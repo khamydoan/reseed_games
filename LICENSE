@@ -1,0 +1,22 @@
+Copyright (c) 2026 Kha My Doan. All rights reserved.
+
+This repository holds ReSeed Quest, browser games about the ReSeed invention-convention project
+(game code, text, characters, page design, voices, data files and the trained ForestNet weights)
+("the Work").
+
+You may play the games in a web browser and read the code on GitHub. No other licence is granted.
+You may not copy, modify, adapt, redistribute, republish, mirror, sell, or otherwise use any part
+of the Work, including to train or evaluate machine-learning models, without prior written
+permission from the copyright holder. To ask, contact the author through https://github.com/khamydoan.
+
+This repository is public so that GitHub Pages can serve the games. GitHub's Terms of Service let
+GitHub users view and fork public repositories on GitHub; that grants no rights beyond those Terms.
+
+Third-party components and data keep their own licences. Nothing above limits the rights those
+licences give you in the original components:
+
+- Fredoka and JetBrains Mono typefaces: SIL Open Font License 1.1 (fonts/OFL-*.txt)
+- Satellite imagery in data/sites: contains modified Copernicus Sentinel data 2016-2026 (ESA) and
+  Landsat data (USGS/NASA, public domain), accessed through Microsoft Planetary Computer
+- Example pictures in data/examples: AI-generated (gpt-image) for the ReSeed project and labelled as such
+- Voices in audio/voice: generated with gpt-audio-1.5 (Azure OpenAI) for this project

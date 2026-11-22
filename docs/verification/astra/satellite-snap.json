@@ -1,0 +1,77 @@
+{
+ "factual_issues": [
+  {
+   "where": "C/D: Rondônia is at",
+   "claim": "Rondônia is at -9.8, -64.3.",
+   "problem": "These are not the coordinates of ReSeed's configured Rondônia site.",
+   "evidence": "config.py: Site(\"rondonia\", \"Jaci-Paraná, Rondônia\", \"Brazil\", -9.35, -64.35, \"forest_loss\",",
+   "fix": "ReSeed's Rondônia site is at -9.35, -64.35. What does the minus in -64.35 mean?"
+  },
+  {
+   "where": "C/D: Ketapang in Borneo is very cloudy",
+   "claim": "ReSeed only keeps pictures with less than 30% cloud.",
+   "problem": "This makes Ketapang's setting sound like a rule for all ReSeed sites. The configured cloud limit varies by site.",
+   "evidence": "config.py sets Ketapang's max_cloud=30, Rondônia's max_cloud=15, and the Site default to max_cloud: int = 20.",
+   "fix": "Ketapang in Borneo is very cloudy. ReSeed uses a 30% cloud limit for this site."
+  },
+  {
+   "where": "sentinel-2: reseed",
+   "claim": "load_sentinel2() masks the clouds and stacks up to 8 clear pictures.",
+   "problem": "The excerpts support cloud masking and median composites, but not this function's implementation or an eight-picture limit. Masked scenes also need not be wholly clear.",
+   "evidence": "acquire.py: \"filter a collection by place and date window, mask clouds per pixel, take the median.\"",
+   "fix": "`reseed/acquire.py` finds pictures by place and date, hides cloudy pixels, and combines the middle values from the remaining pixels."
+  },
+  {
+   "where": "C/D: Real Ketapang is just as cloudy; D: 📜 ReSeed's real log:",
+   "claim": "Here is the log of pictures ReSeed really kept.",
+   "problem": "No actual acquisition log or kept-picture records are supplied. The configuration alone cannot establish that displayed pictures or counts come from a real run.",
+   "evidence": "config.py supplies Ketapang's date window and \"max_cloud=30\"; acquire.py describes filtering and compositing but provides no acquisition results.",
+   "fix": "Ketapang has a 30% cloud limit in ReSeed. Here is our game album of pictures that passed!"
+  },
+  {
+   "where": "gps: reseed",
+   "claim": "reseed/mission.py writes a .waypoints file whose release points the drone flies to by GPS.",
+   "problem": "The supplied excerpts contain no mission exporter or flight evidence. They do not establish this file format or that a drone actually flies these points.",
+   "evidence": "The supplied E excerpts cover acquire.py and config.py; config.py says only \"MISSION_MAX_HA = 50 # one drone mission; bigger patches are split into sub-missions\" about missions.",
+   "fix": "`reseed/config.py` gives each site a latitude and longitude. A drone can also use these two numbers to find a place with GPS."
+  }
+ ],
+ "general_cs_errors": [
+  {
+   "where": "pixel-size; C/D: Right! One pixel is 10 m wide; D: Satellites see forest patches",
+   "claim": "Satellites see forest patches, not single trees.",
+   "problem": "This is too broad: some high-resolution satellite cameras can distinguish individual tree crowns. The limitation being taught belongs to these Sentinel-2 and Landsat images, not all satellites.",
+   "fix": "At 10 m and 30 m, these pictures show forest patches, not clear views of single trees. A close-up drone picture shows more detail!"
+  },
+  {
+   "where": "D: Press Ping to measure; New drone spot! The satellites ping; 📡 Ping GPS 1",
+   "claim": "GPS distances are measured by pinging satellites.",
+   "problem": "GPS receivers passively listen to broadcast timing signals; they do not request a ranging reply from satellites. Unlike the three-circle model, this interaction is not labelled as a game version.",
+   "fix": "Press **Listen** to use a GPS satellite's time signal to estimate its distance. [P]"
+  }
+ ],
+ "hard_for_8yo": [
+  {
+   "where": "lat-lon: text",
+   "text": "Latitude says how far north or south of the equator a place is (0° to 90°). Longitude says how far east or west of the prime meridian through Greenwich, London, it is (0° to 180°).",
+   "simpler": "**Latitude** tells how far north or south a place is from Earth's middle line, the **equator**. **Longitude** tells how far east or west it is from a starting line through Greenwich, London. We measure both in degrees (°). Minus means south or west. Together, the numbers mark a spot."
+  },
+  {
+   "where": "gps: text",
+   "text": "They send exact time signals, a receiver measures how far away each satellite is, and only one spot fits all the distances: trilateration.",
+   "simpler": "They send very exact time signals. Your phone uses them to work out its distance from several satellites. Matching those distances helps it find your spot. This is called **trilateration**."
+  },
+  {
+   "where": "C/D: Each pixel is 0.01 hectare",
+   "text": "Each pixel is 0.01 hectare, so pixels add up to area. ReSeed skips patches under 0.5 ha.",
+   "simpler": "Each 10 m pixel covers a little square of land. A hundred make one **hectare**. ReSeed skips patches smaller than 50 of these pixels."
+  },
+  {
+   "where": "C/D: Under thick trees the signals get fuzzy",
+   "text": "Under thick trees the signals get fuzzy, so the uncertainty circle grows bigger.",
+   "simpler": "Under thick trees, GPS has a harder time finding you. The bigger circle shows more places where you might be."
+  }
+ ],
+ "safety_or_tone": [],
+ "verdict": "The game is approachable and mostly sound, but should correct the site coordinates, qualify unsupported ReSeed claims, and fix the GPS-ping and satellite-detail explanations."
+}

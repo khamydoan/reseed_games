@@ -1,0 +1,20 @@
+You are a senior educational game designer and a CS teacher for kids aged 8-12. Review the game design below.
+It is a browser game world that teaches kids the real ReSeed codebase (satellite forest detection + seed drones)
+and, by stealth, these skills the parent asked for: efficient US QWERTY typing; installing OSes (Ubuntu, Windows,
+RHEL); NVIDIA drivers, CUDA toolkit; vLLM, llama.cpp; neural networks; Conda, UV and other Python virtual
+environments; networking (TCP, UDP); cloud computing (Azure, GCP, AWS); everything about drones (types,
+operations, maneuvers); forest, deforestation, NDVI; infrastructure (CPU, GPU, RAM, HDD); databases; storage
+accounts; Python libraries, algorithms, classes, functions, syntax; satellite image analysis; GPS.
+Constraints: static site on GitHub Pages, no build step, classic scripts, works offline from file://, original
+characters only (no franchise characters), 25 games x 3-5 short levels, built in one session by AI agents.
+
+Answer ONLY in this JSON shape (be concrete and short; no generic advice):
+{"coverage_gaps":[{"skill":"...","where_to_add":"game id + level idea"}],
+ "too_hard_for_8yo":[{"game":"id","problem":"...","fix":"..."}],
+ "fun_risks":[{"game":"id","risk":"why a kid would quit","fix":"a concrete mechanic"}],
+ "accuracy_risks":[{"game":"id","claim":"...","problem":"...","fix":"..."}],
+ "best_three_mechanics_to_add":["..."],
+ "scope_cuts_if_needed":["game ids that add least"],
+ "verdict":"one paragraph"}
+
+=== DESIGN ===

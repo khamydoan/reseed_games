@@ -1,0 +1,63 @@
+{
+ "factual_issues": [
+  {
+   "where": "training / reseed",
+   "claim": "ForestNet uses AdamW and a learning rate that rises, then falls.",
+   "problem": "The supplied train.py excerpt does not show the optimizer or learning-rate schedule. These specific ReSeed claims cannot be verified from E.",
+   "evidence": "The train.py excerpt says: \"Train ForestNet on three kinds of picture: satellite tiles, aerial photos, ground photos.\" It contains no optimizer or schedule definition.",
+   "fix": "`classify/train.py` trains ForestNet on satellite tiles, aerial photos and ground photos, with pictures zoomed, turned, flipped and colour-shifted."
+  },
+  {
+   "where": "forestnet-arch / reseed; D / pictures in about 12 minutes",
+   "claim": "About 54,000 training pictures; about 12 minutes on one GPU (README).",
+   "problem": "Neither the training-picture total nor the total training time appears in the supplied README. The GPU statement is supported, but the quoted total and timing are not.",
+   "evidence": "train.py says: \"All images are held on the GPU as uint8\" and \"an epoch takes a couple of seconds.\" Neither statement establishes a 12-minute training run or 54,000 training pictures.",
+   "fix": "`classify/model.py`: 214,212 parameters. Training uses satellite, aerial and ground pictures, with the pictures held on a GPU (`classify/train.py`)."
+  },
+  {
+   "where": "C and D / Expert challenge! Stack ForestNet's real layers",
+   "claim": "The displayed convolution-plus-ReLU blocks represent ForestNet's real layers.",
+   "problem": "The stack labels omit BatchNorm from every convolution block, although E includes it in all four. Calling this the real layer stack needs that clarification.",
+   "evidence": "Each block contains \"nn.Conv2d(c_in, c_out, 3, padding=1, bias=False)\", \"nn.BatchNorm2d(c_out)\", and \"nn.ReLU(inplace=True)\".",
+   "fix": "Expert challenge! Stack ForestNet's main layers. Each convolution block also includes BatchNorm, which rescales its numbers."
+  }
+ ],
+ "general_cs_errors": [
+  {
+   "where": "C and D / Each dot is a real satellite tile",
+   "claim": "Green dots are forest.",
+   "problem": "The more detailed UI says green means ForestNet predicted forest. A model prediction is not a confirmed label, so the speech should not present it as ground truth.",
+   "fix": "Each dot is a real satellite tile. Green means ForestNet guessed forest; grey marks city, water or desert tiles."
+  },
+  {
+   "where": "D / ReLU: if x < 0 then 0",
+   "claim": "Other filters catch that edge.",
+   "problem": "ReLU removes negative responses, but there is no guarantee that another filter detects the edge whose response was removed.",
+   "fix": "ReLU: if x < 0 then 0\nelse keep x\n\nNo more blue! Other\nfilters may catch that edge."
+  }
+ ],
+ "hard_for_8yo": [
+  {
+   "where": "forestnet-arch / text",
+   "text": "ForestNet: 4 convolution blocks (3 → 24 → 48 → 96 → 160), global average pooling, 96 hidden neurons and a forest answer. About **214,000** weights.",
+   "simpler": "ForestNet has 4 pattern-finding blocks: 24, 48, 96, then 160 filters. It averages their pictures, uses 96 more neurons, and gives a forest answer. About **214,000** learned numbers."
+  },
+  {
+   "where": "D / Forest head 96 → 2 + softmax",
+   "text": "Forest head 96 → 2 + softmax",
+   "simpler": "Forest answer: 96 numbers → 2 scores → chances"
+  },
+  {
+   "where": "D / 4 helper heads: view",
+   "text": "4 helper heads: view · land cover · scene · aerial",
+   "simpler": "4 extra answers: photo type · land type · scene · view from above"
+  },
+  {
+   "where": "D / The picture has 3 colours",
+   "text": "The picture has 3 colours: this conv must take **3** channels in.",
+   "simpler": "The picture has red, green and blue parts: this block must take **3** parts in."
+  }
+ ],
+ "safety_or_tone": [],
+ "verdict": "The game is engaging and mostly accurate; qualify unsupported training details, distinguish predictions from facts, and clarify a few layer labels."
+}

@@ -1,0 +1,50 @@
+{
+ "factual_issues": [
+  {
+   "where": "packing; repeated in D: Water filled the gaps! and 🧲 About **10 %** jam",
+   "claim": "Only about 60% of a roll is seed, and about 10% jam and never fall out.",
+   "problem": "These are ReSeed's planning assumptions, not measured rates established by the excerpts. The code also includes seeds that stay in the roll, not only dispenser jams, and does not say they can never be removed.",
+   "evidence": "E defines `PACKING = 0.60 # random close packing of rounded seeds` and `DISPENSER_LOSS = 0.10 # seeds that jam or stay in the roll`.",
+   "fix": "ReSeed's plan assumes seeds fill about **60 %** of a roll. It allows for about **10 %** to jam or stay behind instead of falling out."
+  },
+  {
+   "where": "D: drones would be enough, and cheaper to run.",
+   "claim": "A smaller drone fleet would be cheaper to run.",
+   "problem": "ReSeed's model makes fleet size affect days, not operating cost. For the same mission and drone type, using fewer drones does not reduce the calculated total flight hours or cost.",
+   "evidence": "E calculates `days = math.ceil(flight_hours / (fleet * hours_per_day))`, but `drone_cost = flight_hours * drone.cost_per_hour_usd`; fleet size is absent from the cost calculation.",
+   "fix": "drones would be enough to meet the deadline."
+  }
+ ],
+ "general_cs_errors": [
+  {
+   "where": "int-down: name",
+   "claim": "int() rounds down",
+   "problem": "Python's int() truncates toward zero, rather than always rounding down. For example, int(-12.27) is -12, not -13. The positive seed-count example itself is correct.",
+   "fix": "int() chops off decimals"
+  }
+ ],
+ "hard_for_8yo": [
+  {
+   "where": "roll-volume: text",
+   "text": "A toilet-paper roll is a tube. The room inside is **π × r × r × length**. It is 4.5 cm across (r = 2.25 cm) and 10 cm long, so about **159 mL**.",
+   "simpler": "Our roll is 4.5 cm wide inside and 10 cm long. Half its width is **2.25 cm**. Its room inside is **π × 2.25 × 2.25 × 10 ≈ 159 mL**. Here, π means about 3.14."
+  },
+  {
+   "where": "C and D: All delivered, but we used some extra trips!",
+   "text": "All delivered, but we used some extra trips! Full carousels would need fewer.",
+   "simpler": "All delivered, but we used some extra trips! Taking full loads would need fewer."
+  },
+  {
+   "where": "D: The **Seeds** machine adds up every native species for",
+   "text": "The **Seeds** machine adds up every native species for",
+   "simpler": "The **Seeds** machine counts seeds of each local tree type for"
+  },
+  {
+   "where": "D: Your turn: use `int()` to finish the sum.",
+   "text": "Your turn: use `int()` to finish the sum.",
+   "simpler": "Your turn: use `int()` to drop the decimal part."
+  }
+ ],
+ "safety_or_tone": [],
+ "verdict": "The game mostly matches ReSeed's model; clarify its packing assumptions, remove the smaller-fleet cost claim, and correct the int() heading."
+}

@@ -1,0 +1,106 @@
+/* Driver Tower (g04) — layout: tower canvas on the left, shelf / terminal / quiz panel on the right. */
+.dt-root { position: absolute; inset: 0; display: flex; gap: 14px; padding: 14px; }
+.dt-left {
+  position: relative; flex: 1 1 auto; min-width: 0; border-radius: 18px; overflow: hidden; background: #c8a165;
+  box-shadow: 0 0 0 3px var(--ink), var(--shadow);
+}
+.dt-panel { flex: 0 0 clamp(290px, 33%, 430px); display: flex; flex-direction: column; gap: 10px; min-height: 0; min-width: 0; }
+.dt-panel.wide { flex-basis: clamp(340px, 45%, 600px); }
+.dt-head {
+  background: var(--paper); border: 3px solid var(--ink); border-radius: 16px; padding: 8px 12px; box-shadow: var(--shadow);
+}
+.dt-head > b { display: block; font-size: 1.15rem; }
+.dt-head > span { display: block; font-size: 1rem; color: var(--ink-2); line-height: 1.25; }
+.dt-body { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; gap: 10px; overflow: auto; padding: 4px 4px 8px; }
+
+/* shelf blocks (same colours as the canvas blocks) */
+.dt-shelf { display: flex; flex-direction: column; gap: 10px; }
+.dt-blk {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; min-height: 52px; padding: 6px 10px; width: 100%;
+  border: 3px solid var(--ink); border-radius: 12px; background: var(--bf); color: var(--bi); font-weight: 700; font-size: 1.05rem;
+  cursor: grab; box-shadow: 0 4px 0 var(--ink); text-align: left; touch-action: none; transition: transform .06s;
+}
+.dt-blk:hover { transform: translateY(-2px); }
+.dt-blk:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--ink); }
+.dt-blk:focus-visible { outline: 4px solid #ffd84d; outline-offset: 2px; }
+.dt-blk .k {
+  width: 28px; height: 28px; border-radius: 8px; background: #fff; color: var(--ink); border: 2px solid var(--ink);
+  display: grid; place-items: center; font-size: .9rem; flex: none;
+}
+.dt-blk .nm { flex: 1; min-width: 0; }
+.dt-blk .tg { background: #fff; color: var(--ink); border: 2px solid var(--ink); border-radius: 999px; padding: 0 9px; font-size: .9rem; white-space: nowrap; }
+.dt-blk .why { flex-basis: 100%; background: #fff0f2; color: #a3152a; border: 2px solid var(--ink); border-radius: 8px; padding: 0 8px; font-size: .9rem; }
+.dt-blk .why:empty { display: none; }
+.dt-blk.glow { outline: 4px solid #ffd84d; outline-offset: 2px; animation: rq-pulse 1.1s ease-in-out infinite; }
+.dt-ghost { position: fixed; z-index: 90; pointer-events: none; width: 300px; transform: translate(-50%, -50%) rotate(-4deg); opacity: .93; }
+.dt-lift.glow { outline: 4px solid #ffd84d; outline-offset: 2px; animation: rq-pulse 1.1s ease-in-out infinite; }
+.dt-lift kbd { font-family: var(--mono); background: var(--paper-2); border: 2px solid var(--ink); border-radius: 6px; padding: 0 5px; font-size: .85rem; }
+.dt-note { background: #fff; border: 3px solid var(--ink); border-radius: 14px; padding: 10px 12px; box-shadow: var(--shadow); font-size: 1.05rem; }
+
+/* route legend */
+.dt-routes { margin-top: auto; display: flex; flex-direction: column; gap: 6px; font-size: 1rem; }
+.dt-routes .r { background: #fff; border: 2px dashed #9aa9b8; border-radius: 12px; padding: 6px 10px; color: var(--ink-2); }
+.dt-routes .r.on { border: 3px solid var(--ink); color: var(--ink); background: var(--c-tint); }
+.dt-routes code { font-size: .92em; }
+
+/* terminal inside the panel */
+.dt-panel .rq-term, .dt-termwrap .rq-term { flex: 1 1 0; min-height: 0; font-size: 15px; }
+.dt-panel .rq-term input.cmd, .dt-termwrap .rq-term input.cmd { font-size: 15px; }
+.dt-termwrap { position: relative; flex: 1 1 auto; min-width: 0; display: flex; }
+.dt-termwrap .rq-term, .dt-termwrap .rq-term input.cmd { font-size: clamp(14px, 1.3vw, 19px); }
+.rq-term .dt-code { color: #fff; }
+.rq-term input.dt-blank {
+  display: inline-block; font-family: var(--mono); font-size: inherit; color: #fff; background: #263b2c; border: 0;
+  border-bottom: 3px solid #f2cc60; border-radius: 4px; padding: 0 3px; margin: 0 1px; outline: none; caret-color: #7ee787;
+  user-select: text; -webkit-user-select: text;
+}
+.rq-term input.dt-blank:focus { background: #2f4d36; box-shadow: 0 0 0 2px #f2cc60; }
+.rq-term input.dt-blank.no { animation: rq-shake .35s; }
+.rq-term .dt-fill { border-radius: 3px; padding: 0 2px; }
+.rq-term .dt-fill.ok { color: #10161f; background: #7ee787; }
+.rq-term .dt-fill.no { color: #10161f; background: #ff7b72; }
+.rq-term .dt-hl { background: #f2cc60; color: #10161f; border-radius: 3px; box-shadow: 0 0 0 2px #f2cc60; }
+.rq-term .dt-hl.ok { background: #7ee787; box-shadow: 0 0 0 2px #7ee787; }
+
+/* word chips + run (finale) */
+.dt-chips { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; background: var(--paper); border: 3px solid var(--ink); border-radius: 16px; padding: 8px 10px; box-shadow: var(--shadow); }
+.dt-chips > span { font-weight: 600; font-size: 1rem; }
+.dt-chips .btn { min-height: 44px; }
+.dt-chips .chip-w { font-family: var(--mono); font-size: 1rem; }
+.dt-chips .chip-w.glow { outline: 4px solid #ffd84d; outline-offset: 2px; animation: rq-pulse 1.1s ease-in-out infinite; }
+.dt-chips .run { margin-left: auto; }
+
+/* nvidia-smi quiz */
+.dt-quiz .dt-gpus { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.dt-gpu {
+  border: 3px solid var(--ink); border-radius: 10px; background: #3b4757; color: #cfd8e3; font-size: .95rem; text-align: center;
+  padding: 6px 2px; font-weight: 700; transition: background .3s, box-shadow .3s;
+}
+.dt-gpu.on { background: #76b900; color: var(--ink); box-shadow: 0 0 16px #9be15d; }
+.dt-gpu.party { animation: rq-pulse .8s ease-in-out infinite; }
+.dt-q { font-size: 1.15rem; font-weight: 600; background: #fff; border: 3px solid var(--ink); border-radius: 16px; padding: 10px 14px; box-shadow: var(--shadow); }
+.dt-q small { display: block; font-weight: 500; color: var(--ink-2); font-size: .95rem; }
+.dt-ans { display: flex; flex-direction: column; gap: 8px; }
+.dt-ans .btn { justify-content: flex-start; white-space: normal; text-align: left; min-height: 46px; font-size: 1rem; }
+.dt-ans .btn b { flex: none; width: 26px; height: 26px; border-radius: 7px; border: 2px solid var(--ink); display: grid; place-items: center; font-size: .85rem; background: var(--paper-2); }
+.dt-ans .btn.right { background: #d9f7df; }
+.dt-ans .btn.nope { background: #ffe0e4; }
+.dt-fb { min-height: 1.4em; font-size: 1.02rem; font-weight: 600; }
+.dt-fb.good { color: #1f7a3a; } .dt-fb.bad { color: #a3152a; }
+
+@media (max-width: 1100px) {
+  .dt-root { gap: 10px; padding: 10px; }
+  .dt-blk { min-height: 48px; font-size: 1rem; }
+  .dt-panel .rq-term, .dt-panel .rq-term input.cmd { font-size: 14px; }
+  .dt-chips > span:first-child { display: none; }
+  .dt-chips { gap: 6px; padding: 6px 8px; }
+}
+@media (max-height: 700px) {
+  .dt-head { padding: 6px 10px; }
+  .dt-head > span { font-size: .95rem; }
+  .dt-blk { min-height: 44px; padding-top: 3px; padding-bottom: 3px; }
+  .dt-shelf { gap: 8px; }
+  .dt-routes .r:not(.on) { display: none; }
+  .dt-q { padding: 8px 12px; font-size: 1.05rem; }
+  .dt-ans .btn { min-height: 44px; padding-top: .3em; padding-bottom: .3em; }
+}

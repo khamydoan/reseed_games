@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>For grown-ups · ReSeed Quest</title>
+<link rel="icon" href="img/favicon.svg">
+<link rel="stylesheet" href="css/quest.css">
+<style>
+  body.rq.page { overflow: auto; user-select: text; -webkit-user-select: text; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 22px 18px 60px; }
+  h1 { font-size: 2.2rem; margin: .2em 0; } h2 { margin-top: 1.6em; }
+  .lead { font-size: 1.15rem; }
+  table { width: 100%; border-collapse: separate; border-spacing: 0; background: #fff; border: 3px solid var(--ink); border-radius: 16px; overflow: hidden; font-size: .95rem; }
+  th, td { padding: 8px 10px; border-bottom: 1.5px solid #e3ddd0; vertical-align: top; text-align: left; }
+  th { background: var(--paper-2); }
+  tr:last-child td { border-bottom: 0; }
+  td .g { display: inline-block; margin: 2px 4px 2px 0; padding: 1px 8px; border-radius: 999px; border: 2px solid var(--ink); background: #fff; font-weight: 600; font-size: .85rem; text-decoration: none; color: var(--ink); white-space: nowrap; }
+  .isle { display: inline-block; width: 14px; height: 14px; border-radius: 4px; border: 2px solid var(--ink); vertical-align: -2px; margin-right: 6px; }
+  .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+  .panel h3 { margin-top: 0; }
+  code { background: var(--paper-2); padding: 1px 5px; border-radius: 6px; }
+</style>
+</head>
+<body class="rq page">
+<div class="wrap">
+  <p><a class="btn small" href="index.html">🗺️ Back to the map</a></p>
+  <h1>ReSeed Quest — for parents and teachers</h1>
+  <p class="lead">25 short browser games for ages 8–12 that follow the real <a href="https://khamydoan.github.io/reseed/">ReSeed</a>
+    program step by step: satellites find lost forest, a neural network checks it, a greenness score (NDVI) decides, and seed
+    drones plant it back. Along the way children practise typing and meet the computer-science ideas the program really uses.
+    They are on missions, not in lessons; every real term they meet becomes a collectible <b>Field Card</b>.</p>
+
+  <div class="cols">
+    <div class="panel"><h3>⏱️ Short and saved</h3>Each level takes 1–3 minutes, each game 3–5 levels. Stars and cards are saved in this browser.
+      After about 20 minutes, Sprout suggests a stretch break.</div>
+    <div class="panel"><h3>🔒 Private</h3>No accounts, no ads, no tracking, no network calls while playing. The only thing stored is progress and an
+      optional nickname, in this browser's local storage. Settings → "Start over" erases it.</div>
+    <div class="panel"><h3>🧭 Honest</h3>Numbers presented as ReSeed's come from the ReSeed code and its real results on 13 places. Where a game
+      simplifies, the Field Card says "game version". Command-line, installer and cloud screens are simulations: nothing is installed.</div>
+  </div>
+
+  <h2>Skill map</h2>
+  <p>Which games practise which skills. Click a game to play it.</p>
+  <table id="skills"><thead><tr><th style="width:28%">Skill</th><th>Games</th></tr></thead><tbody></tbody></table>
+
+  <h2>The journey</h2>
+  <table id="journey"><thead><tr><th style="width:22%">Island</th><th style="width:22%">ReSeed step</th><th>Games and what they teach</th></tr></thead><tbody></tbody></table>
+
+  <h2>Playing</h2>
+  <ul>
+    <li>Works in Chrome, Edge, Firefox and Safari on a computer or a tablet in landscape. Typing games need a keyboard.</li>
+    <li>Online: <a href="https://khamydoan.github.io/reseed_games/">khamydoan.github.io/reseed_games</a>. Offline: download the folder and double-click <code>index.html</code>.</li>
+    <li>Voices: recorded with an AI voice (gpt-audio-1.5); lines without a recording use the computer's own voice if "read aloud" is on.</li>
+    <li>Characters (Sprout, Koa, Tuki, Professor Hoot, Pix, Mo and the Glitch Bugs) are original to this project.</li>
+  </ul>
+
+  <h2>How it was made</h2>
+  <p>See <a href="docs/HOW-IT-WAS-MADE.html">How these games were made</a>, a step-by-step playbook that an AI coding agent can follow to rebuild or extend the games on another computer.</p>
+  <p class="muted">© 2026 Kha My Doan (ReSeed). Satellite imagery: modified Copernicus Sentinel data (ESA) and Landsat (USGS/NASA) via Microsoft Planetary Computer. Fonts: Fredoka and JetBrains Mono (SIL OFL 1.1).</p>
+</div>
+<script src="js/rq.js"></script>
+<script src="js/catalog.js"></script>
+<script>
+(function () {
+  var c = RQ.catalog, u = RQ.u;
+  function link(id) { var g = c.game(id); return '<a class="g" href="' + c.href(g, "") + '">' + g.icon + " " + u.esc(g.title) + "</a>"; }
+  var SKILLS = [
+    ["US QWERTY typing (home row → symbols, speed and accuracy)", ["g01", "g23", "g03", "g05", "g24"]],
+    ["Computer hardware: CPU, GPU, RAM, SSD/HDD, power", ["g02", "g25"]],
+    ["Installing operating systems: Ubuntu, Windows, RHEL; boot, partitions, package managers", ["g03"]],
+    ["NVIDIA drivers, CUDA toolkit, cuDNN, PyTorch on GPU, nvidia-smi", ["g04", "g02"]],
+    ["Python environments: Conda, uv, venv, pip, environment.yml, version conflicts", ["g05"]],
+    ["Large language models: tokens, GPU memory, quantization, vLLM, llama.cpp", ["g12"]],
+    ["Neural networks: neurons, layers, convolution, training, testing", ["g11", "g10"]],
+    ["Networking: packets, TCP, UDP, IP, ports, DNS, HTTP(S)", ["g09"]],
+    ["Cloud computing: Azure, AWS, Google Cloud, VMs, storage accounts and buckets, cost", ["g08"]],
+    ["Satellites, pixels and resolution, satellite image analysis", ["g06", "g07", "g10"]],
+    ["GPS: latitude/longitude, trilateration, waypoints", ["g06", "g22"]],
+    ["Forests, deforestation, seasons, native species, ecosystems", ["g15", "g18", "g23", "g13"]],
+    ["NDVI and invisible light", ["g13", "g15"]],
+    ["Drones: types, parts, sticks (throttle, yaw, pitch, roll), safety, emergencies", ["g20", "g21"]],
+    ["Physics: gravity, drag, terminal velocity, wind", ["g19", "g21"]],
+    ["Algorithms: median, flood fill, sorting, serpentine paths, loops", ["g07", "g16", "g22", "g25"]],
+    ["Databases: tables, rows, keys, SELECT / WHERE / ORDER BY, JSON", ["g18"]],
+    ["Python syntax, variables, functions, if/elif, loops, lists, dicts, classes", ["g14", "g25", "g17"]],
+    ["Math: fractions, decimals, area, volume, rounding up, cost", ["g13", "g16", "g17"]],
+    ["Git, GitHub, automated tests, publishing a website, HTML", ["g24"]]
+  ];
+  var tb = document.querySelector("#skills tbody");
+  SKILLS.forEach(function (s) { tb.insertAdjacentHTML("beforeend", "<tr><td>" + u.esc(s[0]) + "</td><td>" + s[1].map(link).join("") + "</td></tr>"); });
+  var jb = document.querySelector("#journey tbody");
+  c.chapters.forEach(function (ch) {
+    var games = c.inChapter(ch.n).map(function (g) { return link(g.id) + ' <span class="muted">' + u.esc(g.skills.join(" · ")) + "</span>"; }).join("<br>");
+    jb.insertAdjacentHTML("beforeend", '<tr><td><span class="isle" style="background:' + ch.color + '"></span><b>' + u.esc(ch.name) + "</b><br><span class='muted'>" + u.esc(ch.label) + "</span></td><td>" + u.esc(ch.step) + "</td><td>" + games + "</td></tr>");
+  });
+})();
+</script>
+</body>
+</html>

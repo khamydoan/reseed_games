@@ -1,0 +1,89 @@
+{
+ "factual_issues": [
+  {
+   "where": "sql-query / reseed",
+   "claim": "Python looks up BIOMES[site.biome] to get the seed mix in reseed/pipeline.py.",
+   "problem": "E supports a lookup inside seed_mix, but does not establish this expression or the claimed pipeline location.",
+   "evidence": "def seed_mix(biome: str) -> dict:\n    b = BIOMES[biome]\n    return {\"biome\": biome, **b}",
+   "fix": "(game version) Our SQL blocks act like a search. ReSeed's `seed_mix` function looks up `BIOMES[biome]` in `reseed/species.py`."
+  },
+  {
+   "where": "key-join / reseed",
+   "claim": "Each site in reseed/config.py has a biome key that points into BIOMES.",
+   "problem": "The supplied excerpt does not show config.py or its site records. It does show biome names being used to look up BIOMES entries.",
+   "evidence": "\"oak_hickory\": {\"name\": \"Ozark oak-hickory forest\", ...}; seed_mix uses \"b = BIOMES[biome]\".",
+   "fix": "In `reseed/species.py`, `seed_mix` uses a biome label, like `oak_hickory`, to find that forest's facts in `BIOMES`."
+  },
+  {
+   "where": "json / reseed",
+   "claim": "reseed/webexport.py writes BIOMES to site/data/species.json for the ReSeed website.",
+   "problem": "E supplies a Python dictionary, but no exporter, output path or website-loading code. This specific ReSeed implementation claim is unsupported by the supplied evidence.",
+   "evidence": "The supplied file defines \"BIOMES = { ... }\" and \"def seed_mix(biome: str) -> dict:\"; it contains no JSON export.",
+   "fix": "(game version) We show ReSeed's Python seed facts as JSON too, so you can compare two ways to write the same data."
+  },
+  {
+   "where": "native-species / reseed",
+   "claim": "Each biome lists one not_suitable seed and why.",
+   "problem": "Only the forest entries do. The added non-forest entries have no not_suitable field.",
+   "evidence": "BIOMES.setdefault(_key, {\"name\": _name, \"species\": [], \"animals\": [], \"target_stems_per_ha\": 0})",
+   "fix": "`reseed/species.py`: an oak-woodland gap gets acorns, never mango. Each forest biome lists one `not_suitable` seed and why."
+  },
+  {
+   "where": "The Dixie Fire needs seeds that sprout well.",
+   "claim": "Filtering establishment > 0.1 finds seeds that sprout well.",
+   "problem": "ReSeed's establishment value measures surviving seedlings, not just sprouting. The distinction is explicit in E.",
+   "evidence": "\"establishment   fraction of delivered units that become a surviving seedling (field, direct-seeded, planning value - far below lab germination)\"",
+   "fix": "The Dixie Fire needs seeds likely to grow into surviving seedlings. Ask for `biome = '"
+  }
+ ],
+ "general_cs_errors": [
+  {
+   "where": "native-species / text",
+   "claim": "A native plant grew in a place long before people came.",
+   "problem": "Native status means occurring naturally in a region rather than being introduced by people. It is not defined by whether the plant arrived before humans.",
+   "fix": "A **native** plant grows naturally in a place, rather than being brought there by people. Native seeds help rebuild forests and feed local animals."
+  },
+  {
+   "where": "key-join / text",
+   "claim": "A key is a label that links two tables.",
+   "problem": "This makes linking tables the definition of every key. A primary key identifies a row; a foreign key can refer to it from another table.",
+   "fix": "A **primary key** labels a row so we can tell it apart. A **foreign key** points to it from another table. A **join** combines matching facts."
+  },
+  {
+   "where": "✅ Python prints 'single quotes'.",
+   "claim": "Python prints single quotes, whereas JSON uses double quotes.",
+   "problem": "Python string representations can use either quote style, depending on the contents. Single quotes are a feature of this example, not a reliable Python-versus-JSON rule.",
+   "fix": "✅ This Python example uses 'single quotes'; Python allows both kinds. **JSON** text needs \"double quotes\"."
+  },
+  {
+   "where": "Every query starts with `SELECT`.",
+   "claim": "Every query starts with SELECT.",
+   "problem": "Real SQL queries can start with WITH, for example. The rule is valid for this game's query builder, not SQL generally.",
+   "fix": "Our game queries start with `SELECT`. Add the purple block!"
+  }
+ ],
+ "hard_for_8yo": [
+  {
+   "where": "Every seed's `biome` is a **key**.",
+   "text": "Every seed's `biome` is a **key**. Link each 🔗 key to the row in `biomes` with the same 🔑 key: tap one, then the other.",
+   "simpler": "A **biome** is a kind of habitat. Match each seed's 🔗 biome label to the same 🔑 label in `biomes`: tap one, then the other."
+  },
+  {
+   "where": "What is the Latin name of **Paricá**?",
+   "text": "What is the Latin name of **Paricá**? Click that cell.",
+   "simpler": "Find **Paricá**'s science name in the `latin` column. Click that cell."
+  },
+  {
+   "where": "Which seed falls the **fastest**?",
+   "text": "Which seed falls the **fastest**? Find the biggest number in the `v_terminal` column and click it.",
+   "simpler": "`v_terminal` means steady falling speed in still air. Which seed has the biggest number? Click that cell."
+  },
+  {
+   "where": "Connect the keys first.",
+   "text": "Connect the keys first. Then you'll see one record dressed as a table row, JSON and a Python dict.",
+   "simpler": "Connect the keys first. Then see the same seed facts in three outfits: a table row, JSON and a Python dictionary."
+  }
+ ],
+ "safety_or_tone": [],
+ "verdict": "The game is engaging and mostly sound, but should correct the native-plant and establishment definitions, qualify a few database rules, and ground its ReSeed file claims in the supplied code."
+}

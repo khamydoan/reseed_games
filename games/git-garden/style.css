@@ -1,0 +1,96 @@
+/* Git Garden (g24) — layout for the garden + terminal levels, the fix panel, the HTML editor. */
+.gg-wrap { position: absolute; inset: 0; display: flex; flex-direction: column; }
+.gg-top { position: relative; flex: 1; min-height: 0; }
+.gg-bottom {
+  flex: 0 0 auto; height: clamp(196px, 34%, 290px); display: flex; gap: 12px; padding: 10px 12px 12px;
+  background: var(--c-tint); border-top: 3px solid var(--ink);
+}
+.gg-term { flex: 1; min-width: 0; position: relative; display: flex; }
+.gg-term .rq-term { flex: 1; height: auto !important; padding: 10px 12px; }
+.gg-side { width: 290px; flex: none; display: flex; flex-direction: column; gap: 8px; min-height: 0; }
+.gg-step {
+  flex: 1; min-height: 0; overflow: auto; background: #fff; border: 3px solid var(--ink); border-radius: 14px;
+  padding: 8px 12px; box-shadow: var(--shadow); font-weight: 600; font-size: 1.05rem; line-height: 1.3;
+}
+.gg-step small { display: block; color: var(--ink-2); font-weight: 600; font-size: .85rem; text-transform: uppercase; letter-spacing: .04em; }
+.gg-step code, .gg-fix code, .gg-goals code { font-size: .9em; background: var(--paper-2); border-radius: 6px; padding: 0 4px; }
+.gg-files { display: flex; flex-wrap: wrap; gap: 6px; min-height: 30px; align-items: center; font-size: .95rem; }
+.gg-file.new { background: #ffe0e4; } .gg-file.modified { background: #fff1c2; } .gg-file.staged { background: #d9f7df; }
+.gg-side .btn { width: 100%; }
+
+/* L3 fix panel */
+.gg-fix {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: min(660px, 94%); z-index: 5;
+  text-align: center; animation: rq-pop .3s cubic-bezier(.2, 1.6, .4, 1); padding: 12px 16px;
+}
+.gg-fix h3 { margin: 0 0 4px; font-size: 1.25rem; }
+.gg-fix p { margin: 4px 0; }
+.gg-fix .code {
+  font-family: var(--mono); font-size: 18px; background: #fbfaf5; border: 3px solid var(--ink); border-radius: 12px;
+  padding: 8px 12px; text-align: left; display: inline-block; margin: 6px 0; line-height: 1.9; white-space: pre;
+}
+.gg-op {
+  width: 50px; height: 46px; border: 3px solid var(--ink); border-radius: 10px; background: #ffe36e; font: 700 24px var(--mono);
+  cursor: pointer; box-shadow: 0 3px 0 var(--ink); vertical-align: middle; margin: 0 4px; padding: 0;
+}
+.gg-op:focus-visible { outline: 4px solid var(--info); outline-offset: 2px; }
+.gg-op:active { transform: translateY(2px); box-shadow: 0 1px 0 var(--ink); }
+.gg-res { font-weight: 700; min-height: 1.5em; margin-top: 6px; }
+.gg-res.ok { color: var(--good); } .gg-res.no { color: var(--bad); }
+
+/* L4 HTML editor */
+.gg-html { position: absolute; inset: 0; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr auto; gap: 12px; padding: 12px; }
+.gg-ed { display: flex; flex-direction: column; gap: 8px; min-height: 0; padding: 10px 12px; }
+.gg-ed h3, .gg-br h3 { margin: 0; font-size: 1.1rem; }
+.gg-tools { display: flex; flex-wrap: wrap; gap: 8px; }
+.gg-tools .btn { font-family: var(--font); }
+.gg-tools .btn code { background: rgba(255, 255, 255, .6); border-radius: 6px; padding: 0 4px; font-size: .9em; }
+.gg-folder { font-size: .95rem; color: var(--ink-2); }
+.gg-folder code { color: var(--ink); background: var(--paper-2); border-radius: 6px; padding: 0 5px; }
+.gg-src {
+  flex: 1; min-height: 120px; resize: none; font-family: var(--mono); font-size: 17px; line-height: 1.5; padding: 10px 12px;
+  border: 3px solid var(--ink); border-radius: 12px; background: #10161f; color: #d8f3dc; caret-color: #7ee787; outline: none;
+  user-select: text; -webkit-user-select: text; white-space: pre-wrap;
+}
+.gg-src:focus { box-shadow: 0 0 0 4px #ffd84d; }
+.gg-br { display: flex; flex-direction: column; min-height: 0; padding: 0; overflow: hidden; }
+.gg-br .bar { display: flex; align-items: center; gap: 6px; padding: 8px 10px; background: var(--paper-2); border-bottom: 3px solid var(--ink); }
+.gg-br .bar i { width: 12px; height: 12px; border-radius: 50%; display: inline-block; flex: none; }
+.gg-br .addr { flex: 1; background: #fff; border: 2px solid var(--ink); border-radius: 999px; padding: 2px 12px; font-size: .95rem; color: var(--ink-2); overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.gg-view {
+  position: relative; flex: 1; overflow: auto; background: #fff; padding: 14px 18px; font-family: Georgia, "Times New Roman", serif;
+  color: #222; user-select: text; -webkit-user-select: text; font-size: 18px;
+}
+.gg-view h1 { font-size: 2rem; margin: .2em 0 .3em; color: #1e5e2f; }
+.gg-view h2 { font-size: 1.5rem; margin: .2em 0; }
+.gg-view p { margin: .4em 0 .7em; line-height: 1.45; }
+.gg-view img { max-width: 100%; max-height: 220px; border-radius: 8px; display: block; margin: 6px 0; border: 2px solid #ccc; }
+.gg-view a { color: #1a5fd0; text-decoration: underline; cursor: pointer; }
+.gg-broken {
+  display: inline-flex; align-items: center; gap: 8px; padding: 14px 16px; margin: 6px 0; border: 3px dashed var(--bad); border-radius: 10px;
+  background: #fff3f4; color: var(--bad); font-family: var(--font); font-weight: 600; font-size: 1rem;
+}
+.gg-bugpic { position: absolute; width: 70px; height: 70px; pointer-events: none; animation: gg-crawl 1.6s ease-in-out infinite; z-index: 2; }
+.gg-bugpic.squash { animation: gg-squash .5s forwards; }
+@keyframes gg-crawl { 0%, 100% { transform: translate(0, 0) rotate(-8deg); } 50% { transform: translate(14px, -6px) rotate(8deg); } }
+@keyframes gg-squash { to { transform: scale(1.4, .1); opacity: 0; } }
+.gg-goals { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: center; }
+.gg-goals .chip { font-size: 1rem; min-height: 38px; padding: .2em .8em; }
+.gg-goals .chip.ok { background: #d9f7df; }
+.gg-goals .chip.bonus { background: #fff1c2; }
+.gg-goals .chip.bonus.ok { background: #ffe36e; }
+.gg-goals .btn { margin-left: 8px; }
+
+@media (max-width: 1100px) {
+  .gg-side { width: 240px; }
+  .gg-step { font-size: .98rem; }
+}
+@media (max-height: 700px) {
+  .gg-step small { display: none; }
+  .gg-step { font-size: .95rem; padding: 6px 10px; }
+  .gg-src { font-size: 15px; }
+  .gg-view { font-size: 16px; }
+  .gg-view h1 { font-size: 1.6rem; }
+  .gg-view img { max-height: 150px; }
+  .gg-goals .chip { min-height: 34px; font-size: .92rem; }
+}

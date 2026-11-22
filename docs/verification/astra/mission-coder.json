@@ -1,0 +1,76 @@
+{
+ "factual_issues": [
+  {
+   "where": "mc-algorithm / reseed",
+   "claim": "`reseed/pipeline.py` runs ReSeed's steps in order for each site: picture, forest check, NDVI, decide, outline, plan, dispatch.",
+   "problem": "The supplied excerpts do not show pipeline.py or establish this exact sequence.",
+   "evidence": "E shows mission.py: \"lays lawnmower lines one swath apart, places release points so the sowing density is met, and exports for ArduPilot ground stations\".",
+   "fix": "`reseed/mission.py` follows steps to build a mission: lay out flight lines, place seed-release points, then save mission files."
+  },
+  {
+   "where": "mc-debugging / reseed",
+   "claim": "`tests/test_core.py` checks that mission lines cover the patch and that the `.waypoints` file starts right, on every push.",
+   "problem": "Neither these specific tests nor an automated run on every push is supported by E.",
+   "evidence": "E provides no test or automation configuration. It does document: \"python -m reseed.demo_flight --dry-run # print plan + predicted landing\".",
+   "fix": "`reseed/demo_flight.py --dry-run` prints the flight plan and a seed-landing prediction, so you can inspect them without flying."
+  },
+  {
+   "where": "mc-lawnmower / reseed",
+   "claim": "Rondônia's plan: 2.26 m swath, 86,396 seed drops.",
+   "problem": "E supports the path-building method but supplies no Rondônia mission measurements or release count.",
+   "evidence": "E says: \"Lines run along the polygon's long axis to minimise turns\" and shows \"x += swath_m\"; it contains no Rondônia results.",
+   "fix": "`reseed/mission.py` `lawnmower()` lays lines one swath apart, alternating direction, along the patch's long side. The mission also places seed-release points along the lines."
+  }
+ ],
+ "general_cs_errors": [
+  {
+   "where": "mc-algorithm / text",
+   "claim": "A computer follows the steps in order, one by one, and never guesses.",
+   "problem": "Computers can execute work in parallel, and programs can deliberately make guesses or use randomness. The absolute wording goes beyond explaining this game's sequential execution.",
+   "fix": "An **algorithm** is a list of exact steps for solving a problem. In this game, the computer follows your steps in order, one by one."
+  },
+  {
+   "where": "mc-lawnmower / text",
+   "claim": "The gap between lines is the swath.",
+   "problem": "A swath is the width covered in one pass, not inherently the spacing between flight lines. ReSeed uses that width as its line spacing.",
+   "fix": "Fly straight lines side by side and turn back at each end, like mowing a lawn. A **swath** is the width seeded in one pass (game version: one square)."
+  },
+  {
+   "where": "C and D / In the real forest there are no squares, only GPS.",
+   "claim": "In the real forest there are no squares, only GPS.",
+   "problem": "Real drone navigation is not exclusively GPS-based; it can also use local coordinates and other sensors. Real maps can use square grids too.",
+   "fix": "Real drones can use GPS to find their way beyond our game grid. Every spot on Earth has a latitude and a longitude."
+  },
+  {
+   "where": "C and D / A drone must be in the air before it moves; D / Plop!",
+   "claim": "A drone must be in the air before it moves. The jerk only works right after flying forward.",
+   "problem": "A grounded drone can move or slide. Seed release depends on acceleration, seed motion and the release mechanism, not a universal rule that the jerk must immediately follow one particular command.",
+   "fix": "💡 In this demo, take off before flying across the field. Put the jerk right after flying forward to follow ReSeed's script."
+  }
+ ],
+ "hard_for_8yo": [
+  {
+   "where": "mc-waypoints / reseed",
+   "text": "`reseed/mission.py` `export_waypoints()` writes QGC WPL 110 files; servo 9 set to 1900 opens the seed hatch at each release point (the game's practice file has 6 points).",
+   "simpler": "`reseed/mission.py` saves flight instructions in a QGC WPL 110 file. Servo 9 is the hatch motor; setting it to 1900 opens the hatch (our practice file has 6 points)."
+  },
+  {
+   "where": "C and D / Same order as the real script!",
+   "text": "Same order as the real script! On demo day it talks to the drone in GUIDED mode, then switches to LAND.",
+   "simpler": "Same order as the real script! GUIDED mode lets the program guide the drone. LAND tells the drone to land."
+  },
+  {
+   "where": "D / This is the mission as a file a ground station can load.",
+   "text": "This is the mission as a file a ground station can load. Each line is one command, and the CMD column says which one.",
+   "simpler": "This file holds flight instructions for drone-control software. Each command row gives one instruction. CMD means command: it tells you which kind."
+  }
+ ],
+ "safety_or_tone": [
+  {
+   "where": "D / dry run: nothing sent. Pass --connect to fly.",
+   "problem": "This invites children to connect a real drone without the safeguards stated in E: simulator testing, a suitable flying area and a pilot with a kill switch. The existing practice-file warning is helpful but does not cover this instruction.",
+   "fix": "Dry run: nothing sent. Real flights need a trained adult pilot and safety checks."
+  }
+ ],
+ "verdict": "The game largely matches ReSeed's mission code, but should remove unsupported project specifics, correct a few absolute claims, explain key jargon and strengthen the real-flight warning."
+}

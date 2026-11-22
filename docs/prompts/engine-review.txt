@@ -1,0 +1,7 @@
+You are a senior JavaScript reviewer. Review this browser game engine (classic scripts, no build, must run from file:// and
+GitHub Pages, used by 25 kids' games) and its hub page for REAL bugs only: crashes, memory/listener leaks across levels,
+race conditions in async level flow (abort/restart/next while dialogs or modals are open), keyboard focus traps, audio
+context issues (autoplay policy), localStorage failures, XSS from stored nickname, layout bugs. Ignore style.
+Answer ONLY in JSON: {"bugs":[{"file":"...","line_hint":"code snippet","severity":"high|medium|low","problem":"...","fix":"concrete code change"}],"verdict":"..."}
+Max 15 bugs, most severe first.
+=== js/rq.js ===

@@ -1,0 +1,56 @@
+{
+ "factual_issues": [
+  {
+   "where": "udp (reseed)",
+   "claim": "The demo flight script can talk to a drone over UDP: `--connect udp:127.0.0.1:14550` (`reseed/demo_flight.py`).",
+   "problem": "E does not document this connection option or UDP endpoint, so this specific ReSeed command is not verified by the supplied evidence.",
+   "evidence": "README: `python -m reseed demo-flight --dry-run # the canvas demo-day flight, no drone needed`.",
+   "fix": "Try ReSeed's pretend flight with `python -m reseed demo-flight --dry-run`—no drone needed! Our UDP video game is a separate example."
+  }
+ ],
+ "general_cs_errors": [
+  {
+   "where": "tcp (text)",
+   "claim": "A bit slower, but the picture arrives complete.",
+   "problem": "TCP provides an ordered, reliable byte stream while the connection works; it cannot guarantee that a whole picture will arrive if the connection fails. It is also not inherently slower in every situation.",
+   "fix": "**TCP** tracks data, resends missing parts and puts them back in order. Resends can take time, and a broken connection can stop delivery. (Game version: we number packets; real TCP counts bytes.)"
+  },
+  {
+   "where": "dns (text); C/D: Computers don't use names",
+   "claim": "Computers don't use names, they use IP addresses: four numbers with dots between them.",
+   "problem": "Computers do use names, which can be resolved to addresses. Four dotted numbers describe IPv4 addresses, not all IP addresses; IPv6 has a different format.",
+   "fix": "Computers use IP addresses to send packets. IPv4 addresses have four numbers with dots; IPv6 addresses look different."
+  },
+  {
+   "where": "C/D: The video froze, and my drone already flew past!",
+   "claim": "Live video can't wait for resends.",
+   "problem": "Live-video systems can request resends when there is enough time before playback. UDP itself does not resend, but an application using it can. The categorical rule should be limited to the game.",
+   "fix": "The video froze, and my drone already flew past! In this game, we skip resends to keep moving."
+  },
+  {
+   "where": "C/D: Squawk, I'm Tuki!",
+   "claim": "Every picture from space has to travel across the internet to reach us.",
+   "problem": "Space images can reach ground stations by radio and can be stored or transferred without the internet. Internet delivery is common, not required.",
+   "fix": "Squawk, I'm Tuki! Pictures from space often travel across the internet before we see them."
+  }
+ ],
+ "hard_for_8yo": [
+  {
+   "where": "udp (text)",
+   "text": "**UDP** just sends packets: no handshake, no resends, no promise about order. Live video uses it, and the video app **conceals** or **skips** a damaged frame instead of waiting.",
+   "simpler": "**UDP** sends packets without a handshake or built-in resends, and they may arrive mixed up. Some live video uses it. The app can hide damage or skip a video picture, called a **frame**."
+  },
+  {
+   "where": "C/D: If one piece is missing",
+   "text": "If one piece is missing, Conceal it with the last frame's piece. If two or more are missing, Skip the frame.",
+   "simpler": "In this game, one missing piece means Conceal: patch it with the last video picture's piece. Two or more means Skip that picture."
+  },
+  {
+   "where": "D: Last job: build the address",
+   "text": "Last job: build the address of ReSeed's <b>health check</b>, piece by piece.",
+   "simpler": "Last job: build ReSeed's <b>health check</b> address to ask which picture-checking tools are ready."
+  }
+ ],
+ "safety_or_tone": [],
+ "verdict": "The parcel-post theme is approachable, but qualify the networking guarantees, explain the video terms, and replace the unverified ReSeed UDP command."
+}

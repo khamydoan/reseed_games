@@ -1,0 +1,77 @@
+{
+ "factual_issues": [
+  {
+   "where": "ai-in-browser; catalogue reseed; speech starting “Now the real ForestNet”",
+   "claim": "The browser runs the real ForestNet with identical Python weights, and a JavaScript test checks agreement within 0.001.",
+   "problem": "E shows Python model loading, but provides no browser implementation, exported weights or JavaScript parity test. These specific ReSeed implementation claims are not established by the supplied evidence.",
+   "evidence": "E shows: “model.load_state_dict(ckpt[\"state_dict\"])” and “model.eval().to(device)”. No browser code or parity test is included.",
+   "fix": "ReSeed's Python code loads ForestNet's learned numbers, called weights. It gives each picture tile a forest score."
+  },
+  {
+   "where": "image-tiles reseed",
+   "claim": "`classify_tiles` cuts every 640 × 640 picture into 10 × 10 tiles.",
+   "problem": "E supports 64 × 64 tiles, but does not establish that every input scene is 640 × 640 pixels or produces a 10 × 10 grid.",
+   "evidence": "“Scenes are cut into 64x64 tiles (640 m x 640 m at 10 m, the EuroSAT scale) and each tile gets a forest probability.”",
+   "fix": "`classify/infer.py` cuts satellite scenes into 64 × 64 pixel tiles and gives each tile a forest score."
+  },
+  {
+   "where": "baseline-picture reseed",
+   "claim": "The Rondônia baseline is 2017–2019, as infer.py explains.",
+   "problem": "E supports using historical baseline imagery, but neither establishes those years nor contains that example in infer.py.",
+   "evidence": "“ReSeed runs this on the *baseline* image (historical forest extent)” and “Baseline growing season (historical forest extent)”.",
+   "fix": "`pipeline.py` checks the older growing-season picture for forest sites. `infer.py` explains why: cleared forest should still reach the next check."
+  },
+  {
+   "where": "speech and visible string starting “See? The new picture would make ReSeed say STOP”",
+   "claim": "The current Rondônia image would definitely fail the forest check.",
+   "problem": "E reports its baseline forest fraction and current NDVI, not its current-image ForestNet fraction. It supports a risk of rejection, not this definite result.",
+   "evidence": "The Jaci-Paraná row reports “81 % forest tiles (Forest)” under “ForestNet (baseline)” and “0.85 → 0.63” under NDVI.",
+   "fix": "See? The new picture might make ReSeed say STOP, so it judges the old one."
+  },
+  {
+   "where": "visible strings “A: the 2020 picture, before the fire” and “B: the 2026 picture, after the fire”",
+   "claim": "The displayed Dixie images are from 2020 and 2026.",
+   "problem": "E establishes the fire year, but not either image date. Fixed dates should not be presented as verified ReSeed imagery metadata.",
+   "evidence": "The README describes “2021 Dixie Fire” but supplies no dates for the displayed images.",
+   "fix": "A: the old picture, before the fire\nB: the new picture, after the fire"
+  }
+ ],
+ "general_cs_errors": [
+  {
+   "where": "classifier text",
+   "claim": "A classifier also says how sure it is, from 0 % to 100 %.",
+   "problem": "Not every classifier outputs a probability or confidence score; some return only a class label. ForestNet does output probabilities, so scope the second sentence to this model.",
+   "fix": "A **classifier** sorts things into groups, like *forest* or *not forest*. ForestNet also gives a forest score, from 0 % to 100 %."
+  }
+ ],
+ "hard_for_8yo": [
+  {
+   "where": "view-gate text",
+   "text": "ForestNet first asks: is this a **satellite** tile, an **aerial** photo or a **ground** photo? Then the matching expert names what it sees.",
+   "simpler": "ForestNet first asks: was this picture taken from **space**, from **the air** or from **the ground**? Then the matching expert names what it sees."
+  },
+  {
+   "where": "ai-in-browser text",
+   "text": "The real ForestNet runs right here in your web browser, with the same numbers (weights) as the Python version.",
+   "simpler": "ForestNet learns numbers called **weights** from practice pictures. It uses those numbers to help sort new pictures."
+  },
+  {
+   "where": "visible string starting “ReSeed judges the old growing-season picture”",
+   "text": "ReSeed judges the **old growing-season picture**, so cleared or burned forest still counts as forest land.",
+   "simpler": "ReSeed checks an **old picture from when plants were growing**, so cut-down or burned forest can still count as forest land."
+  },
+  {
+   "where": "visible string starting “Bright green fields are farms”",
+   "text": "Bright green fields are farms, not forest. Trees make bumpy, shadowy texture.",
+   "simpler": "These bright green fields are farms, not forest. Tree tops look bumpy and cast shadows."
+  }
+ ],
+ "safety_or_tone": [
+  {
+   "where": "visible string starting “Hee hee! The cut forest looks like a field now”",
+   "problem": "Without an explicit character or correction attached, this sounds like celebrating forest loss and leaves a false “never plant again” message.",
+   "fix": "A tricky disguise! The cut forest looks like a field now. Check the old picture so ReSeed does not miss it!"
+  }
+ ],
+ "verdict": "The core forest-check lesson matches E, but browser-parity claims, image dates and a definite current-image STOP result need verification or softer wording."
+}

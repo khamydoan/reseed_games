@@ -1,0 +1,61 @@
+{
+ "factual_issues": [
+  {
+   "where": "D: Real NDVI of the Ozarks oak forest",
+   "claim": "These twelve values are real monthly NDVI measurements of an Ozarks oak forest.",
+   "problem": "The excerpts describe monthly NDVI calculations but provide no Ozarks measurements or source for these values. Present them as practice data unless their origin is verified.",
+   "evidence": "E describes \"monthly NDVI for the year the image was taken (the phenology curve: does it green up?)\" but supplies no measured Ozarks time series.",
+   "fix": "Practice NDVI for an Ozarks oak forest, month by month. How many months are below 0.30?"
+  }
+ ],
+ "general_cs_errors": [
+  {
+   "where": "D: Your ndvi() spell works for any numbers",
+   "claim": "Your ndvi() spell works for any numbers, in the right order!",
+   "problem": "The displayed Python function divides by nir + red. When that sum is zero, it raises ZeroDivisionError.",
+   "fix": "Your ndvi() spell works when red and NIR don't add up to zero!"
+  },
+  {
+   "where": "D: Water scores **below zero**",
+   "claim": "Water always has negative NDVI, and this function works for any numbers.",
+   "problem": "Water often has negative NDVI, but not always; sediment, algae and mixed pixels can affect it. The function also fails when its denominator is zero.",
+   "fix": "This lake scores **below zero**, as water often does. One spell, many inputs: that's the power of functions!"
+  },
+  {
+   "where": "C/D: Let's add a safety check",
+   "claim": "Let's add a safety check: if the trip is too long, land instead of flying.",
+   "problem": "The shown check returns before subtracting battery. It skips the requested flight; it neither commands nor models a landing.",
+   "fix": "Let's add a game safety check: if the trip is too long, skip that flight."
+  }
+ ],
+ "hard_for_8yo": [
+  {
+   "where": "C/D: This is a challenge spell",
+   "text": "This is a challenge spell. Take your time, and the scaffolding will help you.",
+   "simpler": "This is a challenge spell. Take your time, and the hints will help you."
+  },
+  {
+   "where": "B: py-dict, reseed",
+   "text": "`species.py` keeps the native seeds of every biome in a dictionary called `BIOMES` (game version: fewer details per seed).",
+   "simpler": "`species.py` lists seeds from each forest type it covers in a dictionary called `BIOMES` (game version: fewer details per seed)."
+  }
+ ],
+ "safety_or_tone": [
+  {
+   "where": "C/D: Crikey, minus ten percent?; D: **−10 %**?",
+   "problem": "The crash predictions confuse an impossible game battery value with real drone behavior and add unnecessary alarm. A negative counter reveals a missing model check, not a guaranteed crash into trees.",
+   "fix": "Crikey, minus ten percent? Our game let that drone use more charge than it had!"
+  },
+  {
+   "where": "C/D: Beauty, Tuki lands safe and sound!",
+   "problem": "This presents a simple game check as sufficient real-flight planning and claims a landing the code does not perform. Real planning must also account for return travel, reserve power, weather and other hazards.",
+   "fix": "Beauty, Tuki skips that flight! Real pilots also plan the way home and keep spare power."
+  },
+  {
+   "where": "D: Safe! Tuki lands with **40 %** left.",
+   "problem": "The 25% ReSeed reserve is supported by E, but this game code only declines another flight; it does not demonstrate a safe landing.",
+   "fix": "Tuki skips the next flight with **40 %** left. ReSeed's real `Drone` in `logistics.py` also keeps a 25 % battery reserve."
+  }
+ ],
+ "verdict": "The Python lessons are mostly sound; label unverified NDVI data as practice values, limit the formula's claims, and distinguish the game's battery check from real drone safety."
+}

@@ -1,0 +1,67 @@
+{
+ "factual_issues": [
+  {
+   "where": "C [sprout] Fun fact: we built these very games / D Fun fact: we built these very games",
+   "claim": "These games were built inside a conda environment called games.",
+   "problem": "The excerpts do not document the games' development environment. This is an unsupported project-history claim, not a demonstrated falsehood.",
+   "evidence": "E documents ReSeed's environment as \"name: reseed\" and gives \"conda env create -f environment.yml && conda activate reseed\"; it provides no build history for these games.",
+   "fix": "Fun fact: you can brew a conda environment called `games` for your own game projects!"
+  }
+ ],
+ "general_cs_errors": [
+  {
+   "where": "B virtual-environment",
+   "claim": "Projects never mix, so one project can't break another.",
+   "problem": "Virtual environments separate installed libraries, but they are not complete sandboxes. Projects can still share files, external tools, and other resources.",
+   "fix": "A **virtual environment** is a private cauldron for one project's libraries. Keeping libraries apart helps stop one project's updates from breaking another."
+  },
+  {
+   "where": "B environment-yml",
+   "claim": "One command rebuilds the same cauldron on any computer.",
+   "problem": "An environment file with unpinned dependencies does not guarantee identical versions, and package availability differs across operating systems and hardware.",
+   "fix": "A recipe file for an environment: its **name**, its **channels** (where conda shops) and its **dependencies** (needed tools). One command follows the recipe; results can vary by computer."
+  },
+  {
+   "where": "B conda-env / D Your first cauldron!",
+   "claim": "Always activate before you pip install; creation, activation, and installation must always happen in that order.",
+   "problem": "Activation is a useful workflow, not a technical requirement. An environment's Python can be invoked directly, and tools can explicitly target an environment.",
+   "fix": "`conda create -n NAME` makes an environment and `conda activate NAME` steps into it. The prompt usually shows `(NAME)`. In this game, activate **before** you `pip install`!"
+  },
+  {
+   "where": "D Stop! No cauldron is active",
+   "claim": "Without activation, installation would go into the computer's own Python.",
+   "problem": "This is not generally true. In particular, uv pip install can discover a local .venv without activation and normally refuses to install into system Python unless explicitly requested.",
+   "fix": "[y]Pause! In this game, step into .venv before pouring. Real uv can find that cauldron even when you haven't stepped in![/y]"
+  },
+  {
+   "where": "B version-conflict",
+   "claim": "Fix incompatible library requirements by giving each library its own environment.",
+   "problem": "Separate environments work for independently run tools, but do not resolve conflicting libraries needed together in one Python process. That situation requires compatible versions or changed dependencies.",
+   "fix": "Two tools may need versions that can't fit together, like **numpy<2** and **numpy>=2**. If the tools run separately, give each its own environment. (game version: the two map tools are made up)"
+  }
+ ],
+ "hard_for_8yo": [
+  {
+   "where": "C [pix] A brand-new cauldron! / D A brand-new cauldron!",
+   "text": "A brand-new cauldron! But look at the prompt: it still says (base).",
+   "simpler": "A brand-new cauldron! But look where you type: the name still says (base)."
+  },
+  {
+   "where": "C [pix] Whoosh, that was fast! / D Whoosh, that was fast!",
+   "text": "Whoosh, that was fast! Inside a uv project, uv add rasterio also writes the potion into pyproject.toml.",
+   "simpler": "Whoosh, that was fast! In a uv project, uv add rasterio also saves the potion's name in the recipe, pyproject.toml."
+  },
+  {
+   "where": "B version-conflict reseed",
+   "text": "ReSeed's `pyproject.toml` asks for `numpy>=1.26`: any numpy from 1.26 upward is allowed.",
+   "simpler": "ReSeed's recipe, `pyproject.toml`, asks for `numpy>=1.26`: the `>=` sign means version 1.26 or newer."
+  },
+  {
+   "where": "D old-map-tool wants",
+   "text": "old-map-tool wants `numpy<2` · new-ndvi-tool wants `numpy>=2`",
+   "simpler": "old-map-tool wants numpy below 2 · new-ndvi-tool wants numpy 2 or newer"
+  }
+ ],
+ "safety_or_tone": [],
+ "verdict": "The potion theme is age-friendly and mostly faithful to ReSeed, but the unsupported development claim and absolute promises about isolation, activation, and reproducibility should be revised."
+}

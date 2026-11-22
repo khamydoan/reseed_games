@@ -1,0 +1,105 @@
+{
+ "factual_issues": [
+  {
+   "where": "gpu-memory; strings mentioning the project VM",
+   "claim": "The project's A100 GPUs have 80 GB each; the project VM has four of them.",
+   "problem": "The supplied excerpts do not establish that ReSeed owns or uses this GPU machine. Present it as game equipment rather than project hardware.",
+   "evidence": "E describes \"Azure OpenAI helpers\" and a \"Local ReSeed server for demo day\"; it gives no A100 hardware specification.",
+   "fix": "Our pretend GPU garage has four A100 GPUs with 80 GB each."
+  },
+  {
+   "where": "quantization — reseed",
+   "claim": "`reseed/classify/export.py` saves ForestNet's weights as float16 and checks that answers still match PyTorch.",
+   "problem": "Neither this export file nor its precision and validation behavior is established by the supplied excerpts.",
+   "evidence": "E says, \"The static site on GitHub Pages runs ForestNet in the browser,\" but provides no export code or float16 claim.",
+   "fix": "ReSeed's website runs ForestNet right in the browser. The local demo server also runs ForestNet with PyTorch (`reseed/server.py`)."
+  },
+  {
+   "where": "llama-cpp — reseed",
+   "claim": "ReSeed's website works offline: everything is bundled.",
+   "problem": "Working without an Azure key and running inference in the browser do not establish offline availability or bundled assets. No README excerpt supports this claim.",
+   "evidence": "E says, \"The public website works without it; the local server adds the second opinion.\" Here, \"it\" refers to the API key.",
+   "fix": "ReSeed's public website needs no Azure key: ForestNet runs right in the browser (`reseed/server.py`)."
+  },
+  {
+   "where": "kv-cache — reseed",
+   "claim": "`reseed/server.py` shrinks each picture to at most 1024 × 1024 before asking gpt-6-astra.",
+   "problem": "The supplied server excerpt establishes upload and decoded-image limits, not this resizing step.",
+   "evidence": "E shows \"MAX_UPLOAD = 12 * 1024 * 1024\" and \"MAX_PIXELS = 40_000_000\"; it shows no 1024 × 1024 resize.",
+   "fix": "`reseed/server.py` sets picture-size limits: 12 MB for uploads and 40 million pixels, to keep huge pictures from using too much memory."
+  },
+  {
+   "where": "vllm — reseed",
+   "claim": "Start ReSeed's demo server with `python -m reseed serve`.",
+   "problem": "The supplied excerpts document a different launch command and do not establish this alias.",
+   "evidence": "E documents \"python -m reseed.server            # http://localhost:8000\".",
+   "fix": "ReSeed's own demo server is FastAPI (`python -m reseed.server`, port 8000). It sends gpt-6-astra one paid question at a time, at least 2 s apart (`reseed/server.py`)."
+  }
+ ],
+ "general_cs_errors": [
+  {
+   "where": "gpu-memory; speech and strings starting “A model's weights must fit”",
+   "claim": "A model must fit in the GPU's own memory.",
+   "problem": "This is not a general requirement: inference can use CPU memory, split a model across GPUs, or offload parts between CPU and GPU. The existing game-version qualifier only labels the model sizes.",
+   "fix": "For this GPU-only game, the model's weights must fit across the chosen GPUs."
+  },
+  {
+   "where": "quantization — text",
+   "claim": "The model gets up to 4 × smaller and only a little less exact.",
+   "problem": "Quantization does not guarantee only a small quality loss. Effects depend on the model, method, bit width, and task; weight compression also does not shrink every part of runtime memory equally.",
+   "fix": "The weights can get nearly 4 × smaller, but answers may get worse. Test the model to see!"
+  },
+  {
+   "where": "speech and string starting “llama.cpp is a food truck”",
+   "claim": "llama.cpp uses one small GGUF file on a laptop.",
+   "problem": "GGUF is a file format, not a guarantee of small size. Models can be much larger than a laptop's memory and can use split files.",
+   "fix": "llama.cpp is a food truck: it can run a GGUF model that fits on your laptop. Send each customer to the right one!"
+  },
+  {
+   "where": "string starting “**vLLM** = a big kitchen”",
+   "claim": "llama.cpp runs a GGUF file anywhere.",
+   "problem": "It still needs compatible hardware and enough memory; GGUF files do not run on every device.",
+   "fix": "**vLLM** = a big kitchen for crowds on server GPUs. **llama.cpp** = a food truck that runs GGUF models on many computers!"
+  }
+ ],
+ "hard_for_8yo": [
+  {
+   "where": "gpu-memory — text",
+   "text": "**Weights = parameters × bytes**",
+   "simpler": "**Weight memory = number of stored settings × bytes per setting**"
+  },
+  {
+   "where": "quantization — text",
+   "text": "Store every number with fewer bits: 16-bit = 2 bytes, 8-bit = 1 byte, 4-bit ≈ half a byte.",
+   "simpler": "Use fewer bits—the computer's tiny 0s and 1s—to store numbers: 16 bits = 2 bytes, 8 bits = 1 byte, 4 bits = half a byte."
+  },
+  {
+   "where": "vllm — text",
+   "text": "A serving engine for big server GPUs.",
+   "simpler": "Software that runs AI models on big server GPUs."
+  },
+  {
+   "where": "string starting “-tp 4 splits”",
+   "text": "-tp 4 splits the model across 4 GPUs (tensor parallel).",
+   "simpler": "-tp 4 shares the model's work across 4 GPUs working together."
+  },
+  {
+   "where": "Shorter context",
+   "text": "Shorter context",
+   "simpler": "Less text to remember"
+  },
+  {
+   "where": "speech starting “I'll bring the terminal”",
+   "text": "I'll bring the terminal. Welcome to the Model Garage!",
+   "simpler": "I'll bring a command window to type in. Welcome to the Model Garage!"
+  }
+ ],
+ "safety_or_tone": [
+  {
+   "where": "string starting “Keep a private diary chat”",
+   "problem": "“Nothing leaves the room” promises privacy from local execution alone. Network settings, other software, and backups can still expose data; children should not learn an unconditional privacy guarantee.",
+   "fix": "Use a pretend diary for an offline chat on your own laptop. No cloud AI needed."
+  }
+ ],
+ "verdict": "The garage metaphor works well, but unsupported ReSeed details, absolute memory and quantization claims, and the privacy promise need correction before release."
+}

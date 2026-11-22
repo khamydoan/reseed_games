@@ -1,0 +1,89 @@
+{
+ "factual_issues": [
+  {
+   "where": "le-cuda / reseed",
+   "claim": "ForestNet takes about 12 minutes on one GPU (README), and train.py uses the quoted device-selection code.",
+   "problem": "The supplied E contains neither the training code nor the README timing. These precise ReSeed claims are not supported by the provided evidence.",
+   "evidence": "E supplies excerpts headed \"reseed/ndvi.py\", \"reseed/logistics.py\" and \"reseed/polygonize.py\", but no training or README excerpt.",
+   "fix": "In PyTorch, `torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")` picks CUDA when available, or the CPU otherwise."
+  },
+  {
+   "where": "le-port / reseed",
+   "claim": "`python -m reseed serve` answers on port 8000, and `/api/health` returns the stated JSON.",
+   "problem": "E contains no server or command-line excerpt establishing this port, route or response. The same unsupported attribution appears in the network terminal and its feedback.",
+   "evidence": "The supplied E excerpts are headed \"reseed/ndvi.py\", \"reseed/logistics.py\" and \"reseed/polygonize.py\"; none shows `serve` or `/api/health`.",
+   "fix": "In this game, the pretend server answers on port **8000**, and `/api/health` replies with `{\"ok\": true, …}`."
+  },
+  {
+   "where": "le-dict / reseed",
+   "claim": "`reseed/species.py` keeps every biome's native seeds, climate and animals in `BIOMES`.",
+   "problem": "E establishes that BIOMES is imported from species.py, but does not show its entries or fields. In particular, it does not establish the animal-list lookup used by the game.",
+   "evidence": "\"from reseed.species import BIOMES\"",
+   "fix": "`reseed/logistics.py` imports `BIOMES` from `reseed/species.py`. Our game adds an animal lookup to open Koa's cage."
+  },
+  {
+   "where": "le-condition / reseed; le-lists / reseed",
+   "claim": "ReSeed's healthy threshold is 0.60, and ndvi.py numbers health classes from 0 = healthy.",
+   "problem": "The threshold definitions are not supplied. The shown function returns a dictionary of labels, not a numbered health class, so the numbering claim is also unsupported.",
+   "evidence": "\"from reseed.config import HEALTH_CLASSES\" and \"return {\\\"key\\\": key, \\\"label\\\": label, \\\"advice\\\": advice}\"",
+   "fix": "`reseed/ndvi.py` uses `if value >= lower:` to choose a health label. Our game uses 0.6 for its healthy-score door.\n`reseed/polygonize.py` ranks lost-forest patches biggest first. Python list positions start at 0."
+  },
+  {
+   "where": "[g]3 floors up: the roof!",
+   "claim": "15 acorns fill one 159 mL roll.",
+   "problem": "The calculation estimates seeds available after packing gaps and dispenser loss; it does not calculate how many acorns fill the roll. E also does not supply the acorn volume used in the game.",
+   "evidence": "\"seeds per roll = roll volume x packing x (1 - dispenser loss) / seed volume\"; \"DISPENSER_LOSS = 0.10 # seeds that jam or stay in the roll\"",
+   "fix": "[g]3 floors up: the roof! (Game estimate: 15 acorns delivered per roll.)[/g]"
+  }
+ ],
+ "general_cs_errors": [
+  {
+   "where": "le-cuda / text; In PyTorch, a graphics card (GPU) is called",
+   "claim": "A graphics card is called cuda, and GPU training is necessarily much faster.",
+   "problem": "CUDA is a computing platform, not another name for a graphics card. PyTorch uses `cuda` for compatible GPU devices, not all graphics cards. Speed depends on the task and hardware.",
+   "fix": "PyTorch can train on the **cpu**, or use **cuda** for a compatible GPU. A GPU does many calculations at once, so it can train big models faster."
+  },
+  {
+   "where": "[hoot] Whoo-hoo! Thank you, Sprout.",
+   "claim": "Training on a GPU really is faster.",
+   "problem": "This is stated as a general fact, but small workloads or data-transfer overhead can make GPU training slower.",
+   "fix": "Whoo-hoo! Thank you, Sprout. A GPU can make training faster!"
+  },
+  {
+   "where": "doors = [\"red\", \"blue\", \"green\", \"gold\"]",
+   "claim": "`doors[{{v}}].open()` opens an item in the displayed list.",
+   "problem": "The list contains Python strings, which have no `.open()` method. This would raise AttributeError, even if a separate game door API existed.",
+   "fix": "doors = [\"red\", \"blue\", \"green\", \"gold\"]\nroom.open_door(doors[{{v}}])  # game action: Pix is behind green"
+  },
+  {
+   "where": "[r]Port 22 speaks SSH, not web.",
+   "claim": "Sending a web request to an SSH port makes the packet bounce back.",
+   "problem": "A protocol mismatch can produce an error or close the connection; it does not make the original packet bounce back. The port number itself also does not enforce SSH.",
+   "fix": "[r]This game's port 22 runs SSH, not web. The web request won't work![/r]"
+  }
+ ],
+ "hard_for_8yo": [
+  {
+   "where": "[hoot] Whoo! I'm stuck on a high ledge.",
+   "text": "That door opens when the forest score is healthy: NDVI ≥ 0.6.",
+   "simpler": "Whoo! I'm stuck on a high ledge. The door opens when NDVI, our plant-green score, is 0.6 or more."
+  },
+  {
+   "where": "[tuki] Squawk! Koa is locked in the database room.",
+   "text": "Look up the right biome to open the cage!",
+   "simpler": "Squawk! Koa is locked in the database room. Find his forest type, called a biome, to open the cage!"
+  },
+  {
+   "where": "le-dict / text",
+   "text": "A **dict** finds a value by its key, like a word in a dictionary. `BIOMES[\"southern_eucalypt\"]` jumps straight to Kangaroo Island's forest.",
+   "simpler": "A **dict** stores things under names called keys. In our game, `BIOMES[\"southern_eucalypt\"]` finds information about Koa's forest."
+  },
+  {
+   "where": "[pix] Terminals run real-looking Python.",
+   "text": "Terminals run real-looking Python. Change the code, and the room changes!",
+   "simpler": "These code screens, called terminals, show Python-style code. Change it, and the room changes!"
+  }
+ ],
+ "safety_or_tone": [],
+ "verdict": "The playful escape-room setup works well, but correct the CUDA and Python examples and clearly separate game rules from ReSeed details not established by E."
+}

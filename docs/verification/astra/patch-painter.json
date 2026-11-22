@@ -1,0 +1,81 @@
+{
+ "factual_issues": [
+  {
+   "where": "pp-split / reseed",
+   "claim": "`polygonize.split_patch` cuts bigger patches into squares; `pipeline.py` flies the largest patch that fits (2–50 ha) first.",
+   "problem": "The excerpts support a 50-hectare mission limit and splitting larger patches, but do not establish square-shaped pieces, a 2-hectare minimum, or the pipeline's flight-selection rule.",
+   "evidence": "E: `MISSION_MAX_HA = 50 # one drone mission; bigger patches are split into sub-missions`. Neither `split_patch` nor `pipeline.py` is shown.",
+   "fix": "`config.py`: `MISSION_MAX_HA = 50`. Bigger patches are split into smaller missions. In our game, cut them with a square grid and pick the biggest patch from 2–50 ha first."
+  },
+  {
+   "where": "[koa] Bonzer, that's our first mission patch!",
+   "claim": "ReSeed's real pipeline picked the same one.",
+   "problem": "This asserts a real execution result that the supplied excerpts do not establish.",
+   "evidence": "E establishes `MISSION_MAX_HA = 50`, but supplies no pipeline execution or selected mission patch.",
+   "fix": "Bonzer, that's our first mission patch! You picked the biggest one that fits our game rules."
+  },
+  {
+   "where": "[pix] ReSeed does this in splitpatch / D: ReSeed does this in `split_patch`",
+   "claim": "ReSeed's splitting function uses squares of about 707 m.",
+   "problem": "The mission-area limit is supported, but the function's implementation and square dimensions are not shown. Also, 707 × 707 m is approximately, not exactly, 50 hectares.",
+   "evidence": "E: `MISSION_MAX_HA = 50 # one drone mission; bigger patches are split into sub-missions`. The provided `polygonize.py` excerpt contains no splitting implementation.",
+   "fix": "ReSeed limits each mission to 50 hectares. A square about 707 m on each side is about that size."
+  }
+ ],
+ "general_cs_errors": [
+  {
+   "where": "pp-hectare / text",
+   "claim": "One Sentinel-2 pixel is 10 m × 10 m.",
+   "problem": "Sentinel-2 bands have different native resolutions: 10, 20, or 60 metres. The calculation is correct for ReSeed's stated 10-metre grid, not every Sentinel-2 pixel.",
+   "fix": "On ReSeed's 10 m grid, one pixel is 10 m × 10 m = 100 m² = **0.01 ha**. One **hectare** is 100 m × 100 m, so it holds **100 of these pixels**."
+  },
+  {
+   "where": "[pix] Now sweep the speckle! / matching D string",
+   "claim": "Patches smaller than 0.5 ha are just noise.",
+   "problem": "A size filter does not prove that a patch is noise. Real forest loss can cover less than half a hectare.",
+   "fix": "Now sweep the speckle! ReSeed skips patches smaller than 0.5 ha; some may be real."
+  },
+  {
+   "where": "[pix] ReSeed's real rule uses 0.20 / matching D string",
+   "claim": "A drop that big, two seasons in a row, means lost forest.",
+   "problem": "A vegetation-index drop is evidence used to flag possible loss, not proof of forest loss. The wording also leaves out that recent seasonal peaks are compared with a baseline peak.",
+   "fix": "ReSeed checks for a 0.20 greenness drop from an earlier peak across two recent growing seasons: a clue to forest loss."
+  },
+  {
+   "where": "[pix] 💡 Lost forest has big drops / matching D string",
+   "claim": "Lost forest has big drops, healthy forest only wiggles.",
+   "problem": "Healthy vegetation can show large seasonal changes, and forest loss does not always produce a neatly separated drop. This is valid as a property of the invented game map, not a general biological rule.",
+   "fix": "💡 On this game map, lost forest has big drops and healthy forest only wiggles. Find the gap!"
+  },
+  {
+   "where": "[koa] G'day! One drone mission covers at most 50 hectares / matching D string",
+   "claim": "One drone mission covers at most 50 hectares.",
+   "problem": "Fifty hectares is ReSeed's configured planning limit, not a universal drone capability. Actual coverage depends on the drone, payload, conditions, and task.",
+   "fix": "G'day! ReSeed sets a 50-hectare limit per mission, so bigger patches need cutting."
+  }
+ ],
+ "hard_for_8yo": [
+  {
+   "where": "pp-threshold / reseed",
+   "text": "`detect.py` counts a peak-NDVI drop of 0.20 or more (`DECLINE_ABS` in `config.py`, or a 25 % drop), two recent seasons in a row, as loss. `polygonize.py` turns the mask into patches.",
+   "simpler": "ReSeed compares each season's greenest reading with an earlier one. A drop of 0.20 or more—or 25%—lasting two recent growing seasons is a loss clue. `polygonize.py` turns the yes/no map into patches."
+  },
+  {
+   "where": "pp-sorting / text",
+   "text": "**Bubble sort** compares two neighbours and swaps them if they are in the wrong order, pass after pass. Python's `sort()` is called **Timsort**; on short lists it does insertion sort.",
+   "simpler": "**Bubble sort** checks neighbours and swaps them into order, again and again. Python uses **Timsort**. For short lists, it can use **insertion sort**: tuck each item into its right spot."
+  },
+  {
+   "where": "D: Tap a cream patch to measure it.",
+   "text": "Tap a cream patch to measure it. Keep if **≥ 0.5 ha** (50 pixels), sweep if smaller.",
+   "simpler": "Tap a cream patch to measure it. Keep **50 pixels or more** (0.5 hectares); sweep smaller patches."
+  },
+  {
+   "where": "[pix] Map two: a burn scar. / matching D string",
+   "text": "Map two: a burn scar. Its edges are trickier!",
+   "simpler": "Map two: land burned by a fire. Its edges are trickier!"
+  }
+ ],
+ "safety_or_tone": [],
+ "verdict": "The core grid, flood-fill, area, and sorting lessons are sound; qualify real-world detection claims and remove unsupported claims about ReSeed's mission selection and splitting details."
+}

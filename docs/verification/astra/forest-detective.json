@@ -1,0 +1,69 @@
+{
+ "factual_issues": [
+  {
+   "where": "C/D: RESEED needs a drop of 0.20 or more",
+   "claim": "RESEED requires an absolute drop of at least 0.20 in both recent seasons.",
+   "problem": "ReSeed also accepts a relative drop of at least 25%. A smaller absolute drop can therefore qualify. The two-seasons card correctly includes this alternative, but these instructions omit it.",
+   "evidence": "E, detect.py: \"LOSS = decline_k >= 0.20 or decline_k / baseline_peak >= 0.25, in every recent year\".",
+   "fix": "RESEED needs a drop of 0.20 or more, or 25%, in both recent seasons. Check the other clues, then stamp!"
+  },
+  {
+   "where": "D: Lost patch ≥ 1 ha: dropped ≥ 0.20",
+   "claim": "A burn-or-clearing clue is required for a lost patch to qualify.",
+   "problem": "The real rule also allows persistent loss without that clue when the latest absolute decline is at least 0.35. The displayed condition excludes that route.",
+   "evidence": "E, detect.py: \"deforested = forest_extent & persistent & (disturbed | (np.nan_to_num(decline) >= 0.35))\".",
+   "fix": "Lost patches total ≥ 1 ha: down ≥ 0.20 (or 25%) in BOTH recent seasons + either a burn-or-clearing clue or latest drop ≥ 0.35"
+  },
+  {
+   "where": "C/D: All thirteen cases match ReSeed! Your if / elif chain IS ReSeed's rule; D: Your if / elif flowchart solved all",
+   "claim": "The game's chain is exactly ReSeed's rule.",
+   "problem": "Matching the thirteen examples does not establish that the rules are identical. The displayed question blocks omit UNKNOWN and STRESSED outcomes and numerical checks used for SEASONAL, among other details.",
+   "evidence": "E, summarise: \"elif seas_frac >= 0.3\"; \"elif counts[\\\"unknown\\\"] / max(forest_px, 1) > 0.5\"; and \"elif counts[\\\"stressed / recovering\\\"] > counts[\\\"healthy forest\\\"] + counts[\\\"seasonal leaf-off\\\"]\".",
+   "fix": "All thirteen cases match ReSeed! Your if / elif chain is a game version of ReSeed's rule."
+  }
+ ],
+ "general_cs_errors": [
+  {
+   "where": "D: <div class='big ok'>No past dips</div>No extra past seasons were checked here.",
+   "claim": "There were no past dips when no extra past seasons were checked.",
+   "problem": "Missing observations cannot establish that an event did not happen. This confuses missing evidence with evidence of absence.",
+   "fix": "<div class='big'>Past dips unknown</div>No extra past seasons were checked here."
+  },
+  {
+   "where": "B: recovering",
+   "claim": "If greenness returns after a large dip, nature is healing by itself.",
+   "problem": "Returning greenness alone cannot establish natural forest recovery or its cause. Shrubs, crops, or planted vegetation can also restore greenness. This is a useful monitoring clue, not proof that the original forest is healing unaided.",
+   "fix": "If greenness dipped a lot in a past year but is back now, nature may be healing by itself. Hold off on seeds: keep watching."
+  }
+ ],
+ "hard_for_8yo": [
+  {
+   "where": "B: burn-clue",
+   "text": "Short-wave infrared light shows bare or burned ground. If NBR drops by 0.10 or more, that is a clue of burning or clearing, not proof of fire.",
+   "simpler": "Satellites use invisible light to spot changes in the ground. If a reading called NBR drops by 0.10 or more, it hints at burning or clearing—not proof of fire."
+  },
+  {
+   "where": "D: Lost patches of 1 ha or more, down in both recent seasons, with the burn-or-clearing clue.",
+   "text": "Lost patches of 1 ha or more, down in both recent seasons, with the burn-or-clearing clue.",
+   "simpler": "Game version: lost patches cover at least 1 hectare (about two football fields), with drops in both seasons and a burn-or-clearing clue."
+  },
+  {
+   "where": "B: if-elif",
+   "text": "A rule checks its questions from top to bottom, and the first true one wins. Order matters! ReSeed's rule is a rule of thumb: NDVI cannot tell a plantation from a natural forest.",
+   "simpler": "An if / elif chain checks from top to bottom: the first true answer wins. Order matters! ReSeed's greenness reading, NDVI, cannot tell a planted tree farm from a natural forest."
+  },
+  {
+   "where": "D: Old normal",
+   "text": "Old normal",
+   "simpler": "Usual greenness before"
+  }
+ ],
+ "safety_or_tone": [
+  {
+   "where": "C/D: Now we know which patches need seeds. On to the Plan island to draw them!",
+   "problem": "This presents a satellite-based screening result as a certain planting decision. A brief check-before-action cue would preserve the adventure while avoiding the implication that detected loss automatically means seeding is appropriate.",
+   "fix": "Now we have patches to check for planting. On to the Plan island to draw them!"
+  }
+ ],
+ "verdict": "An engaging, mostly faithful game; label the chain as a game version, correct the threshold wording, and distinguish missing data and returning greenness from proof."
+}

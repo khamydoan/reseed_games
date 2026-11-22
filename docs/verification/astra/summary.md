@@ -1,0 +1,36 @@
+# gpt-6-astra content review
+
+## regrow-rescue
+
+The game is approachable and mostly aligned with ReSeed, but should label invented field outcomes, verify the time-lapse attribution, and avoid treating rising NDVI as proof of forest recovery.
+
+- **factual_issues** · rr-s-curve / reseed: The supplied excerpts do not establish this duration, formula, or implementation. They support monitoring NDVI, not this specific attribution. → The README sends **Regrow** back to the NDVI check to watch for change. Our game's smooth growth curve is a pretend example of a forest growing back.
+- **factual_issues** · [koa] Our seeds are in the ground / corresponding D string: This sounds like a completed real planting. E describes seed planning and flight-file generation, but does not establish that seeds were planted in Rondônia. → In our game, we've planted seeds in Rondônia. Now the animals need help to come home!
+- **factual_issues** · [koa] G'day! / corresponding D string: E does not establish this site-specific recovery pattern or the existence of one remaining patch. Label the scenario as fictional rather than a measured ReSeed result. → G'day! This is my home, Kangaroo Island. In our game, we're helping one small patch grow back after a fire.
+- **general_cs_errors** · [tuki] ReSeed keeps checking / corresponding D string: Higher NDVI indicates greener vegetation, not proof that planted trees survived, a native forest recovered, or animals returned. Grass and other vegetation can also raise NDVI. → ReSeed checks NDVI from space to look for greener leaves. That's a clue—not proof the forest is back!
+- **general_cs_errors** · rr-s-curve / text: Real forest recovery and NDVI do not necessarily follow the same smooth S-curve. NDVI varies with seasons and disturbances and can level off while trees keep growing. → Game version: our forest grows slowly, then fast, then levels off. On a chart that looks like a stretched **S**. Real forests and NDVI can rise and fall along the way.
+- **general_cs_errors** · Eats only eucalyptus leaves.: Koalas mainly eat eucalyptus leaves but occasionally eat leaves from other trees. 'Only' makes the statement false. → Eats mostly eucalyptus leaves.
+- **hard_for_8yo** · rr-regrow-monitor / text: When **NDVI** climbs back near the old forest's score, the forest is healing. → **NDVI** is a satellite score for green leaves. When it rises near the old forest's score, plants may be growing back.
+- **hard_for_8yo** · [koa] Be careful what you bring / corresponding D string: Be careful what you bring to a burn scar! → Be careful what you bring to land burned by fire!
+- **hard_for_8yo** · rr-corridor / reseed: The Borneo mix in `reseed/species.py` starts with Kadam, a native pioneer that 'closes the canopy in 3-4 years'. → The Borneo mix in `reseed/species.py` includes Kadam, a local tree that grows fast: its leafy treetops can meet in 3–4 years.
+- **hard_for_8yo** · · game version: ReSeed's verdict here is RECOVERING: · game version: ReSeed's verdict here is RECOVERING, so it would just keep watching → · game version: ReSeed says RECOVERING—growing back—so it would watch, not plant
+
+## lab-escape
+
+The playful escape-room setup works well, but correct the CUDA and Python examples and clearly separate game rules from ReSeed details not established by E.
+
+- **factual_issues** · le-cuda / reseed: The supplied E contains neither the training code nor the README timing. These precise ReSeed claims are not supported by the provided evidence. → In PyTorch, `torch.device("cuda" if torch.cuda.is_available() else "cpu")` picks CUDA when available, or the CPU otherwise.
+- **factual_issues** · le-port / reseed: E contains no server or command-line excerpt establishing this port, route or response. The same unsupported attribution appears in the network terminal and its feedback. → In this game, the pretend server answers on port **8000**, and `/api/health` replies with `{"ok": true, …}`.
+- **factual_issues** · le-dict / reseed: E establishes that BIOMES is imported from species.py, but does not show its entries or fields. In particular, it does not establish the animal-list lookup used by the game. → `reseed/logistics.py` imports `BIOMES` from `reseed/species.py`. Our game adds an animal lookup to open Koa's cage.
+- **factual_issues** · le-condition / reseed; le-lists / reseed: The threshold definitions are not supplied. The shown function returns a dictionary of labels, not a numbered health class, so the numbering claim is also unsupported. → `reseed/ndvi.py` uses `if value >= lower:` to choose a health label. Our game uses 0.6 for its healthy-score door.
+`reseed/polygonize.py` ranks lost-forest patches biggest first. Python list positions start at 0.
+- **factual_issues** · [g]3 floors up: the roof!: The calculation estimates seeds available after packing gaps and dispenser loss; it does not calculate how many acorns fill the roll. E also does not supply the acorn volume used in the game. → [g]3 floors up: the roof! (Game estimate: 15 acorns delivered per roll.)[/g]
+- **general_cs_errors** · le-cuda / text; In PyTorch, a graphics card (GPU) is called: CUDA is a computing platform, not another name for a graphics card. PyTorch uses `cuda` for compatible GPU devices, not all graphics cards. Speed depends on the task and hardware. → PyTorch can train on the **cpu**, or use **cuda** for a compatible GPU. A GPU does many calculations at once, so it can train big models faster.
+- **general_cs_errors** · [hoot] Whoo-hoo! Thank you, Sprout.: This is stated as a general fact, but small workloads or data-transfer overhead can make GPU training slower. → Whoo-hoo! Thank you, Sprout. A GPU can make training faster!
+- **general_cs_errors** · doors = ["red", "blue", "green", "gold"]: The list contains Python strings, which have no `.open()` method. This would raise AttributeError, even if a separate game door API existed. → doors = ["red", "blue", "green", "gold"]
+room.open_door(doors[{{v}}])  # game action: Pix is behind green
+- **general_cs_errors** · [r]Port 22 speaks SSH, not web.: A protocol mismatch can produce an error or close the connection; it does not make the original packet bounce back. The port number itself also does not enforce SSH. → [r]This game's port 22 runs SSH, not web. The web request won't work![/r]
+- **hard_for_8yo** · [hoot] Whoo! I'm stuck on a high ledge.: That door opens when the forest score is healthy: NDVI ≥ 0.6. → Whoo! I'm stuck on a high ledge. The door opens when NDVI, our plant-green score, is 0.6 or more.
+- **hard_for_8yo** · [tuki] Squawk! Koa is locked in the database room.: Look up the right biome to open the cage! → Squawk! Koa is locked in the database room. Find his forest type, called a biome, to open the cage!
+- **hard_for_8yo** · le-dict / text: A **dict** finds a value by its key, like a word in a dictionary. `BIOMES["southern_eucalypt"]` jumps straight to Kangaroo Island's forest. → A **dict** stores things under names called keys. In our game, `BIOMES["southern_eucalypt"]` finds information about Koa's forest.
+- **hard_for_8yo** · [pix] Terminals run real-looking Python.: Terminals run real-looking Python. Change the code, and the room changes! → These code screens, called terminals, show Python-style code. Change it, and the room changes!

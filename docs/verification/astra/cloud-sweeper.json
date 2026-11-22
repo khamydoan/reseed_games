@@ -1,0 +1,80 @@
+{
+ "factual_issues": [
+  {
+   "where": "pixel-numbers; C/D: A real 640 by 640 picture; D: A real picture needs 2,048,000 medians!",
+   "claim": "A ReSeed site picture is always 640 × 640 pixels.",
+   "problem": "The excerpt supports a configurable grid, not a fixed picture size. The pixel and median totals are correct for this example size, but should not be presented as universal.",
+   "evidence": "def site_geobox(lat: float, lon: float, size_m: float, res: float = 10.0); n = int(round(size_m / res)); shape=(n, n)",
+   "fix": "A 6.4 km-wide ReSeed site picture has 640 × 640 pixels of 10 m. By default, `load_sentinel2` loads 5 bands: blue, green, red, near-infrared and short-wave infrared."
+  },
+  {
+   "where": "C/D: Your forest's pictures were nearly cloud-free",
+   "claim": "The player's forest is Ketapang on Borneo, and its pictures were nearly cloud-free because of a lucky dry season.",
+   "problem": "E contains neither a site identification nor scene results or weather records supporting this account. Low cloud cover alone would not establish a dry-season explanation.",
+   "evidence": "E records scene metadata with \"cloud\" and \"clear_fraction\", but supplies no scene records, Ketapang location, or dry-season finding.",
+   "fix": "Some forest pictures can be nearly cloud-free: a lucky clear view! Let's practice finding clear patches where rainforests often hide under clouds."
+  }
+ ],
+ "general_cs_errors": [
+  {
+   "where": "cloud-mask",
+   "claim": "Sentinel-2 sends a scene classification layer (SCL) with every picture.",
+   "problem": "SCL is produced by ground processing for Sentinel-2 Level-2A products. It is not sent by the satellite with every image, and Level-1C products do not include it.",
+   "fix": "Sentinel-2 **Level-2A pictures** include a **scene classification layer (SCL)** made by computers on Earth. Each pixel gets a class number: 4 vegetation, 6 water, 8 and 9 cloud, 3 cloud shadow, 10 thin cirrus. (Game version: we mask big squares, the real mask works pixel by pixel.)"
+  },
+  {
+   "where": "median",
+   "claim": "A wild value, like a bright cloud, cannot drag the median away.",
+   "problem": "The median resists extreme values but is not immune to them. With two values, for example, one extreme value directly changes the median.",
+   "fix": "Sort the numbers and take the **middle** one. With an even count, take halfway between the two middle numbers. A wild value, like a bright cloud, usually changes the median less than it changes the **mean** (average)!"
+  },
+  {
+   "where": "composite",
+   "claim": "Take the median of every pixel and the clouds vanish!",
+   "problem": "A median alone does not guarantee cloud removal. Cloudy values can dominate, and a pixel masked in every scene remains missing rather than revealing the forest.",
+   "fix": "Stack pictures of the same place, taken on different days. Mask clouds, then take each pixel's median. Spots with no clear views stay empty!"
+  },
+  {
+   "where": "C/D: Five numbers: two are smaller",
+   "claim": "Five numbers: two are smaller and two are bigger than the median.",
+   "problem": "Repeated values may equal the median. The defining property here is position in the sorted list, not strict inequality.",
+   "fix": "Five sorted numbers: two come before the median and two come after it. Some can match! Count to the third tile to find the middle."
+  },
+  {
+   "where": "D: The computer sorts **every** stack at the same time",
+   "claim": "The computer sorts every stack at the same time.",
+   "problem": "Processing an entire array does not mean every stack is sorted simultaneously. Computers may process the stacks in sequence or in batches, and median algorithms need not fully sort them.",
+   "fix": "The computer finds the middle value for **every** stack, much faster than we can by hand…"
+  },
+  {
+   "where": "D: Sort, then take the middle: you found",
+   "claim": "Clouds and shadows lose every time!",
+   "problem": "This repeats an unconditional success guarantee for median compositing. It is only guaranteed by the chosen practice examples, not by the method.",
+   "fix": "Sort, then take the middle: you found the **median** three times. Clouds and shadows lost in these examples!"
+  }
+ ],
+ "hard_for_8yo": [
+  {
+   "where": "cloud-mask: reseed",
+   "text": "`reseed/acquire.py` keeps only classes 4, 5, 6, 7 and 11 (`S2_CLEAR_SCL`) and turns every other pixel into NaN, an empty value.",
+   "simpler": "`reseed/acquire.py` keeps classes 4, 5, 6, 7 and 11 (`S2_CLEAR_SCL`). Other pixels get NaN, a special marker that means “no usable number here.”"
+  },
+  {
+   "where": "pixel-numbers: text",
+   "text": "A picture is a grid of numbers: one number per pixel for each colour band. (Game version: brightness from 0 to 100. ReSeed uses reflectance, usually a number between 0 and 1.)",
+   "simpler": "A picture is a grid of numbers: each tiny square, or pixel, has a number for each kind of light. (Game version: brightness from 0 to 100. ReSeed measures reflected light, usually from 0 to 1.)"
+  },
+  {
+   "where": "C/D: Squawk! Clouds hide your forest",
+   "text": "Squawk! Clouds hide your forest. Tap every cloud, cloud shadow and thin cirrus square to mask it.",
+   "simpler": "Squawk! Clouds hide your forest. Tap clouds, their dark shadows and thin, wispy clouds called cirrus to mark squares to skip."
+  },
+  {
+   "where": "D: blue · green · red · near-infrared · SWIR",
+   "text": "blue · green · red · near-infrared · SWIR",
+   "simpler": "blue · green · red · two kinds of invisible infrared light"
+  }
+ ],
+ "safety_or_tone": [],
+ "verdict": "A strong, age-friendly activity once it qualifies the median's limits, explains a few technical terms, and removes unsupported claims about the real site's pictures."
+}

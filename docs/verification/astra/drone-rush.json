@@ -1,0 +1,56 @@
+{
+ "factual_issues": [],
+ "general_cs_errors": [
+  {
+   "where": "Hold thrust to climb and tilt to fly sideways",
+   "claim": "Let go of thrust to sink gently.",
+   "problem": "Stopping a real drone's thrust does not ensure a gentle descent. Clearly label this as a game control, including in the matching landing instructions and tips.",
+   "fix": "Game controls: hold thrust to climb and tilt to fly sideways. Release thrust for a gentle game landing."
+  }
+ ],
+ "hard_for_8yo": [
+  {
+   "where": "payload-battery / text",
+   "text": "A heavier drone needs more thrust, so the battery empties faster. Full payload cuts flight time by about a third.",
+   "simpler": "A heavier drone needs more lift, so its battery runs out sooner. Carrying the heaviest allowed load cuts flying time by about a third."
+  },
+  {
+   "where": "payload-battery / reseed",
+   "text": "`reseed/logistics.py`: endurance = 22 min × (1 − 0.35 × payload / 900 g); plans keep a 25 % battery reserve. (Game version: time runs faster.)",
+   "simpler": "`reseed/logistics.py`: flight time starts at 22 minutes and drops by 35% with a full 900 g load. Plans save a quarter of the battery. (Game version: time runs faster.)"
+  },
+  {
+   "where": "return-home / text",
+   "text": "Always save enough battery to fly home. Real autopilots have a **Return to Launch (RTL)** mode that flies home by itself.",
+   "simpler": "Always save enough battery to fly home. Many drones have a **Return to Launch (RTL)** setting that guides them back to where they took off."
+  }
+ ],
+ "safety_or_tone": [
+  {
+   "where": "💡 Fly **under** the power lines",
+   "problem": "This gives children direct advice to maneuver near power lines and moving birds, rather than keep a safe distance.",
+   "fix": "💡 These are game obstacles! Real pilots stay well away from power lines and birds instead of squeezing through gaps."
+  },
+  {
+   "where": "This valley has tall trees, busy birds and power lines",
+   "problem": "Finding gaps between these hazards is presented as a safe real-world flying strategy.",
+   "fix": "This game valley has trees, birds and power lines. In real life, choose a clear flying area far from these hazards!"
+  },
+  {
+   "where": "Big storm coming! Two seed packs for two patches",
+   "problem": "The mission encourages continuing flight into dangerous weather without distinguishing game challenges from safe real-world behavior.",
+   "fix": "Game-only storm challenge! Two seed packs, two patches and checkpoints. Real pilots land before storms arrive."
+  },
+  {
+   "where": "Rain makes us heavier and the gusts are strong",
+   "problem": "The encouragement reinforces flying through rain and strong gusts rather than landing.",
+   "fix": "Game rain and strong gusts! Real pilots would land safely and wait for better weather."
+  },
+  {
+   "where": "Fly in the dark with a tight battery",
+   "problem": "This frames a small battery margin as an exciting flying goal, undermining the card's reserve-battery lesson.",
+   "fix": "Game night flight: save enough battery to get home"
+  }
+ ],
+ "verdict": "The supplied ReSeed excerpt establishes no clear factual contradiction, but the game needs explicit game-only framing for its descent controls and hazardous flying challenges."
+}

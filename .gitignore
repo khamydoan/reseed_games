@@ -1,0 +1,9 @@
+# secrets never live here; the Azure key stays in ../reseed/.env
+.env
+*.key
+__pycache__/
+*.pyc
+.gstack/
+*.log
+.DS_Store
+audio/voice/*.raw.mp3

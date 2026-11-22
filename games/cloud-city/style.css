@@ -1,0 +1,109 @@
+/* g08 Cloud City: scene canvas on top, a control panel (job card + three big choice cards) below. */
+.cc-root { display: flex; flex-direction: column; }
+.cc-scene { position: relative; flex: 1; min-height: 0; }
+.cc-panel {
+  flex: none; display: flex; gap: 12px; padding: 10px 14px 14px; align-items: stretch;
+  background: var(--c-tint); border-top: 3px solid var(--ink); min-height: 158px;
+}
+.cc-job {
+  width: clamp(200px, 21vw, 300px); flex: none; background: #fff; border: 3px solid var(--ink); border-radius: 16px;
+  padding: 8px 12px; box-shadow: var(--shadow); font-size: 1rem; line-height: 1.25; overflow: hidden;
+}
+.cc-job h3 { margin: 0 0 4px; font-size: 1rem; color: var(--c); letter-spacing: .02em; }
+.cc-area { flex: 1; min-width: 0; display: flex; gap: 12px; align-items: stretch; }
+.cc-cards { display: flex; gap: 12px; flex: 1; min-width: 0; }
+.cc-card {
+  flex: 1 1 0; min-width: 0; position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 3px;
+  text-align: left; padding: 8px 12px 10px; background: #fff; border: 3px solid var(--ink); border-radius: 16px;
+  box-shadow: 0 5px 0 var(--ink); cursor: pointer; min-height: 124px; font: inherit; color: inherit;
+  transition: transform .08s, background .15s;
+}
+.cc-card:hover { transform: translateY(-3px); }
+.cc-card:active { transform: translateY(3px); box-shadow: 0 2px 0 var(--ink); }
+.cc-card:focus-visible { outline: 4px solid #ffd84d; outline-offset: 2px; }
+.cc-card .cc-top { display: flex; align-items: center; gap: 8px; width: 100%; padding-right: 26px; }
+.cc-card .cc-ico { font-size: 30px; line-height: 1; flex: none; }
+.cc-card b { font-size: 1.05rem; line-height: 1.12; }
+.cc-card small { font-size: .9rem; color: var(--ink-2); line-height: 1.22; }
+.cc-card code { font-size: .85rem; background: var(--paper-2); padding: 0 4px; border-radius: 5px; word-break: break-all; }
+.cc-card .cc-price {
+  margin-top: auto; font-weight: 700; background: #fff3c4; border: 2px solid var(--ink); border-radius: 999px;
+  padding: 0 10px; font-size: .95rem;
+}
+.cc-card .cc-key {
+  position: absolute; top: 6px; right: 8px; width: 26px; height: 26px; border-radius: 50%; border: 2px solid var(--ink);
+  display: grid; place-items: center; font-size: .8rem; font-weight: 700; background: var(--paper-2);
+}
+.cc-card.picked { background: #fff3c4; outline: 4px solid var(--c); outline-offset: 1px; }
+.cc-card.good { background: #d9f7df; }
+.cc-card.no { animation: rq-shake .35s; background: #ffe0e4; }
+.cc-card[disabled] { cursor: default; transform: none; }
+.cc-card[disabled]:not(.picked):not(.good) { opacity: .45; }
+
+/* VM control rows (level 2) */
+.cc-rows { flex: 1; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.cc-row {
+  display: flex; align-items: center; gap: 10px; background: #fff; border: 3px solid var(--ink); border-radius: 14px;
+  padding: 4px 8px 4px 12px; box-shadow: 0 3px 0 var(--ink); min-height: 58px;
+}
+.cc-row .ico { font-size: 28px; }
+.cc-row .nm { flex: 1; min-width: 0; line-height: 1.15; }
+.cc-row .nm small { display: block; color: var(--ink-2); font-size: .9rem; }
+.cc-row .state { font-weight: 700; white-space: nowrap; }
+.cc-row.on { background: #fff6e0; }
+.cc-row .btn { min-width: 150px; }
+
+/* side column of action buttons */
+.cc-side { display: flex; flex-direction: column; gap: 10px; justify-content: center; flex: none; }
+.cc-side .btn { min-height: 52px; }
+
+/* query form (level 4) */
+.cc-form { flex: 1; display: grid; grid-template-columns: auto 1fr; gap: 6px 12px; align-items: center; min-width: 0; }
+.cc-form .lab { font-weight: 700; white-space: nowrap; }
+.cc-form .val { display: flex; align-items: center; gap: 8px; min-width: 0; flex-wrap: wrap; }
+.cc-form .val code { background: #fff; border: 2px solid var(--ink); border-radius: 8px; padding: 2px 8px; font-size: .95rem; }
+.cc-form input[type=range] { flex: 1; min-width: 120px; height: 44px; accent-color: var(--c); cursor: pointer; }
+.cc-form .btn.small { min-height: 44px; min-width: 44px; font-size: 1.1rem; }
+.cc-form .big-num { font-weight: 700; font-size: 1.15rem; min-width: 4.5ch; text-align: right; }
+
+/* bill (level 3) */
+.cc-bill { flex: 1; background: #fffdf2; border: 3px dashed var(--ink); border-radius: 14px; padding: 6px 12px; min-width: 0; overflow: auto; }
+.cc-bill h4 { margin: 0 0 2px; font-size: 1rem; }
+.cc-bill .ln { display: flex; justify-content: space-between; gap: 10px; font-size: .95rem; border-bottom: 1px dotted #c9c2a8; padding: 1px 0; }
+.cc-bill .ln.tot { font-weight: 700; border-bottom: 0; font-size: 1.05rem; }
+.cc-bill .ln .bad { color: var(--bad); font-weight: 700; }
+
+@media (max-height: 720px) {
+  .cc-panel { min-height: 0; padding: 8px 10px 10px; }
+  .cc-card { min-height: 104px; padding: 6px 10px 8px; }
+  .cc-card .cc-ico { font-size: 24px; }
+  .cc-row { min-height: 50px; }
+  .cc-job { font-size: .95rem; }
+}
+@media (min-height: 950px) {
+  .cc-panel { min-height: 200px; padding: 14px 18px 18px; }
+  .cc-card { min-height: 150px; }
+  .cc-card b { font-size: 1.2rem; }
+  .cc-card small { font-size: 1rem; }
+}
+
+.cc-root { font-kerning: none; }
+.cc-note {
+  position: absolute; left: 50%; top: 90px; transform: translate(-50%, -8px); z-index: 5; padding: 7px 16px;
+  border: 3px solid var(--ink); border-radius: 14px; background: #fff; box-shadow: var(--shadow); font-weight: 600;
+  opacity: 0; pointer-events: none; transition: opacity .2s, transform .2s; max-width: 90%; text-align: center;
+}
+.cc-note.show { opacity: 1; transform: translate(-50%, 0); }
+.cc-note.good { background: #d9f7df; } .cc-note.bad { background: #ffe0e4; } .cc-note.info { background: #e3f0ff; }
+@media (min-height: 950px) and (min-width: 1500px) {
+  .cc-job { font-size: 1.15rem; width: 320px; }
+  .cc-job h3 { font-size: 1.15rem; }
+  .cc-card b { font-size: 1.3rem; }
+  .cc-card small { font-size: 1.08rem; }
+  .cc-card .cc-ico { font-size: 38px; }
+  .cc-card .cc-price { font-size: 1.1rem; }
+  .cc-bill h4 { font-size: 1.15rem; } .cc-bill .ln { font-size: 1.08rem; } .cc-bill .ln.tot { font-size: 1.2rem; }
+  .cc-row { min-height: 70px; } .cc-row .nm { font-size: 1.15rem; } .cc-row .nm small { font-size: 1rem; } .cc-row .state { font-size: 1.1rem; }
+  .cc-form { font-size: 1.15rem; row-gap: 10px; }
+  .cc-note { font-size: 1.15rem; }
+}

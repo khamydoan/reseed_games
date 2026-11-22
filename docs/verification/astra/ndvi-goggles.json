@@ -1,0 +1,97 @@
+{
+ "factual_issues": [
+  {
+   "where": "health-classes",
+   "claim": "config.py and health_class() give exactly these labels, including “Moderate”.",
+   "problem": "The threshold is correct, but the exact ReSeed label is “Moderate health”, not “Moderate”.",
+   "evidence": "HEALTH_CLASSES includes (0.30, \"moderate\", \"Moderate health\", \"no seed yet\").",
+   "fix": "Each NDVI number gets one label, checked from the top: **≥ 0.60** Healthy, **≥ 0.30** Moderate health, **≥ 0.10** Sparse, **≥ 0.01** No vegetation, anything lower is Not seedable."
+  },
+  {
+   "where": "ndvi / reseed",
+   "claim": "acquire.py computes NDVI, clips it to −1…1, and turns 0 ÷ 0 into no data.",
+   "problem": "E does not include this function or establish its clipping and division-by-zero behavior. Those implementation details cannot be verified from the supplied excerpts.",
+   "evidence": "E shows only “from reseed import acquire” and, separately, health_map() using “valid = np.isfinite(ndvi)”. Neither establishes acquire.ndvi()'s behavior.",
+   "fix": "`ndvi.py health_map()` labels each pixel with a health class. Missing or invalid numbers stay marked as \"no data\" instead."
+  },
+  {
+   "where": "forest-check / reseed",
+   "claim": "ForestNet checks the older baseline picture first in pipeline.py, and detect.py limits detection to that historical forest area.",
+   "problem": "E contains neither pipeline.py nor detect.py and does not document ForestNet's role or this execution order.",
+   "evidence": "E describes “growing-season peak NDVI per year in a matched month window” and defines “PERSIST_YEARS = 2”, but provides no ForestNet workflow.",
+   "fix": "ReSeed compares growing-season NDVI across years. Its settings check for loss that lasts, rather than treating every low number as lost forest."
+  },
+  {
+   "where": "Here is your site's wave too. The gaps were cloudy months",
+   "claim": "Every gap in the site's monthly curve was caused by clouds.",
+   "problem": "The supplied code does not establish the cause of each gap. Insufficient usable observations do not prove that clouds caused every missing value.",
+   "evidence": "MIN_CLEAR_OBS = 2 is described as “fewer clear observations in a window = UNKNOWN”; ndvi.py mentions “cloud-free median composites”.",
+   "fix": "Here is your site's wave too. Gaps mean missing readings; clouds can hide the ground from the satellite."
+  },
+  {
+   "where": "🐞 This was a forest! Lost forest is exactly what ReSeed replants.",
+   "claim": "A place having been forest is enough to justify the game's immediate seeding decision.",
+   "problem": "This feedback makes past forest status sound sufficient. E includes additional checks for persistent loss, seasonal changes, and natural recovery.",
+   "evidence": "E defines “PERSIST_YEARS = 2”, “SEASONAL_PEAK_TOL = 0.10” with “canopy intact”, and “RECOVERY_DIP = 0.12” with “recovering naturally”.",
+   "fix": "🐞 This was a forest! ReSeed still checks for lasting loss and new growth."
+  },
+  {
+   "where": "You read a real NDVI map and the NDVI wave of a real oak forest.",
+   "claim": "The displayed annual wave comes from a real oak forest.",
+   "problem": "E supports monthly NDVI calculations but does not identify any site as an oak forest or establish that the teaching wave is measured oak-forest data.",
+   "evidence": "ndvi.py describes “monthly NDVI for the year the image was taken (the phenology curve: does it green up?)”; no oak species or oak-forest dataset is identified.",
+   "fix": "You read an NDVI map and explored how a forest's NDVI can change through the year."
+  }
+ ],
+ "general_cs_errors": [
+  {
+   "where": "🕵️ Mystery solved: a **plastic tree**! Green to our eyes, but no NIR glow.",
+   "claim": "A plastic tree is green but does not reflect near-infrared light.",
+   "problem": "Plastic and its pigments can reflect near-infrared light. Being artificial or visibly green does not determine its NIR reflectance.",
+   "fix": "🕵️ Mystery solved: a **plastic tree**! In our game, this one bounces back very little NIR."
+  },
+  {
+   "where": "ndvi / The answer is always between −1 and 1",
+   "claim": "The NDVI formula always produces an answer between −1 and 1.",
+   "problem": "With nonnegative light measurements, this holds only when NIR + Red is greater than zero. Both inputs being zero gives no defined answer, as the game itself later teaches.",
+   "fix": "**NDVI = (NIR − Red) ÷ (NIR + Red)**. With light readings above zero, it stays between −1 and 1. Plants often score high; water often scores below 0. Both readings zero? No answer!"
+  },
+  {
+   "where": "[hoot] You can't break it! NDVI always lands",
+   "claim": "NDVI always lands between −1 and +1, without an exception.",
+   "problem": "The machine permits both inputs to be zero, so this directly conflicts with its division-by-zero activity.",
+   "fix": "NDVI lands between −1 and +1—unless both light readings are zero. Then there's no answer!"
+  },
+  {
+   "where": "! Oaks drop their leaves every winter, and that's normal.",
+   "claim": "All oaks drop their leaves every winter.",
+   "problem": "Some oaks are evergreen, and some deciduous oaks retain dead leaves into winter. The seasonal example should refer to the particular forest being modeled.",
+   "fix": "! These oaks lose their leaves in the cold season, and that's normal."
+  },
+  {
+   "where": "! A dip that comes back every year is just the seasons.",
+   "claim": "A recurring annual NDVI dip must be seasonal rather than forest loss.",
+   "problem": "Seasonal variation can coexist with lasting forest loss. A repeating dip alone does not establish that the forest is intact; recovery of growing-season values matters too.",
+   "fix": "! A dip that returns each year can be seasonal. Check that the summer highs recover too."
+  }
+ ],
+ "hard_for_8yo": [
+  {
+   "where": "health-classes / checked from the top",
+   "text": "Each NDVI number gets one label, checked from the top: **≥ 0.60** Healthy",
+   "simpler": "Start at the top and stop at the first match. **≥** means “this number or higher”: **≥ 0.60** Healthy"
+  },
+  {
+   "where": "Sort each NDVI number into the right class",
+   "text": "Sort each NDVI number into the right class",
+   "simpler": "Put each NDVI number in the matching group"
+  },
+  {
+   "where": "⚠️ Tricky ones now: exactly on the line!",
+   "text": "⚠️ Tricky ones now: exactly on the line!",
+   "simpler": "⚠️ Tricky ones: equal to a ladder number!"
+  }
+ ],
+ "safety_or_tone": [],
+ "verdict": "The game is approachable and mostly sound, but should qualify its NDVI and biology absolutes, avoid unsupported data claims, and keep past forest status separate from permission to seed."
+}

@@ -1,0 +1,68 @@
+{
+ "factual_issues": [
+  {
+   "where": "speech: ReSeed simulates every seed / Bonza! You can predict; matching D strings",
+   "claim": "ReSeed simulates every real seed before flight and predicts where every seed lands.",
+   "problem": "The excerpt supports a simulated seed cloud with random effects, not an exact prediction for every physical seed.",
+   "evidence": "E sets `n_seeds: int = 40` and describes “a gust that follows an Ornstein-Uhlenbeck process shared by all seeds of one release”.",
+   "fix": "ReSeed simulates a group of seeds to estimate where they might land. Let's learn to predict like it does!"
+  },
+  {
+   "where": "speech: This is your forest! / Time for the real thing; D: ReSeed plans every release point this way.",
+   "claim": "The activity flies an actual site-specific release plan, and ReSeed plans every release point this way.",
+   "problem": "E supplies simulation defaults, but does not establish that they are an operational plan for this player's site or that every release point is planned this way.",
+   "evidence": "E shows `mode: str = \"hatch_drop\"`, `altitude_m: float = 20.0`, and `speed_mps: float = 4.0` as defaults in `Release`; its stated purpose is “where do the seeds land? Seed-release ballistics with wind.”",
+   "fix": "This is your forest challenge! Try a practice drop using ReSeed's seed-flight model."
+  }
+ ],
+ "general_cs_errors": [
+  {
+   "where": "wind-drift: Wind blows faster high up",
+   "claim": "Wind always increases with height according to the displayed formula.",
+   "problem": "This is a useful wind-profile model, not a universal law. Real wind profiles vary with weather, terrain, and nearby obstacles.",
+   "fix": "In this wind model, wind blows faster high up: **w(z) = w10 × (z / 10)^0.2**. Slowly falling seeds spend longer in the wind, so they drift farther. Gusts change where seeds land."
+  },
+  {
+   "where": "speech: Wind pushes falling seeds sideways; D: Heavy seeds fall fast, light seeds drift.",
+   "claim": "Light seeds are pushed most by wind, and heavy seeds fall fastest.",
+   "problem": "Mass alone does not determine falling speed or drift. Shape, exposed area, and air resistance also matter.",
+   "fix": "Wind pushes falling seeds sideways. Slow-falling seeds spend longer drifting."
+  },
+  {
+   "where": "speech and D: Seeds don't fall straight down.",
+   "claim": "Speed, wind and weight all push seeds around, and seeds do not fall straight down.",
+   "problem": "Speed is not a force. Seeds can fall straight down when released without sideways motion in still air.",
+   "fix": "Seeds can drift as they fall. Their starting speed, gravity and moving air shape their path."
+  },
+  {
+   "where": "inertia: When the hatch opens",
+   "claim": "Inheriting the drone's forward speed guarantees that seeds land ahead of the release point.",
+   "problem": "Inherited speed explains their initial motion, but a strong headwind can reverse that motion before landing.",
+   "fix": "Things keep their speed and direction unless a force changes them. Seeds start with the drone's forward speed. With no wind, they land **ahead** of the drop point."
+  }
+ ],
+ "hard_for_8yo": [
+  {
+   "where": "simulation: A simulation moves every seed",
+   "text": "A simulation moves every seed forward a tiny step (0.01 s), adds gravity, drag and wind, and repeats until the seed hits the ground: dv/dt = g − k|v−w|(v−w).",
+   "simpler": "A **simulation** is a computer's model of what might happen. Every hundredth of a second, it works out how gravity and moving air change each seed's speed and position. It repeats until the seed reaches the ground."
+  },
+  {
+   "where": "wind-drift: reseed",
+   "text": "`reseed/physics.py` `Wind`: 3 m/s at 10 m, gusts of 0.8 m/s, shear exponent 0.2. (Game version: in levels 1–4 the wind blows along your flight line.)",
+   "simpler": "`reseed/physics.py` models wind that changes with height and has gusts. Its usual wind speed is 3 metres per second at 10 metres high. (Game version: in levels 1–4, wind blows along your flight path.)"
+  },
+  {
+   "where": "speech and D: Pick the seed that falls slowest",
+   "text": "💡 Pick the seed that falls slowest: the dewinged pine seed.",
+   "simpler": "💡 Pick the slowest-falling seed: the pine seed with its papery wing removed."
+  },
+  {
+   "where": "footprint: Where a seed cloud lands",
+   "text": "Where a seed cloud lands: the drift (how far from the release point), the blast radius (circle holding 90 % of the seeds) and the fall time.",
+   "simpler": "Where a group of seeds lands: the **drift** (how far the group's middle moves sideways), the **spread** (a circle holding about 9 in 10 seeds) and the **fall time**."
+  }
+ ],
+ "safety_or_tone": [],
+ "verdict": "The game closely follows ReSeed's physics model, but should distinguish estimates from real flight plans, correct the weight-and-wind shortcuts, and simplify the youngest players' technical text."
+}

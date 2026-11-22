@@ -1,0 +1,69 @@
+{
+ "factual_issues": [
+  {
+   "where": "rr-s-curve / reseed",
+   "claim": "The website's 3D twin plays a 15-year time-lapse where NDVI follows an S-curve, `logistic((y - 4.5) / 1.6)` in `site/js/mission3d.js`.",
+   "problem": "The supplied excerpts do not establish this duration, formula, or implementation. They support monitoring NDVI, not this specific attribution.",
+   "evidence": "The README says: \"Regrow<br/>monitor NDVI, back to 03\". No `site/js/mission3d.js` excerpt is supplied.",
+   "fix": "The README sends **Regrow** back to the NDVI check to watch for change. Our game's smooth growth curve is a pretend example of a forest growing back."
+  },
+  {
+   "where": "[koa] Our seeds are in the ground / corresponding D string",
+   "claim": "Our seeds are in the ground in Rondônia.",
+   "problem": "This sounds like a completed real planting. E describes seed planning and flight-file generation, but does not establish that seeds were planted in Rondônia.",
+   "evidence": "Step 09 describes \"Lawnmower lines and release points → Mission Planner `.waypoints` and QGroundControl `.plan`\"; the species module describes seed traits as \"planning values\".",
+   "fix": "In our game, we've planted seeds in Rondônia. Now the animals need help to come home!"
+  },
+  {
+   "where": "[koa] G'day! / corresponding D string",
+   "claim": "Most trees came back after the fire, but one small patch did not.",
+   "problem": "E does not establish this site-specific recovery pattern or the existence of one remaining patch. Label the scenario as fictional rather than a measured ReSeed result.",
+   "evidence": "E identifies \"Kangaroo Island eucalypt woodland\" and says generally: \"RECOVERING<br/>let nature regrow\". It provides no Kangaroo Island recovery measurements.",
+   "fix": "G'day! This is my home, Kangaroo Island. In our game, we're helping one small patch grow back after a fire."
+  }
+ ],
+ "general_cs_errors": [
+  {
+   "where": "[tuki] ReSeed keeps checking / corresponding D string",
+   "claim": "That's how we know it worked.",
+   "problem": "Higher NDVI indicates greener vegetation, not proof that planted trees survived, a native forest recovered, or animals returned. Grass and other vegetation can also raise NDVI.",
+   "fix": "ReSeed checks NDVI from space to look for greener leaves. That's a clue—not proof the forest is back!"
+  },
+  {
+   "where": "rr-s-curve / text",
+   "claim": "A new forest grows slowly, then fast, then levels off. ... NDVI climbs the same way as leaves cover the ground.",
+   "problem": "Real forest recovery and NDVI do not necessarily follow the same smooth S-curve. NDVI varies with seasons and disturbances and can level off while trees keep growing.",
+   "fix": "Game version: our forest grows slowly, then fast, then levels off. On a chart that looks like a stretched **S**. Real forests and NDVI can rise and fall along the way."
+  },
+  {
+   "where": "Eats only eucalyptus leaves.",
+   "claim": "Koalas eat only eucalyptus leaves.",
+   "problem": "Koalas mainly eat eucalyptus leaves but occasionally eat leaves from other trees. 'Only' makes the statement false.",
+   "fix": "Eats mostly eucalyptus leaves."
+  }
+ ],
+ "hard_for_8yo": [
+  {
+   "where": "rr-regrow-monitor / text",
+   "text": "When **NDVI** climbs back near the old forest's score, the forest is healing.",
+   "simpler": "**NDVI** is a satellite score for green leaves. When it rises near the old forest's score, plants may be growing back."
+  },
+  {
+   "where": "[koa] Be careful what you bring / corresponding D string",
+   "text": "Be careful what you bring to a burn scar!",
+   "simpler": "Be careful what you bring to land burned by fire!"
+  },
+  {
+   "where": "rr-corridor / reseed",
+   "text": "The Borneo mix in `reseed/species.py` starts with Kadam, a native pioneer that 'closes the canopy in 3-4 years'.",
+   "simpler": "The Borneo mix in `reseed/species.py` includes Kadam, a local tree that grows fast: its leafy treetops can meet in 3–4 years."
+  },
+  {
+   "where": "· game version: ReSeed's verdict here is RECOVERING",
+   "text": "· game version: ReSeed's verdict here is RECOVERING, so it would just keep watching",
+   "simpler": "· game version: ReSeed says RECOVERING—growing back—so it would watch, not plant"
+  }
+ ],
+ "safety_or_tone": [],
+ "verdict": "The game is approachable and mostly aligned with ReSeed, but should label invented field outcomes, verify the time-lapse attribution, and avoid treating rising NDVI as proof of forest recovery."
+}

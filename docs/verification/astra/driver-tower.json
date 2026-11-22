@@ -1,0 +1,95 @@
+{
+ "factual_issues": [
+  {
+   "where": "gpu-driver, reseed",
+   "claim": "The project computer runs NVIDIA driver 570.211.01 and supports CUDA up to 12.8.",
+   "problem": "E contains no driver report or computer specification establishing this exact configuration. Present it as the game's example, not a verified ReSeed setup.",
+   "evidence": "E says only: “Retrain ForestNet (about 12 minutes on one GPU)”. It supplies no driver version.",
+   "fix": "Our game computer uses NVIDIA driver **570.211.01**, with CUDA 12.8 on its report. ReSeed trains ForestNet with PyTorch; this is an example setup."
+  },
+  {
+   "where": "torch-wheel, reseed",
+   "claim": "environment.yml installs torch with pip; the project computer has torch 2.6.0+cu124 and no CUDA toolkit.",
+   "problem": "E names environment.yml but does not show its contents, installed package versions, or toolkit inventory. The same unsupported no-toolkit claim appears in cuda-toolkit and the terminal feedback.",
+   "evidence": "E gives “conda env create -f environment.yml && conda activate reseed” and the training code's “import torch”, neither of which establishes these installation details.",
+   "fix": "ReSeed uses PyTorch to train ForestNet. Our game shows torch 2.6.0 with CUDA 12.4 libraries: this ready-made setup can train without installing a separate CUDA toolkit."
+  },
+  {
+   "where": "cudnn, reseed",
+   "claim": "On the project GPU, PyTorch runs ForestNet's convolutions with cuDNN 9.1.",
+   "problem": "E does not establish the installed cuDNN version or which backend executed these operations.",
+   "evidence": "E describes “the real network in plain JavaScript and a 3D view of its activations (after Okdalto's CNN visualisation)” but provides no cuDNN package list or execution trace.",
+   "fix": "ReSeed trains ForestNet with PyTorch. Our game pairs PyTorch with cuDNN 9.1, a library that can help neural networks run quickly on NVIDIA GPUs."
+  },
+  {
+   "where": "[pix] This is the real report",
+   "claim": "The displayed four-A100 report is the real report from the ReSeed project computer.",
+   "problem": "E supplies no nvidia-smi output or evidence of four A100 GPUs. The nvidia-smi card and other strings repeat this unverified attribution.",
+   "evidence": "E says “Retrain ForestNet (about 12 minutes on one GPU)”; it does not identify the GPU model or total GPU count.",
+   "fix": "This is our game computer's example GPU report. Read it to answer my questions."
+  },
+  {
+   "where": "torch-cuda-check, reseed",
+   "claim": "train.py uses the exact quoted torch.device fallback expression.",
+   "problem": "The supplied excerpt stops before the device-selection code. Neither that exact expression nor the claimed line 265 in D can be verified from E. The README timing is supported.",
+   "evidence": "E provides “train.py (first 40 lines)” and “Retrain ForestNet (about 12 minutes on one GPU)”, but no device-selection statement.",
+   "fix": "Try this GPU-or-CPU choice: `torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")`. ReSeed's README says retraining takes about 12 minutes on one GPU."
+  }
+ ],
+ "general_cs_errors": [
+  {
+   "where": "gpu-driver, text; cuda-toolkit, text",
+   "claim": "Each driver can run CUDA programs up to a certain version, and no newer; the toolkit must not be newer than that limit.",
+   "problem": "This is not an absolute upper limit. CUDA minor-version compatibility can allow programs built with a newer toolkit in the same major family to run on older drivers, subject to restrictions. Compatibility packages provide further supported cases. The game's stricter stacking rule is fine if labelled.",
+   "fix": "The **driver** helps programs talk to the GPU. CUDA and driver versions must work together. (game version: a CUDA block cannot be newer than the driver's tag.)"
+  },
+  {
+   "where": "torch-wheel, text",
+   "claim": "On Linux, the torch wheel brings the CUDA runtime and cuDNN inside.",
+   "problem": "For the depicted modern Linux pip installation, CUDA libraries and cuDNN are separate dependency packages, not contents of the torch wheel. CPU-only builds also exist.",
+   "fix": "`pip install torch` gets a **wheel**, a ready-made package. A CUDA-enabled Linux build also downloads GPU helper packages, including cuDNN. For ready-made GPU code, you usually just add the driver. (game version: we show one matching set.)"
+  },
+  {
+   "where": "[pix] Easy route: let pip bring PyTorch with a CUDA that fits",
+   "claim": "pip install torch automatically brings a CUDA version that fits the installed driver.",
+   "problem": "pip resolves package requirements and platform compatibility; it does not select a CUDA build by checking the NVIDIA driver. An unpinned command also does not guarantee the depicted torch 2.6.0 installation.",
+   "fix": "Easy route: we've picked a PyTorch package that fits this game computer. Type pip install torch."
+  },
+  {
+   "where": "Right! 81920 MiB = 80 GB",
+   "claim": "81920 MiB equals 80 GB because 1024 MiB make 1 GB.",
+   "problem": "1024 MiB make 1 GiB, not 1 GB. 81920 MiB equals 80 GiB, approximately 85.9 decimal GB. The GPU's marketed “80GB” name does not change that unit conversion.",
+   "fix": "Right! 81920 MiB = 80 GiB, because 1024 MiB make 1 GiB. This GPU's name says “80GB.”"
+  },
+  {
+   "where": "[y]apt installs system programs. Python packages come with",
+   "claim": "apt installs system programs, whereas Python packages come from pip.",
+   "problem": "apt can install Python packages too. The feedback should explain which tool this exercise expects rather than teach a false division.",
+   "fix": "[y]apt can install Python packages too. For this game, use[/y] [w]pip[/w]"
+  }
+ ],
+ "hard_for_8yo": [
+  {
+   "where": "cuda-toolkit, text",
+   "text": "The toolkit adds nvcc, the compiler experts use to build GPU programs.",
+   "simpler": "The **toolkit** adds `nvcc`, a tool that turns an expert's code into instructions the GPU can run."
+  },
+  {
+   "where": "cudnn, text",
+   "text": "cuDNN is NVIDIA's box of fast tricks for neural networks, like convolutions.",
+   "simpler": "**cuDNN** is NVIDIA's box of fast tools for AI, like spotting patterns in pictures."
+  },
+  {
+   "where": "[mo] Experts stack it by hand",
+   "text": "Experts stack it by hand: driver, then CUDA toolkit, then cuDNN, then build.",
+   "simpler": "Expert route: add the driver, CUDA tools, and cuDNN helpers, then turn PyTorch's code into a ready-to-run program."
+  },
+  {
+   "where": "Look at Memory-Usage: used / total.",
+   "text": "Look at **Memory-Usage**: used / total.",
+   "simpler": "Look at **Memory-Usage**: memory already busy / all the memory available."
+  }
+ ],
+ "safety_or_tone": [],
+ "verdict": "The playful tower works, but label the unverified ReSeed computer setup as an example and correct the package-installation, compatibility, and memory-unit lessons before release."
+}

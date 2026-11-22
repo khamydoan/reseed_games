@@ -1,0 +1,21 @@
+/* Satellite Snap (g06): deep-space stage with a control bar under the canvas. */
+.ss-root { display: flex; flex-direction: column; background: #050a1f; }
+.ss-view { position: relative; flex: 1; min-height: 0; }
+.ss-bar {
+  flex: none; min-height: 78px; display: flex; align-items: center; justify-content: center; gap: 12px; padding: 8px 18px;
+  background: linear-gradient(180deg, #1b2a5c, #10193f); border-top: 3px solid var(--ink); color: #fff;
+}
+.ss-bar .ss-info { flex: 1; max-width: 680px; font-size: 1.05rem; line-height: 1.25; color: #e8eefc; text-align: left; }
+.ss-bar .ss-info b { color: #ffd46b; }
+.ss-bar .ss-info code { background: rgba(255, 255, 255, .14); color: #fff; padding: 0 .3em; border-radius: 6px; font-size: .92em; }
+.ss-bar kbd {
+  font-family: var(--mono); font-size: .72em; font-weight: 600; padding: .05em .4em; border-radius: 6px;
+  background: rgba(29, 43, 58, .14); border: 1.5px solid currentColor; opacity: .8;
+}
+.ss-bar .btn[hidden] { display: none; }
+.ss-bar .ss-pad { min-width: 74px; touch-action: none; }
+.ss-bar .ss-snap { min-width: 190px; font-size: 1.3rem; }
+.ss-bar .ss-snap.ready { background: var(--good); animation: ss-pulse .45s ease-in-out infinite alternate; }
+@keyframes ss-pulse { from { transform: scale(1); } to { transform: scale(1.07); } }
+@media (max-width: 1100px) { .ss-bar .ss-info { font-size: .95rem; } .ss-bar .ss-pad { min-width: 60px; padding: 0 .6em; } }
+@media (prefers-reduced-motion: reduce) { .ss-bar .ss-snap.ready { animation: none; } }

@@ -1,0 +1,105 @@
+{
+ "factual_issues": [
+  {
+   "where": "drone-types / reseed",
+   "claim": "The ReSeed prototype is an X500-class quadcopter: 22 min endurance, 900 g payload, 1 seed roll.",
+   "problem": "The 22-minute figure is a planning value without payload, not the flight time while carrying the stated seed load.",
+   "evidence": "E: `endurance_min: float = 22.0    # hover endurance without payload`; `max_payload_g: float = 900.0`.",
+   "fix": "ReSeed's X500-class quad model: 22 min without cargo, up to 900 g cargo, 1 seed roll (`reseed/logistics.py` `PROTOTYPE`)."
+  },
+  {
+   "where": "C and D / It was tested in SITL first",
+   "claim": "It was tested in SITL first: a pretend drone inside the computer.",
+   "problem": "The excerpt instructs users to test in SITL; it does not document that testing actually happened.",
+   "evidence": "E: \"Test in SITL first, fly outdoors or in a netted hall, keep a pilot on the RC transmitter with a kill switch.\"",
+   "fix": "Test it in SITL first: a pretend drone inside the computer. Safe and smart!"
+  },
+  {
+   "where": "D / A **servo** opens the hatch",
+   "claim": "A servo opens the hatch of the seed roll and hangs under the nose of ReSeed's drone.",
+   "problem": "Neither this hatch mechanism nor its mounting position is supported by E. The documented release uses a backward jerk. A game-only component should be identified as such.",
+   "evidence": "E: \"before reaching the destination, jerk back so the seeds fly out of the roll\".",
+   "fix": "This game's **servo** sits at the **front**, under the nose. ReSeed's code releases seeds by jerking the drone back."
+  },
+  {
+   "where": "D / Hover over one small patch",
+   "claim": "Hover over one small patch and drop one seed roll.",
+   "problem": "The documented mechanism drops seeds from the roll, not the roll itself.",
+   "evidence": "E: \"JERK BACK: reverse to {jerk_speed} m/s for {jerk_s} s - seeds exit the roll\".",
+   "fix": "Hover over one small patch and drop seeds from **one seed roll**. Keep it simple and cheap!"
+  }
+ ],
+ "general_cs_errors": [
+  {
+   "where": "C and D / Octocopter! Eight rotors",
+   "claim": "An octocopter can still land if one motor fails.",
+   "problem": "Eight rotors do not guarantee a safe motor-out landing. It depends on layout, remaining thrust, load and flight-controller support.",
+   "fix": "Octocopter! Eight rotors share the heavy load. Some can land after one motor fails, but not all."
+  },
+  {
+   "where": "C and D / Hexacopter! With six rotors",
+   "claim": "With six rotors, the other five can still bring it down gently.",
+   "problem": "A hexacopter is not automatically capable of a controlled landing after a motor failure.",
+   "fix": "Hexacopter! Six rotors share the load. Some can land after one motor fails, but not all."
+  },
+  {
+   "where": "D / Carry a medium load",
+   "claim": "Carry a medium load, and land safely even if one motor stops.",
+   "problem": "As a mission for choosing a drone by type alone, this implies that rotor count guarantees motor-failure safety. That capability must be established for the particular aircraft.",
+   "fix": "Carry a medium load with six rotors sharing the work."
+  },
+  {
+   "where": "C and D / RTL: with no radio",
+   "claim": "With no radio, the drone flies home by itself using GPS.",
+   "problem": "Radio loss does not automatically select RTL on every drone. The failsafe must be configured, and returning requires a usable position estimate and home position.",
+   "fix": "RTL: if set up for this, the drone can use GPS to fly home when the radio link fails. That's a failsafe!"
+  },
+  {
+   "where": "C and D / VTOL hybrid! It lifts off",
+   "claim": "A VTOL hybrid lifts off like a quad, then tilts into plane mode.",
+   "problem": "Not all hybrid VTOL aircraft tilt to change modes. Some use separate lift and cruise motors; not all have four lift rotors.",
+   "fix": "VTOL hybrid! It takes off straight up, then uses its wings to cruise far like a plane."
+  },
+  {
+   "where": "D / 🛰️ GPS GLITCH: 4 satellites",
+   "claim": "Four satellites indicate a GPS glitch.",
+   "problem": "Four suitably placed satellites can provide a normal 3D GPS solution. Satellite count alone does not establish a glitch or the reliability of the position.",
+   "fix": "🛰️ GPS GLITCH: position unreliable"
+  }
+ ],
+ "hard_for_8yo": [
+  {
+   "where": "flight-controller / text",
+   "text": "The drone's brain. It reads its gyros, the GPS and the radio receiver, then tells each ESC how fast to spin its motor. A LiPo battery powers it all.",
+   "simpler": "The drone's brain. It reads motion sensors, **GPS** location and the pilot's radio commands. Each **ESC** motor control sets a motor's speed. A **LiPo** rechargeable battery powers it all."
+  },
+  {
+   "where": "sticks / text",
+   "text": "On a Mode 2 transmitter the left stick is throttle (up/down) and yaw (turn). The right stick is pitch (forward/back) and roll (sideways).",
+   "simpler": "On a **Mode 2** controller—a common layout—the **left stick** controls throttle (up/down) and yaw (turn). The **right stick** controls pitch (forward/back) and roll (sideways)."
+  },
+  {
+   "where": "C and D / Make diagonal partners",
+   "text": "Make diagonal partners spin the same way, and neighbours spin opposite ways.",
+   "simpler": "Props across from each other spin the same way. Props side by side spin opposite ways."
+  },
+  {
+   "where": "D / 3D fix with 14 satellites",
+   "text": "3D fix with 14 satellites.",
+   "simpler": "GPS position found using 14 satellites."
+  }
+ ],
+ "safety_or_tone": [
+  {
+   "where": "C and D / Welcome to Drone Academy",
+   "problem": "For young children, earning 'pilot wings' alongside realistic assembly and flight instructions could suggest readiness to operate a real drone. Establish the game-only boundary.",
+   "fix": "Welcome to Drone Academy! Five lessons earn your game pilot wings. Real flights need a trained adult."
+  },
+  {
+   "where": "D / Never fly a puffy LiPo",
+   "problem": "The warning is good, but 'Swap in a good one' directs children to handle a potentially hazardous damaged battery themselves.",
+   "fix": "Never use a puffy LiPo: it can catch fire. Leave it alone and tell an adult."
+  }
+ ],
+ "verdict": "A strong game concept, but qualify motor-failure and failsafe claims, distinguish documented ReSeed behavior from game inventions, and add clear adult-supervision boundaries."
+}

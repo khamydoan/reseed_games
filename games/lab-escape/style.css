@@ -1,0 +1,43 @@
+/* Server Lab Escape (g25): code terminal panel + touch buttons */
+.le-term { position: absolute; left: 50%; transform: translateX(-50%); width: min(760px, 96%); z-index: 6; display: none;
+  flex-direction: column; gap: 6px; background: #101a24; color: #e8f1f8; border: 4px solid var(--ink); border-radius: 18px;
+  box-shadow: var(--shadow-lg); padding: 8px 12px 10px; }
+.le-term.top { animation: rq-drop .22s ease-out; } .le-term.bottom { animation: rq-up .22s ease-out; }
+.le-term.open { display: flex; }
+.le-term.top { top: 10px; }
+.le-term.bottom { bottom: 10px; }
+.le-bar { display: flex; align-items: center; gap: 8px; font-weight: 700; color: #9fe8ff; font-family: var(--mono); font-size: .95rem; }
+.le-bar .le-x { margin-left: auto; min-height: 44px; width: 44px; padding: 0; background: #22313f; color: #fff; border-color: #0b131b; box-shadow: 0 3px 0 #0b131b; }
+.le-code { margin: 0; background: #0b131b; border: 2px solid #2b3d50; border-radius: 12px; padding: 8px 12px; font: 17px/1.55 var(--mono);
+  white-space: pre; overflow: auto; color: #e8f1f8; user-select: text; }
+.le-code .py-kw { color: #ff8fd8; } .le-code .py-fn { color: #82c8ff; } .le-code .py-str { color: #a5e887; } .le-code .py-num { color: #ffb86b; }
+.le-code .py-com { color: #7d8ea0; font-style: italic; } .le-code .py-bi { color: #7ff0e0; } .le-code .py-op { color: #e8f1f8; } .le-code .py-self { color: #ffb86b; }
+.le-code .ln-run { background: rgba(255, 227, 110, .16); display: inline-block; width: 100%; }
+.le-slot { font: inherit; line-height: 1.2; padding: 1px 8px; margin: 0 2px; border: 2px solid #ffd84d; border-radius: 8px; background: #3a3210;
+  color: #ffe36e; cursor: pointer; }
+.le-slot:hover { background: #574a14; }
+.le-slot:focus-visible { outline: 3px solid #fff; }
+.le-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.le-row .lbl { font-weight: 600; color: #cfe3f1; font-size: .95rem; }
+.le-opt { min-width: 48px; min-height: 44px; font: 600 16px var(--mono); border: 3px solid var(--ink); border-radius: 12px; background: #fff;
+  color: var(--ink); box-shadow: 0 3px 0 #0b131b; cursor: pointer; padding: 0 10px; }
+.le-opt.on { background: #ffe36e; }
+.le-opt:active { transform: translateY(2px); box-shadow: 0 1px 0 #0b131b; }
+.le-row .btn.go { margin-left: auto; }
+.le-out { font: 15px/1.45 var(--mono); min-height: 30px; max-height: 92px; overflow: auto; background: #0b131b; border-radius: 10px; padding: 5px 10px; color: #cfe3f1; white-space: pre-wrap; }
+.le-out .g { color: #7ee787; } .le-out .r { color: #ff7b72; } .le-out .y { color: #ffd166; } .le-out .c { color: #7ff0ff; } .le-out .dim { opacity: .6; }
+.le-var { font: 600 15px var(--mono); background: #ffe36e; color: var(--ink); border-radius: 999px; padding: 2px 10px; border: 2px solid var(--ink); }
+.le-hint { color: #ffd166; font-size: .95rem; }
+.le-pad { position: absolute; bottom: 12px; display: flex; gap: 12px; z-index: 4; opacity: .72; }
+.le-pad:hover { opacity: 1; }
+.le-pad.l { left: 12px; } .le-pad.r { right: 12px; align-items: flex-end; }
+.le-pad button { width: 66px; height: 66px; border-radius: 50%; border: 3px solid var(--ink); background: rgba(255, 255, 255, .85); font-size: 26px;
+  box-shadow: 0 4px 0 var(--ink); touch-action: none; cursor: pointer; display: grid; place-items: center; padding: 0; color: var(--ink); font-weight: 700; }
+.le-pad button.big { width: 80px; height: 80px; font-size: 30px; }
+.le-pad button.down { background: #ffe36e; transform: translateY(3px); box-shadow: 0 1px 0 var(--ink); }
+@media (max-height: 660px) {
+  .le-code { font-size: 15px; padding: 6px 10px; }
+  .le-term { padding: 6px 10px 8px; gap: 4px; }
+  .le-out { max-height: 64px; }
+  .le-pad button { width: 56px; height: 56px; font-size: 22px; } .le-pad button.big { width: 66px; height: 66px; }
+}

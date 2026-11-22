@@ -1,0 +1,41 @@
+{
+ "factual_issues": [
+  {
+   "where": "A reseed; qwerty.reseed",
+   "claim": "Every ReSeed command is typed on a keyboard.",
+   "problem": "The examples support typing commands to run ReSeed, but not the claim that every command must be typed on a keyboard.",
+   "evidence": "E lists `python -m reseed run rondonia` under “Run it” but also describes a browser interface: “upload / paste / camera → ForestNet in the browser”.",
+   "fix": "You can run ReSeed by typing a command, like `python -m reseed run rondonia`."
+  },
+  {
+   "where": "C and D: Every command we send to the drones gets typed.",
+   "claim": "Every command sent to the drones gets typed.",
+   "problem": "E documents mission-file generation and a demo flight script, not manual typing of every drone command.",
+   "evidence": "E lists `python -m reseed mission rondonia --out missions/` with “.waypoints / .plan / .geojson”, and says: “The drone demo script must be tested in ArduPilot SITL first and flown with a safety pilot.”",
+   "fix": "Typing helps us tell ReSeed what to do. So let's train your fingers first!"
+  }
+ ],
+ "general_cs_errors": [
+  {
+   "where": "wpm.text",
+   "claim": "Every 5 letters count as one word.",
+   "problem": "Standard typing WPM counts five characters, including spaces and punctuation, rather than only letters.",
+   "fix": "Typing speed is measured in **words per minute (WPM)**. Every 5 characters count as one word—even spaces and punctuation. Careful beats fast!"
+  },
+  {
+   "where": "C and D: Now reach up to the top row",
+   "claim": "Each finger only moves straight up a little.",
+   "problem": "US QWERTY rows are staggered, and index fingers cover multiple columns. Reaching assigned keys can require sideways movement too.",
+   "fix": "Now reach up to the top row, then come back home. Some keys need a little sideways reach too."
+  }
+ ],
+ "hard_for_8yo": [
+  {
+   "where": "wpm.reseed",
+   "text": "A good typist can write the ReSeed command line in a few seconds.",
+   "simpler": "With practice, you can type a ReSeed command in a few seconds."
+  }
+ ],
+ "safety_or_tone": [],
+ "verdict": "Mostly clear and age-appropriate; correct the typing mechanics and WPM definition, and avoid claiming that every ReSeed or drone command is typed."
+}

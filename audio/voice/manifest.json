@@ -1,0 +1,5366 @@
+{
+ "3cd64943": {
+  "key": "4a779b2594673d16",
+  "who": "sprout",
+  "text": "Hi! I'm Sprout, a seed drone. Welcome to ReSeed Quest!",
+  "match": 1.0,
+  "files": [
+   "js/hub.js"
+  ]
+ },
+ "12cffa62": {
+  "key": "ebf340ca27ee72e3",
+  "who": "sprout",
+  "text": "Forests are being cut down and burned. Satellites can find the lost forest, and drones like me can plant it back.",
+  "match": 1.0,
+  "files": [
+   "js/hub.js"
+  ]
+ },
+ "a60b8794": {
+  "key": "df42baf569e3fcf1",
+  "who": "sprout",
+  "text": "Each island is one step of the real ReSeed program. Play the games, collect Field Cards, and take breaks whenever you like.",
+  "match": 1.0,
+  "files": [
+   "js/hub.js"
+  ]
+ },
+ "91e396aa": {
+  "key": "e788ad9d2a8a0188",
+  "who": "hoot",
+  "text": "Neuron, filter, training, layers: you know what is inside ForestNet now. Splendid!",
+  "match": 1.0,
+  "files": [
+   "games/brain-builder/game.js"
+  ]
+ },
+ "909b9eea": {
+  "key": "584a96246f55e10d",
+  "who": "sprout",
+  "text": "Next, let's see how giant AI models fit inside a GPU in the Model Garage!",
+  "match": 1.0,
+  "files": [
+   "games/brain-builder/game.js"
+  ]
+ },
+ "de4341e3": {
+  "key": "5e71b9c6316e25c9",
+  "who": "hoot",
+  "text": "Hoo! ForestNet is a neural network: a brain made of tiny number machines called neurons.",
+  "match": 1.0,
+  "files": [
+   "games/brain-builder/game.js"
+  ]
+ },
+ "952b7e7e": {
+  "key": "1e214ce3e9680467",
+  "who": "hoot",
+  "text": "A neuron draws one straight line. Drag the yellow handles so the Glitch Bugs disappear, then fire!",
+  "match": 1.0,
+  "files": [
+   "games/brain-builder/game.js"
+  ]
+ },
+ "1ed9771b": {
+  "key": "16da28b7da266988",
+  "who": "hoot",
+  "text": "Each dot is a real satellite tile. Green dots are tiles ForestNet called forest; grey dots are city, water or desert.",
+  "match": 1.0,
+  "files": [
+   "games/brain-builder/game.js"
+  ]
+ },
+ "9fc6138e": {
+  "key": "23c5fb2c8856ae5a",
+  "who": "mo",
+  "text": "At each spot it multiplies and adds. Pick the filter that makes the forest edge glow!",
+  "match": 1.0,
+  "files": [
+   "games/brain-builder/game.js"
+  ]
+ },
+ "3fa764b4": {
+  "key": "caea47a4af2737f1",
+  "who": "mo",
+  "text": "Welcome to my filter factory! A filter is a tiny 3 × 3 grid of numbers that slides over the pixels.",
+  "match": 0.878,
+  "files": [
+   "games/brain-builder/game.js"
+  ]
+ },
+ "855b905e": {
+  "key": "dc5f8fe015e9c2f3",
+  "who": "sprout",
+  "text": "Some tiles are locked in a vault for the test. Train, watch the loss drop, and finish the checklist!",
+  "match": 1.0,
+  "files": [
+   "games/brain-builder/game.js"
+  ]
+ },
+ "24fd99cb": {
+  "key": "8c773a1ee57a059e",
+  "who": "hoot",
+  "text": "Expert challenge! Stack ForestNet's real layers, from the picture at the top to the forest answer at the bottom.",
+  "match": 1.0,
+  "files": [
+   "games/brain-builder/game.js"
+  ]
+ },
+ "f8d8c51b": {
+  "key": "f60d759c68a0f35c",
+  "who": "hoot",
+  "text": "This tiny brain starts with random weights. Each epoch it looks at every training tile and nudges its weights.",
+  "match": 1.0,
+  "files": [
+   "games/brain-builder/game.js"
+  ]
+ },
+ "5b58a02d": {
+  "key": "a8aaa3ae15e06372",
+  "who": "mo",
+  "text": "Shapes must fit like pipes: what comes out of one layer must go into the next.",
+  "match": 1.0,
+  "files": [
+   "games/brain-builder/game.js"
+  ]
+ },
+ "75b6ef59": {
+  "key": "70ad5cab519c4380",
+  "who": "hoot",
+  "text": "Splendid! Every filter hunts for its own pattern, so try the next job.",
+  "match": 1.0,
+  "files": [
+   "games/brain-builder/game.js"
+  ]
+ },
+ "44754553": {
+  "key": "a3a21cd37f7c4c75",
+  "who": "hoot",
+  "text": "Four times smaller, and the edge still glows! ForestNet does this squash three times.",
+  "match": 1.0,
+  "files": [
+   "games/brain-builder/game.js"
+  ]
+ },
+ "4376248e": {
+  "key": "8ef522794f14adec",
+  "who": "hoot",
+  "text": "Look, green farm fields sit right next to the forest dots! Two numbers are not enough to tell them apart.",
+  "match": 1.0,
+  "files": [
+   "games/brain-builder/game.js"
+  ]
+ },
+ "118ba479": {
+  "key": "6738cee0b02fa96f",
+  "who": "hoot",
+  "text": "ForestNet's first layer has 24 filters like yours. Here are six of the pictures they make from this real tile.",
+  "match": 1.0,
+  "files": [
+   "games/brain-builder/game.js"
+  ]
+ },
+ "7fcc7da4": {
+  "key": "f2e555613aa4bcb0",
+  "who": "sprout",
+  "text": "Let's build one, piece by piece, and teach it to spot forests!",
+  "match": 1.0,
+  "files": [
+   "games/brain-builder/game.js"
+  ]
+ },
+ "a947090d": {
+  "key": "f323f818ef337dca",
+  "who": "hoot",
+  "text": "You built ForestNet! Now let's run the real weights through your stack.",
+  "match": 1.0,
+  "files": [
+   "games/brain-builder/game.js"
+  ]
+ },
+ "2bdabdba": {
+  "key": "cc1cfd0c30468a19",
+  "who": "hoot",
+  "text": "The real ForestNet uses filters to see texture, and it trained on farms, lawns and parks too.",
+  "match": 1.0,
+  "files": [
+   "games/brain-builder/game.js"
+  ]
+ },
+ "75654f79": {
+  "key": "d01e102356c549cb",
+  "who": "mo",
+  "text": "Welcome to my workshop! I'm Mo, and I build computers.",
+  "match": 1.0,
+  "files": [
+   "games/build-a-bot/game.js"
+  ]
+ },
+ "9f98410d": {
+  "key": "1ccef7963ef293ee",
+  "who": "sprout",
+  "text": "💡 Put handle 1 at the bottom left and handle 2 in the middle, so the green dots sit below the line.",
+  "match": 1.0,
+  "files": [
+   "games/brain-builder/game.js"
+  ]
+ },
+ "c74c53ca": {
+  "key": "eb915a979dcf6236",
+  "who": "sprout",
+  "text": "ReSeed needs a strong computer to find lost forests. Let's build one and see what every part does!",
+  "match": 1.0,
+  "files": [
+   "games/build-a-bot/game.js"
+  ]
+ },
+ "66319004": {
+  "key": "820281fdb8fbdc74",
+  "who": "mo",
+  "text": "You built a computer, ran its kitchen and read a real spec sheet. Hardware hero!",
+  "match": 1.0,
+  "files": [
+   "games/build-a-bot/game.js"
+  ]
+ },
+ "4c486d2e": {
+  "key": "a733536d1f2619fd",
+  "who": "mo",
+  "text": "Here's an empty case and a motherboard, the big board every part plugs into.",
+  "match": 1.0,
+  "files": [
+   "games/build-a-bot/game.js"
+  ]
+ },
+ "b50b3651": {
+  "key": "ed447cbeba9df819",
+  "who": "pix",
+  "text": "Your computer still needs a brain program. Come to Operation Install and give it an operating system!",
+  "match": 1.0,
+  "files": [
+   "games/build-a-bot/game.js"
+  ]
+ },
+ "a9d4b71d": {
+  "key": "121c7c2b7c5e4c91",
+  "who": "mo",
+  "text": "Drag each part to the slot with the same shape. A wrong socket means bonk!",
+  "match": 1.0,
+  "files": [
+   "games/build-a-bot/game.js"
+  ]
+ },
+ "2e2c8c9f": {
+  "key": "d0676ce2d541b758",
+  "who": "hoot",
+  "text": "ForestNet is ReSeed's forest-spotting brain. It must study thousands of pictures to get smart.",
+  "match": 1.0,
+  "files": [
+   "games/build-a-bot/game.js"
+  ]
+ },
+ "0c6f3501": {
+  "key": "a43c65030293b343",
+  "who": "mo",
+  "text": "A computer works like a busy kitchen. Orders fly in, and you send each one to the right worker!",
+  "match": 1.0,
+  "files": [
+   "games/build-a-bot/game.js"
+  ]
+ },
+ "0e516cd0": {
+  "key": "50b94f3b7c14f1e3",
+  "who": "mo",
+  "text": "Studying means the same math again and again. Pick the part that should do it!",
+  "match": 1.0,
+  "files": [
+   "games/build-a-bot/game.js"
+  ]
+ },
+ "640e63a2": {
+  "key": "f89539236a83c398",
+  "who": "sprout",
+  "text": "The CPU chefs make tricky choices, and GPU helpers shine at matching jobs on many things. RAM is the countertop; storage is the pantry.",
+  "match": 1.0,
+  "files": [
+   "games/build-a-bot/game.js"
+  ]
+ },
+ "43234e30": {
+  "key": "89f4d31b84dfce4b",
+  "who": "mo",
+  "text": "Detective time! This is the spec sheet of our real project computer, where ReSeed was built.",
+  "match": 1.0,
+  "files": [
+   "games/build-a-bot/game.js"
+  ]
+ },
+ "d9740b1e": {
+  "key": "7b3d73368be38dad",
+  "who": "mo",
+  "text": "Read it carefully and crack each case. Click the right line or the right answer.",
+  "match": 0.968,
+  "files": [
+   "games/build-a-bot/game.js"
+  ]
+ },
+ "24b0ff31": {
+  "key": "678036da7915460b",
+  "who": "mo",
+  "text": "Power cut! The countertop forgot everything, but the pantry kept every jar.",
+  "match": 1.0,
+  "files": [
+   "games/build-a-bot/game.js"
+  ]
+ },
+ "ca8af6e4": {
+  "key": "b2447e4041f42042",
+  "who": "mo",
+  "text": "That's RAM versus storage: RAM is fast but forgets, and storage remembers.",
+  "match": 1.0,
+  "files": [
+   "games/build-a-bot/game.js"
+  ]
+ },
+ "3d120b64": {
+  "key": "7a8a19b734499788",
+  "who": "mo",
+  "text": "Great pick! The GPU did the same math on many pictures at once.",
+  "match": 1.0,
+  "files": [
+   "games/build-a-bot/game.js"
+  ]
+ },
+ "44f74c7d": {
+  "key": "3554cfc8a1d65d22",
+  "who": "sprout",
+  "text": "Look, the pantry split in two: a fast SSD shelf and a big, cheap HDD cabinet!",
+  "match": 1.0,
+  "files": [
+   "games/build-a-bot/game.js"
+  ]
+ },
+ "435c95fe": {
+  "key": "8a851f54199a0449",
+  "who": "mo",
+  "text": "Quick check! On one GPU, the README says ForestNet trains in about…",
+  "match": 1.0,
+  "files": [
+   "games/build-a-bot/game.js"
+  ]
+ },
+ "6b5d8e8c": {
+  "key": "7b01352b8f56186a",
+  "who": "hoot",
+  "text": "ForestNet is saved in the pantry as a file, ready to check real forests!",
+  "match": 1.0,
+  "files": [
+   "games/build-a-bot/game.js"
+  ]
+ },
+ "b772a12c": {
+  "key": "21dc7f0894a7941e",
+  "who": "mo",
+  "text": "The GPU finished first! Your CPU chefs are still on the first few pictures.",
+  "match": 1.0,
+  "files": [
+   "games/build-a-bot/game.js"
+  ]
+ },
+ "9ac96209": {
+  "key": "d3fe4eee25ffce22",
+  "who": "mo",
+  "text": "Case closed! Psst: these games were built on this very computer.",
+  "match": 1.0,
+  "files": [
+   "games/build-a-bot/game.js"
+  ]
+ },
+ "2a695375": {
+  "key": "c777054887bf561f",
+  "who": "tuki",
+  "text": "You can rent them by the hour. Every job has a deadline, and every hour costs coins!",
+  "match": 1.0,
+  "files": [
+   "games/cloud-city/game.js"
+  ]
+ },
+ "5930c97a": {
+  "key": "9d2bb3a55068d809",
+  "who": "tuki",
+  "text": "Squawk, I'm Tuki! Welcome to Cloud City, where computers live in giant buildings called data centres.",
+  "match": 1.0,
+  "files": [
+   "games/cloud-city/game.js"
+  ]
+ },
+ "ed726767": {
+  "key": "cc2937ceb37b861a",
+  "who": "sprout",
+  "text": "Our pictures are ready. Next, they travel across the internet in Packet Post!",
+  "match": 1.0,
+  "files": [
+   "games/cloud-city/game.js"
+  ]
+ },
+ "7f9f98a0": {
+  "key": "8aaf63bd0b9f7e29",
+  "who": "tuki",
+  "text": "You ran Cloud City like a pro: fast, cheap and safe!",
+  "match": 1.0,
+  "files": [
+   "games/cloud-city/game.js"
+  ]
+ },
+ "f686cd80": {
+  "key": "778cfcaa916c74f7",
+  "who": "tuki",
+  "text": "Rescue job! The team needs a greenness map of your forest by 1 PM.",
+  "match": 1.0,
+  "files": [
+   "games/cloud-city/game.js"
+  ]
+ },
+ "96d5d8e6": {
+  "key": "eda69408f6b0de53",
+  "who": "tuki",
+  "text": "First pick a region, the place where your cloud computer lives. Then pick the computer.",
+  "match": 1.0,
+  "files": [
+   "games/cloud-city/game.js"
+  ]
+ },
+ "02a158ee": {
+  "key": "a6e3848d115b7000",
+  "who": "mo",
+  "text": "Next job: train ForestNet, our forest-spotting AI, before noon.",
+  "match": 1.0,
+  "files": [
+   "games/cloud-city/game.js"
+  ]
+ },
+ "bac5dd88": {
+  "key": "da4222413e335e8d",
+  "who": "pix",
+  "text": "Oops, I left my test VM running all night. Every hour on the meter costs coins!",
+  "match": 1.0,
+  "files": [
+   "games/cloud-city/game.js"
+  ]
+ },
+ "5a601c8d": {
+  "key": "e0fbf1bea553e69e",
+  "who": "hoot",
+  "text": "Then sort the boxes. Some we read every day, some almost never.",
+  "match": 1.0,
+  "files": [
+   "games/cloud-city/game.js"
+  ]
+ },
+ "df36c7ca": {
+  "key": "8bda10963df76ef0",
+  "who": "tuki",
+  "text": "Satellite pictures need a safe home in the cloud. Let's build a storage account!",
+  "match": 1.0,
+  "files": [
+   "games/cloud-city/game.js"
+  ]
+ },
+ "7a07fd2d": {
+  "key": "267e3776b72db6e1",
+  "who": "tuki",
+  "text": "Tell it where, when and how cloudy. It's like a library card index for space pictures.",
+  "match": 1.0,
+  "files": [
+   "games/cloud-city/game.js"
+  ]
+ },
+ "f98b6a75": {
+  "key": "73f63515493f933d",
+  "who": "sprout",
+  "text": "Demo day! ReSeed asks a cloud AI for a second opinion on a picture.",
+  "match": 1.0,
+  "files": [
+   "games/cloud-city/game.js"
+  ]
+ },
+ "52a34411": {
+  "key": "9f4042472f355cbc",
+  "who": "pix",
+  "text": "The AI needs a secret API key. Where we keep that key really matters!",
+  "match": 1.0,
+  "files": [
+   "games/cloud-city/game.js"
+  ]
+ },
+ "9db26f48": {
+  "key": "0bd753e4b2dda8fa",
+  "who": "hoot",
+  "text": "I waited and waited! Pictures we need every day belong in a quick tier.",
+  "match": 1.0,
+  "files": [
+   "games/cloud-city/game.js"
+  ]
+ },
+ "bf160b50": {
+  "key": "d0e9b89b50f62545",
+  "who": "hoot",
+  "text": "Too strict, only a few pictures got through! This game needs at least 3 pictures, so raise the cloud limit.",
+  "match": 1.0,
+  "files": [
+   "games/cloud-city/game.js"
+  ]
+ },
+ "55f35c52": {
+  "key": "3b92dc9cab809540",
+  "who": "tuki",
+  "text": "Anyone can peek inside a web page. The Glitch Bugs copied our key and spent our coins!",
+  "match": 1.0,
+  "files": [
+   "games/cloud-city/game.js"
+  ]
+ },
+ "a1f4c74c": {
+  "key": "b6ba8e372d617902",
+  "who": "mo",
+  "text": "That model is far too big for one laptop. It ran out of memory!",
+  "match": 1.0,
+  "files": [
+   "games/cloud-city/game.js"
+  ]
+ },
+ "440ce988": {
+  "key": "262349151f4f7d75",
+  "who": "tuki",
+  "text": "💡 In this game the pictures live in West Europe. Rent your VM next to the data, not next to the forest!",
+  "match": 1.0,
+  "files": [
+   "games/cloud-city/game.js"
+  ]
+ },
+ "79d1c451": {
+  "key": "66da1ad010a5e962",
+  "who": "hoot",
+  "text": "💡 Read every box: today's pictures are needed every morning, so they must be quick to open.",
+  "match": 0.903,
+  "files": [
+   "games/cloud-city/game.js"
+  ]
+ },
+ "a842bdfb": {
+  "key": "637fe4d361d9a146",
+  "who": "hoot",
+  "text": "I need clear pictures of your forest by 11 AM. Ask the STAC catalogue!",
+  "match": 1.0,
+  "files": [
+   "games/cloud-city/game.js"
+  ]
+ },
+ "f270b840": {
+  "key": "1a092ba92ce4b394",
+  "who": "tuki",
+  "text": "💡 Training is done, but a meter is still running! Press Deallocate on every VM.",
+  "match": 1.0,
+  "files": [
+   "games/cloud-city/game.js"
+  ]
+ },
+ "3350e218": {
+  "key": "ff31e91342b4243a",
+  "who": "tuki",
+  "text": "💡 Train on the GPU, then press Deallocate on every VM when its job is done. That ends its compute bill.",
+  "match": 1.0,
+  "files": [
+   "games/cloud-city/game.js"
+  ]
+ },
+ "843b7914": {
+  "key": "cae0f8d779e91f63",
+  "who": "tuki",
+  "text": "💡 Ask the catalogue from any computer. For the big downloads, a VM next to the data saves lots of time!",
+  "match": 1.0,
+  "files": [
+   "games/cloud-city/game.js"
+  ]
+ },
+ "b3ab1de9": {
+  "key": "60f066a72143e699",
+  "who": "sprout",
+  "text": "But clouds keep getting in the way! Let's sweep them out of the pictures.",
+  "match": 1.0,
+  "files": [
+   "games/cloud-sweeper/game.js"
+  ]
+ },
+ "b1304b5f": {
+  "key": "32f9bc0ceb5d4272",
+  "who": "tuki",
+  "text": "Hi, I'm Tuki! My satellite dish catches pictures of forests from space.",
+  "match": 1.0,
+  "files": [
+   "games/cloud-sweeper/game.js"
+  ]
+ },
+ "182fbb2c": {
+  "key": "f5768fa1300431e2",
+  "who": "tuki",
+  "text": "Clear skies! You can mask clouds and build a median picture, just like ReSeed.",
+  "match": 1.0,
+  "files": [
+   "games/cloud-sweeper/game.js"
+  ]
+ },
+ "d70aab24": {
+  "key": "4678d41aa6b4a685",
+  "who": "hoot",
+  "text": "Mask, sort, then take the middle. When most pictures of a spot are clear, that little trick wipes the clouds away!",
+  "match": 1.0,
+  "files": [
+   "games/cloud-sweeper/game.js"
+  ]
+ },
+ "e7bc1d44": {
+  "key": "6e7eb32f640ff208",
+  "who": "tuki",
+  "text": "Squawk, clouds hide your forest! Tap clouds, their dark shadows and thin, wispy cirrus clouds to mask those squares.",
+  "match": 1.0,
+  "files": [
+   "games/cloud-sweeper/game.js"
+  ]
+ },
+ "1cf4fc6d": {
+  "key": "cc7cc7a873bcc924",
+  "who": "hoot",
+  "text": "Here is ONE pixel, photographed on different passes. Clouds make it too bright, shadows too dark.",
+  "match": 1.0,
+  "files": [
+   "games/cloud-sweeper/game.js"
+  ]
+ },
+ "b4100133": {
+  "key": "dddc0cd45a9b6797",
+  "who": "tuki",
+  "text": "Masked squares are skipped, so only clear ground is kept. Drag to paint many squares at once!",
+  "match": 1.0,
+  "files": [
+   "games/cloud-sweeper/game.js"
+  ]
+ },
+ "2c27e947": {
+  "key": "d75c1acd74810d9f",
+  "who": "hoot",
+  "text": "Sort the numbers from smallest to biggest, then pick the one in the middle. That is the median.",
+  "match": 1.0,
+  "files": [
+   "games/cloud-sweeper/game.js"
+  ]
+ },
+ "ea7b3131": {
+  "key": "9fe3bccad702f506",
+  "who": "tuki",
+  "text": "On AWS and Google Cloud, what holds your picture files?",
+  "match": 1.0,
+  "files": [
+   "games/cloud-city/game.js"
+  ]
+ },
+ "86049f3f": {
+  "key": "61f37eb5043149e9",
+  "who": "sprout",
+  "text": "A tiny picture: 36 pixels, 5 passes each. Find the middle value of the glowing pixels.",
+  "match": 1.0,
+  "files": [
+   "games/cloud-sweeper/game.js"
+  ]
+ },
+ "789f73ca": {
+  "key": "00b00ebb79c3b4c5",
+  "who": "tuki",
+  "text": "Do three by hand. Then press Median magic and let the computer do the rest!",
+  "match": 1.0,
+  "files": [
+   "games/cloud-sweeper/game.js"
+  ]
+ },
+ "8e250421": {
+  "key": "de76dea4e7bc37dc",
+  "who": "tuki",
+  "text": "Less than half clear, so loadsentinel2 skips this scene. The satellite comes back in a few days!",
+  "match": 1.0,
+  "files": [
+   "games/cloud-sweeper/game.js"
+  ]
+ },
+ "fac0d88e": {
+  "key": "1723c9a77bd8c767",
+  "who": "hoot",
+  "text": "Look at the number line. Here the bright clouds drag the mean up, but the median stays with the forest!",
+  "match": 1.0,
+  "files": [
+   "games/cloud-sweeper/game.js"
+  ]
+ },
+ "69d770b6": {
+  "key": "533d61470c1f57c1",
+  "who": "tuki",
+  "text": "Real pictures now! ReSeed's search lines up the scenes from least cloudy to most cloudy, then stacks up to 8.",
+  "match": 1.0,
+  "files": [
+   "games/cloud-sweeper/game.js"
+  ]
+ },
+ "24a016cc": {
+  "key": "542b3b0dbcc4878b",
+  "who": "hoot",
+  "text": "A ReSeed site picture is 640 by 640: that's 409,600 pixels! The computer finds the median of every one, in every band.",
+  "match": 1.0,
+  "files": [
+   "games/cloud-sweeper/game.js"
+  ]
+ },
+ "49babb8a": {
+  "key": "647a1752e128d100",
+  "who": "hoot",
+  "text": "Two middles? Take the number halfway between them. That is exactly what np.nanmedian does.",
+  "match": 1.0,
+  "files": [
+   "games/cloud-sweeper/game.js"
+  ]
+ },
+ "af3620e6": {
+  "key": "c40eac5fb122d765",
+  "who": "tuki",
+  "text": "Your own forest, Ketapang on Borneo! Many of its pictures are half hidden by clouds.",
+  "match": 1.0,
+  "files": [
+   "games/cloud-sweeper/game.js"
+  ]
+ },
+ "b680fc71": {
+  "key": "2f1bfb3492b0ad21",
+  "who": "tuki",
+  "text": "Fun fact: the cloud number counts clouds on the whole big satellite tile. Your small square can still be clear!",
+  "match": 1.0,
+  "files": [
+   "games/cloud-sweeper/game.js"
+  ]
+ },
+ "8469bc04": {
+  "key": "f73f3beb9f7a3e72",
+  "who": "tuki",
+  "text": "Your forest's pictures, taken June to September, were nearly cloud-free. Let's help Ketapang on Borneo, whose pictures are much cloudier!",
+  "match": 1.0,
+  "files": [
+   "games/cloud-sweeper/game.js"
+  ]
+ },
+ "00affdee": {
+  "key": "75d6c66ba89dd274",
+  "who": "tuki",
+  "text": "💡 Look at the edges of each cloud and at the dark shadow just below-right of it. Thin cirrus looks like white streaks.",
+  "match": 1.0,
+  "files": [
+   "games/cloud-sweeper/game.js"
+  ]
+ },
+ "a0b323b9": {
+  "key": "41a0893f85d99c0e",
+  "who": "hoot",
+  "text": "💡 Compare the numbers one by one and keep the smallest in your head. The tiles with 80s and 90s are clouds!",
+  "match": 1.0,
+  "files": [
+   "games/cloud-sweeper/game.js"
+  ]
+ },
+ "3935e0fc": {
+  "key": "aca48873ce1c5ec9",
+  "who": "hoot",
+  "text": "💡 Count the tiles: the middle one has the same number of tiles on its left and on its right.",
+  "match": 1.0,
+  "files": [
+   "games/cloud-sweeper/game.js"
+  ]
+ },
+ "3f5231a2": {
+  "key": "84af0116c0b43940",
+  "who": "mo",
+  "text": "Bonk! Driver 570 only speaks CUDA up to 12.8, so a CUDA 13 block is too new for it.",
+  "match": 1.0,
+  "files": [
+   "games/driver-tower/game.js"
+  ]
+ },
+ "b8a22fb3": {
+  "key": "9d6dba7c255a1d91",
+  "who": "tuki",
+  "text": "💡 Read the cloud number under each picture. The smallest number is the least cloudy scene, so it goes first.",
+  "match": 1.0,
+  "files": [
+   "games/cloud-sweeper/game.js"
+  ]
+ },
+ "80d85a87": {
+  "key": "f0609974fb599060",
+  "who": "pix",
+  "text": "Easy route: pip brings PyTorch plus its GPU helper packages, and on this computer they fit the driver. Type pip install torch.",
+  "match": 1.0,
+  "files": [
+   "games/driver-tower/game.js"
+  ]
+ },
+ "8f396666": {
+  "key": "87bbf9942fed6ff0",
+  "who": "mo",
+  "text": "The GPU in our mission computer is fast asleep. Software wakes it up, one layer at a time.",
+  "match": 1.0,
+  "files": [
+   "games/driver-tower/game.js"
+  ]
+ },
+ "8ab3946c": {
+  "key": "1f55739e753120a7",
+  "who": "pix",
+  "text": "We'll stack a tower of drivers and libraries. Wrong versions wobble and fall, so read the labels!",
+  "match": 1.0,
+  "files": [
+   "games/driver-tower/game.js"
+  ]
+ },
+ "08c6a48e": {
+  "key": "20b1710ecfd07b0c",
+  "who": "mo",
+  "text": "The GPU is awake and PyTorch can see it. ForestNet can train now!",
+  "match": 1.0,
+  "files": [
+   "games/driver-tower/game.js"
+  ]
+ },
+ "53700220": {
+  "key": "6d61b1f9a18c7da0",
+  "who": "hoot",
+  "text": "Next stop: the Potion Lab, where every project gets its own environment.",
+  "match": 1.0,
+  "files": [
+   "games/driver-tower/game.js"
+  ]
+ },
+ "b50edd18": {
+  "key": "7a7c7c68d3c6275a",
+  "who": "mo",
+  "text": "Drop the driver block onto the GPU. Click it, drag it, or press 1.",
+  "match": 1.0,
+  "files": [
+   "games/driver-tower/game.js"
+  ]
+ },
+ "f233849d": {
+  "key": "6f391c20e7d37b0a",
+  "who": "mo",
+  "text": "Check the version tags. A block that doesn't fit will wobble and fall!",
+  "match": 1.0,
+  "files": [
+   "games/driver-tower/game.js"
+  ]
+ },
+ "e99bb83c": {
+  "key": "1f1115071d85f06e",
+  "who": "mo",
+  "text": "Meet our GPU, an NVIDIA A100. First it needs a driver, the translator between the computer and the GPU.",
+  "match": 1.0,
+  "files": [
+   "games/driver-tower/game.js"
+  ]
+ },
+ "07c77e57": {
+  "key": "509e653d5ff29cea",
+  "who": "mo",
+  "text": "Experts stack it by hand: driver, then CUDA toolkit, then cuDNN, then build.",
+  "match": 1.0,
+  "files": [
+   "games/driver-tower/game.js"
+  ]
+ },
+ "2ef49952": {
+  "key": "bc78246782af00d4",
+  "who": "pix",
+  "text": "Want to check on a GPU? Just type nvidia-smi to see its report card.",
+  "match": 1.0,
+  "files": [
+   "games/driver-tower/game.js"
+  ]
+ },
+ "23cf19cb": {
+  "key": "7dbc96ad825c4f89",
+  "who": "pix",
+  "text": "This is the real report from our project computer, where ReSeed was built. Read it to answer my questions.",
+  "match": 1.0,
+  "files": [
+   "games/driver-tower/game.js"
+  ]
+ },
+ "a718c8dd": {
+  "key": "f139d61db4456c58",
+  "who": "hoot",
+  "text": "Let's ask Python if it can see the GPU. One word is missing from my spell.",
+  "match": 1.0,
+  "files": [
+   "games/driver-tower/game.js"
+  ]
+ },
+ "0fcdaea8": {
+  "key": "94c91135bce80e50",
+  "who": "hoot",
+  "text": "Fill the gap, then press Enter. If it prints True, the GPU is ours!",
+  "match": 1.0,
+  "files": [
+   "games/driver-tower/game.js"
+  ]
+ },
+ "e07de1a3": {
+  "key": "f0a16da7eaa18574",
+  "who": "hoot",
+  "text": "True! PyTorch can see the GPU, so let's ask how many GPUs there are.",
+  "match": 1.0,
+  "files": [
+   "games/driver-tower/game.js"
+  ]
+ },
+ "8a80e507": {
+  "key": "87e4a9dac993ef7c",
+  "who": "mo",
+  "text": "New job! This project needs CUDA 13.0, so pick a driver that speaks CUDA 13.",
+  "match": 1.0,
+  "files": [
+   "games/driver-tower/game.js"
+  ]
+ },
+ "0d822483": {
+  "key": "ac51d0387c373219",
+  "who": "hoot",
+  "text": "Four GPUs, from cuda:0 to cuda:3! Now fill in the backup plan in ReSeed's real training code.",
+  "match": 1.0,
+  "files": [
+   "games/driver-tower/game.js"
+  ]
+ },
+ "b8e4fc27": {
+  "key": "e4ae5fd574293abb",
+  "who": "koa",
+  "text": "Fixed-wing: wings make lift, so it flies far and fast! But it can never hover.",
+  "match": 1.0,
+  "files": [
+   "games/drone-academy/game.js"
+  ]
+ },
+ "dc3752a2": {
+  "key": "22586442e846c0b4",
+  "who": "koa",
+  "text": "A quadcopter: four rotors, great at hovering! ReSeed's prototype is an X500-class quad.",
+  "match": 1.0,
+  "files": [
+   "games/drone-academy/game.js"
+  ]
+ },
+ "fb1b2385": {
+  "key": "47148bca499ab5b9",
+  "who": "koa",
+  "text": "Octocopter: eight rotors share the heavy load! Many can still land if one motor fails, but not all.",
+  "match": 1.0,
+  "files": [
+   "games/drone-academy/game.js"
+  ]
+ },
+ "53f39852": {
+  "key": "5d4859c6d9e6690c",
+  "who": "koa",
+  "text": "VTOL hybrid: it takes off straight up, then uses its wings to cruise far like a plane!",
+  "match": 1.0,
+  "files": [
+   "games/drone-academy/game.js"
+  ]
+ },
+ "497ea179": {
+  "key": "97250339a34d4801",
+  "who": "hoot",
+  "text": "💡 Sort the five numbers in your head: two come before the middle one and two come after it. The middle is the 3rd.",
+  "match": 1.0,
+  "files": [
+   "games/cloud-sweeper/game.js"
+  ]
+ },
+ "92574112": {
+  "key": "78cde99f2a194f81",
+  "who": "koa",
+  "text": "Single-rotor helicopter! One big rotor is very efficient for long, heavy work.",
+  "match": 1.0,
+  "files": [
+   "games/drone-academy/game.js"
+  ]
+ },
+ "2abe2b7e": {
+  "key": "fb57fff8d2c94d0d",
+  "who": "koa",
+  "text": "Hexacopter: six rotors share the load! Many can land on the other five, if they are set up for it.",
+  "match": 1.0,
+  "files": [
+   "games/drone-academy/game.js"
+  ]
+ },
+ "942288e8": {
+  "key": "ca6f335bc224a023",
+  "who": "mo",
+  "text": "All parts in, now the propellers! If all four spin the same way, the whole drone twists around.",
+  "match": 1.0,
+  "files": [
+   "games/drone-academy/game.js"
+  ]
+ },
+ "0ba9439c": {
+  "key": "2cfb63e7d8edd26b",
+  "who": "koa",
+  "text": "RTL: fly home now, while there's still enough battery! ReSeed's battery plans keep a 25 % reserve for this.",
+  "match": 1.0,
+  "files": [
+   "games/drone-academy/game.js"
+  ]
+ },
+ "af694244": {
+  "key": "7da55d043dab849f",
+  "who": "koa",
+  "text": "LAND: RTL and HOLD need GPS to know where the drone is! Come down gently, right now.",
+  "match": 1.0,
+  "files": [
+   "games/drone-academy/game.js"
+  ]
+ },
+ "f89f66d7": {
+  "key": "abb878472afaa8b0",
+  "who": "koa",
+  "text": "RTL: if the failsafe is set up, the drone uses GPS to fly home when the radio is lost! It needs a good GPS fix and a saved home point.",
+  "match": 1.0,
+  "files": [
+   "games/drone-academy/game.js"
+  ]
+ },
+ "f46f1a76": {
+  "key": "025408aca7af2225",
+  "who": "koa",
+  "text": "HOLD: stop and hover in place until they have walked past! Never fly over people.",
+  "match": 1.0,
+  "files": [
+   "games/drone-academy/game.js"
+  ]
+ },
+ "023170ec": {
+  "key": "d414c7774aeb84eb",
+  "who": "koa",
+  "text": "RTL! Plenty of battery and good GPS: head home before the storm arrives.",
+  "match": 1.0,
+  "files": [
+   "games/drone-academy/game.js"
+  ]
+ },
+ "67928859": {
+  "key": "8145c27ea3ed75f5",
+  "who": "mo",
+  "text": "Props across from each other spin the same way. Props side by side spin opposite ways.",
+  "match": 1.0,
+  "files": [
+   "games/drone-academy/game.js"
+  ]
+ },
+ "71cbb5ef": {
+  "key": "62aea14d3bdb5c2c",
+  "who": "koa",
+  "text": "LAND: it's too far to make it home on 8 %! Land now in a clear spot, and an adult can fetch it.",
+  "match": 1.0,
+  "files": [
+   "games/drone-academy/game.js"
+  ]
+ },
+ "eefde7a7": {
+  "key": "031f4b1d10d36844",
+  "who": "koa",
+  "text": "For each alarm, pick a flight mode: RTL flies home, LAND comes down, HOLD hovers.",
+  "match": 1.0,
+  "files": [
+   "games/drone-academy/game.js"
+  ]
+ },
+ "45dab6cb": {
+  "key": "ffc6dcc3fb044fa5",
+  "who": "koa",
+  "text": "Welcome to Drone Academy! Five lessons earn your game pilot wings.",
+  "match": 1.0,
+  "files": [
+   "games/drone-academy/game.js"
+  ]
+ },
+ "a13b1042": {
+  "key": "baed34467d0efdac",
+  "who": "sprout",
+  "text": "Ready for a real mission? Let's fly Drone Rush!",
+  "match": 1.0,
+  "files": [
+   "games/drone-academy/game.js"
+  ]
+ },
+ "51e773dd": {
+  "key": "8332f10fa95b7df7",
+  "who": "koa",
+  "text": "Real drones are flown by trained adult pilots who follow local drone rules. Let's learn what they know!",
+  "match": 1.0,
+  "files": [
+   "games/drone-academy/game.js"
+  ]
+ },
+ "d26c5c79": {
+  "key": "a474874822c047ae",
+  "who": "koa",
+  "text": "Game pilot wings, earned! Real flights need a trained adult pilot and local drone rules.",
+  "match": 1.0,
+  "files": [
+   "games/drone-academy/game.js"
+  ]
+ },
+ "21040a0f": {
+  "key": "e095cab67bcb13cb",
+  "who": "koa",
+  "text": "Every job needs the right drone. Read each mission and pick the best card, or press keys 1 to 6.",
+  "match": 1.0,
+  "files": [
+   "games/drone-academy/game.js"
+  ]
+ },
+ "df332ec9": {
+  "key": "01a31e788eb7e425",
+  "who": "koa",
+  "text": "A pilot has two sticks: the left one climbs and turns. The right one moves you around.",
+  "match": 1.0,
+  "files": [
+   "games/drone-academy/game.js"
+  ]
+ },
+ "d09987a7": {
+  "key": "2edcbaa8c66cf7da",
+  "who": "koa",
+  "text": "Use the keys, or drag the sticks on the screen. Higher drones fly higher on the screen too!",
+  "match": 1.0,
+  "files": [
+   "games/drone-academy/game.js"
+  ]
+ },
+ "c5be9d0a": {
+  "key": "83ec76d95915cd03",
+  "who": "koa",
+  "text": "Before every flight, pilots run a checklist. Spot anything that's not safe!",
+  "match": 1.0,
+  "files": [
+   "games/drone-academy/game.js"
+  ]
+ },
+ "1ef536d1": {
+  "key": "3b4c7c7513886e7f",
+  "who": "koa",
+  "text": "ReSeed's demo flight is a Python script that flies the drone in GUIDED mode.",
+  "match": 1.0,
+  "files": [
+   "games/drone-academy/game.js"
+  ]
+ },
+ "8c04fa80": {
+  "key": "606b08ae48993023",
+  "who": "koa",
+  "text": "Fly it to the glowing patch, drop the seeds, then fly home before the battery runs out.",
+  "match": 1.0,
+  "files": [
+   "games/drone-rush/game.js"
+  ]
+ },
+ "6e4db077": {
+  "key": "e7306eb535bda1a1",
+  "who": "sprout",
+  "text": "demoflight.py says: test in SITL first, a pretend drone inside the computer. Safe and smart!",
+  "match": 1.0,
+  "files": [
+   "games/drone-academy/game.js"
+  ]
+ },
+ "84fdfbd3": {
+  "key": "d2626095c78ceaac",
+  "who": "koa",
+  "text": "Strap in, pilot! The seed drone carries a pack of seeds on a rope.",
+  "match": 1.0,
+  "files": [
+   "games/drone-rush/game.js"
+  ]
+ },
+ "dfce5bd6": {
+  "key": "6a6a38c3b5a2e44c",
+  "who": "sprout",
+  "text": "Don't bonk into anything. I'm right here inside that drone!",
+  "match": 1.0,
+  "files": [
+   "games/drone-rush/game.js"
+  ]
+ },
+ "4c89a36c": {
+  "key": "331efb4003f0fc54",
+  "who": "koa",
+  "text": "Five missions, five forests seeded. You're a real seed pilot now!",
+  "match": 1.0,
+  "files": [
+   "games/drone-rush/game.js"
+  ]
+ },
+ "f85dc017": {
+  "key": "614fe72827e46c3d",
+  "who": "sprout",
+  "text": "Next, let's program the drone so it can fly the mission by itself.",
+  "match": 1.0,
+  "files": [
+   "games/drone-rush/game.js"
+  ]
+ },
+ "f6881ff9": {
+  "key": "23d48ec4da8ffd1d",
+  "who": "koa",
+  "text": "Game controls: hold thrust to climb and tilt to fly sideways. Let go of thrust for a gentle game landing.",
+  "match": 1.0,
+  "files": [
+   "games/drone-rush/game.js"
+  ]
+ },
+ "1a74541e": {
+  "key": "6c9a8ece43c9c924",
+  "who": "mo",
+  "text": "Let's build ReSeed's seed drone, a quadcopter. Pick a part and read where it goes.",
+  "match": 1.0,
+  "files": [
+   "games/drone-academy/game.js"
+  ]
+ },
+ "bfbde249": {
+  "key": "4b9db316c5397568",
+  "who": "koa",
+  "text": "Over the glowing patch, get low and press Space to drop the pack. Then land on the home pad.",
+  "match": 1.0,
+  "files": [
+   "games/drone-rush/game.js"
+  ]
+ },
+ "cf041e85": {
+  "key": "2bf3c7688e3eb188",
+  "who": "koa",
+  "text": "Windy today! When you see a gust arrow, tilt into the wind to stay steady.",
+  "match": 1.0,
+  "files": [
+   "games/drone-rush/game.js"
+  ]
+ },
+ "41cc06d2": {
+  "key": "9c80a274ca8acf4e",
+  "who": "koa",
+  "text": "Great, now you're at the ground control station! Things can go wrong in the air.",
+  "match": 1.0,
+  "files": [
+   "games/drone-academy/game.js"
+  ]
+ },
+ "93ce8ebc": {
+  "key": "9eddb6ff4a94df4d",
+  "who": "koa",
+  "text": "This game valley has tall trees, busy birds and power lines. Real pilots pick a clear area far away from these!",
+  "match": 1.0,
+  "files": [
+   "games/drone-rush/game.js"
+  ]
+ },
+ "52096e2c": {
+  "key": "a4010e4bef2e3ba8",
+  "who": "koa",
+  "text": "See that red dashed line up high? In many countries, drones must stay below about 120 m.",
+  "match": 1.0,
+  "files": [
+   "games/drone-rush/game.js"
+  ]
+ },
+ "0a5b6228": {
+  "key": "e220668fff40eec7",
+  "who": "koa",
+  "text": "Game night mission with a small battery! The heavy seed pack makes it drain faster.",
+  "match": 1.0,
+  "files": [
+   "games/drone-rush/game.js"
+  ]
+ },
+ "64147813": {
+  "key": "7d34e40775262d64",
+  "who": "koa",
+  "text": "Game-only storm challenge! Two seed packs, two patches, and each planted patch is a checkpoint.",
+  "match": 1.0,
+  "files": [
+   "games/drone-rush/game.js"
+  ]
+ },
+ "c9fa0e24": {
+  "key": "fbb73655c433d486",
+  "who": "koa",
+  "text": "Fly smooth and save enough battery to get home. Real night flights need extra rules and a trained adult pilot.",
+  "match": 1.0,
+  "files": [
+   "games/drone-rush/game.js"
+  ]
+ },
+ "215eb4d3": {
+  "key": "f1611fd6da48dff7",
+  "who": "sprout",
+  "text": "Real pilots land before a storm and wait for better weather. In the game, we can do this!",
+  "match": 1.0,
+  "files": [
+   "games/drone-rush/game.js"
+  ]
+ },
+ "94d660a1": {
+  "key": "e40d7bcaeb437112",
+  "who": "hoot",
+  "text": "Hoo, detective! Thirteen real case files just landed on my desk, each one a real place on Earth.",
+  "match": 1.0,
+  "files": [
+   "games/forest-detective/game.js"
+  ]
+ },
+ "5169ef38": {
+  "key": "8b86c78b74223b26",
+  "who": "hoot",
+  "text": "Case closed! You used ReSeed's real rule on real satellite data. A true data detective.",
+  "match": 1.0,
+  "files": [
+   "games/forest-detective/game.js"
+  ]
+ },
+ "d76ac39d": {
+  "key": "ac552e73752b1764",
+  "who": "sprout",
+  "text": "Now we have patches to check for planting. On to the Plan island to draw them!",
+  "match": 1.0,
+  "files": [
+   "games/forest-detective/game.js"
+  ]
+ },
+ "1ef37193": {
+  "key": "da05aeef487b3d43",
+  "who": "hoot",
+  "text": "For each case we decide: lost forest, just winter, or healing by itself? Only lost forest gets the drones.",
+  "match": 1.0,
+  "files": [
+   "games/forest-detective/game.js"
+  ]
+ },
+ "fbb7f4ca": {
+  "key": "b0fa539b4275c4e1",
+  "who": "sprout",
+  "text": "Press O to open a case or N for not forest. Thirteen cases, go!",
+  "match": 1.0,
+  "files": [
+   "games/forest-detective/game.js"
+  ]
+ },
+ "b98edcb9": {
+  "key": "caa5264739399e94",
+  "who": "hoot",
+  "text": "Rule number one: ask ForestNet if the place was forest. If fewer than 1 tile in 4 is forest, stamp NOT FOREST.",
+  "match": 1.0,
+  "files": [
+   "games/forest-detective/game.js"
+  ]
+ },
+ "818582ac": {
+  "key": "45197c19bfd7ac81",
+  "who": "hoot",
+  "text": "Trees without leaves look brown, like a lost forest. Compare best season with best season, never winter with summer!",
+  "match": 1.0,
+  "files": [
+   "games/forest-detective/game.js"
+  ]
+ },
+ "5c98273a": {
+  "key": "c9c8d6d58add648f",
+  "who": "hoot",
+  "text": "Final challenge: turn our detective rule into an if / elif chain, like in Python.",
+  "match": 1.0,
+  "files": [
+   "games/forest-detective/game.js"
+  ]
+ },
+ "c8b90d65": {
+  "key": "76ce50b89e03aa51",
+  "who": "hoot",
+  "text": "RESEED needs a drop of 0.20 or more (or 25 %) in two recent seasons. Inspect the clues, then stamp!",
+  "match": 1.0,
+  "files": [
+   "games/forest-detective/game.js"
+  ]
+ },
+ "cb325ad7": {
+  "key": "01eb7e53eed40205",
+  "who": "hoot",
+  "text": "But forests can heal by themselves. A big dip that is back to green means RECOVERING: don't seed!",
+  "match": 1.0,
+  "files": [
+   "games/forest-detective/game.js"
+  ]
+ },
+ "0819bd1f": {
+  "key": "c33b179dbb02a7a2",
+  "who": "hoot",
+  "text": "Fires and saws leave a clue in short-wave infrared light. A drop of 0.10 in NBR hints at burning or clearing.",
+  "match": 1.0,
+  "files": [
+   "games/forest-detective/game.js"
+  ]
+ },
+ "25a06d41": {
+  "key": "a8ef07922e8e234e",
+  "who": "pix",
+  "text": "Drag each question into a slot and give it a verdict stamp. Then run it on all thirteen cases!",
+  "match": 1.0,
+  "files": [
+   "games/forest-detective/game.js"
+  ]
+ },
+ "937daf67": {
+  "key": "e57d395432f8f737",
+  "who": "hoot",
+  "text": "Yes, it's just winter! The oaks drop their leaves, and every summer they come back.",
+  "match": 1.0,
+  "files": [
+   "games/forest-detective/game.js"
+  ]
+ },
+ "9296c378": {
+  "key": "383f948d257fabbc",
+  "who": "hoot",
+  "text": "Correct! Huge patches dropped in both recent seasons, so it's time to plan the drones.",
+  "match": 1.0,
+  "files": [
+   "games/forest-detective/game.js"
+  ]
+ },
+ "5c40afb1": {
+  "key": "d2cd26f13339a131",
+  "who": "hoot",
+  "text": "Careful, the picture is from January! In summer the greenness is back near its usual level, so it is just winter.",
+  "match": 1.0,
+  "files": [
+   "games/forest-detective/game.js"
+  ]
+ },
+ "3081afac": {
+  "key": "0a47899bbc54f4a5",
+  "who": "hoot",
+  "text": "Look at the lost patches: huge areas dropped in both recent seasons. That is a RESEED case.",
+  "match": 1.0,
+  "files": [
+   "games/forest-detective/game.js"
+  ]
+ },
+ "573ff53a": {
+  "key": "724d715e43472393",
+  "who": "hoot",
+  "text": "Right! The rainforest stays green all year and has no lost patches, so no drones are needed.",
+  "match": 1.0,
+  "files": [
+   "games/forest-detective/game.js"
+  ]
+ },
+ "e6a60349": {
+  "key": "c1c02a1d7e405df7",
+  "who": "hoot",
+  "text": "The greenness stays high every year, and there are no lost patches. This forest is healthy!",
+  "match": 1.0,
+  "files": [
+   "games/forest-detective/game.js"
+  ]
+ },
+ "b7093606": {
+  "key": "124651c3bc25905d",
+  "who": "hoot",
+  "text": "Correct! Shrubs grew back after the fire, but big patches of conifers are still gone.",
+  "match": 1.0,
+  "files": [
+   "games/forest-detective/game.js"
+  ]
+ },
+ "37c87814": {
+  "key": "f9e7bca014aba758",
+  "who": "hoot",
+  "text": "Correct! Small cleared patches dropped in both recent seasons.",
+  "match": 1.0,
+  "files": [
+   "games/forest-detective/game.js"
+  ]
+ },
+ "2cdf27e2": {
+  "key": "485dc8929ec22ee5",
+  "who": "hoot",
+  "text": "Some green came back, but big patches still dropped in both seasons. ReSeed says RESEED.",
+  "match": 1.0,
+  "files": [
+   "games/forest-detective/game.js"
+  ]
+ },
+ "78571d2f": {
+  "key": "4d85c00262463029",
+  "who": "koa",
+  "text": "That's my island! Most of our gum trees grew new leaves right out of their burned trunks.",
+  "match": 1.0,
+  "files": [
+   "games/forest-detective/game.js"
+  ]
+ },
+ "e4ee2287": {
+  "key": "633433f12c16b2ec",
+  "who": "hoot",
+  "text": "Surprise! After the big fire the greenness crashed, but now it is back, and the only lost patch is under 1 hectare.",
+  "match": 1.0,
+  "files": [
+   "games/forest-detective/game.js"
+  ]
+ },
+ "4f838a2d": {
+  "key": "1ef268ad1be41b42",
+  "who": "hoot",
+  "text": "Wow, you spotted it! The fire was huge, but the eucalypts sprouted again and the forest seems to be healing by itself.",
+  "match": 1.0,
+  "files": [
+   "games/forest-detective/game.js"
+  ]
+ },
+ "b72b09df": {
+  "key": "972458a56b2d6226",
+  "who": "hoot",
+  "text": "Look closely: small patches, about 10 hectares in total, dropped in both recent seasons.",
+  "match": 1.0,
+  "files": [
+   "games/forest-detective/game.js"
+  ]
+ },
+ "37a50ba4": {
+  "key": "cc2651820c14cd40",
+  "who": "hoot",
+  "text": "All thirteen cases match ReSeed! Your if / elif chain is a game version of ReSeed's rule.",
+  "match": 1.0,
+  "files": [
+   "games/forest-detective/game.js"
+  ]
+ },
+ "858f5e8d": {
+  "key": "77eec4c279569e46",
+  "who": "hoot",
+  "text": "Remember, it is a rule of thumb made by the project, not a law of nature.",
+  "match": 1.0,
+  "files": [
+   "games/forest-detective/game.js"
+  ]
+ },
+ "2c96eb22": {
+  "key": "11a7e5f693fd1cf1",
+  "who": "sprout",
+  "text": "💡 Compare best season with best season. A winter picture can fool you!",
+  "match": 1.0,
+  "files": [
+   "games/forest-detective/game.js"
+  ]
+ },
+ "d434f163": {
+  "key": "a6a81878a41b4753",
+  "who": "hoot",
+  "text": "One limit of the rule: NDVI cannot tell a plantation from a natural forest. This neat grid is a plantation!",
+  "match": 1.0,
+  "files": [
+   "games/forest-detective/game.js"
+  ]
+ },
+ "966c37c4": {
+  "key": "a851529790c5d0eb",
+  "who": "pix",
+  "text": "That frame is an iframe. airesearchcenter.com/reseed shows the github.io page inside its own page.",
+  "match": 1.0,
+  "files": [
+   "games/git-garden/game.js"
+  ]
+ },
+ "ef9c6e3e": {
+  "key": "3efa5792dba12223",
+  "who": "sprout",
+  "text": "And these games will live at khamydoan.github.io/reseedgames. Let's share them with everyone!",
+  "match": 1.0,
+  "files": [
+   "games/git-garden/game.js"
+  ]
+ },
+ "d828a7f0": {
+  "key": "5ec3565f0206b4bf",
+  "who": "sprout",
+  "text": "Let's plant some history. I'll carry the basket!",
+  "match": 1.0,
+  "files": [
+   "games/git-garden/game.js"
+  ]
+ },
+ "7301fe14": {
+  "key": "743c37422d94fd31",
+  "who": "pix",
+  "text": "Hey, I'm Pix! ReSeed's code grows in a git history garden.",
+  "match": 1.0,
+  "files": [
+   "games/git-garden/game.js"
+  ]
+ },
+ "612fd53b": {
+  "key": "888688a9b38e217f",
+  "who": "pix",
+  "text": "Every commit plants a tree. Push to main, and robots test the code and publish the website!",
+  "match": 1.0,
+  "files": [
+   "games/git-garden/game.js"
+  ]
+ },
+ "1e3273f6": {
+  "key": "e4006022c90b5191",
+  "who": "sprout",
+  "text": "Next stop: the Server Lab Escape. Let's go!",
+  "match": 1.0,
+  "files": [
+   "games/git-garden/game.js"
+  ]
+ },
+ "5d99b53f": {
+  "key": "a1d2c8f11dd4d1c4",
+  "who": "pix",
+  "text": "Commit, branch, merge, push, test, publish. You work like a real coder now!",
+  "match": 1.0,
+  "files": [
+   "games/git-garden/game.js"
+  ]
+ },
+ "0ed954ad": {
+  "key": "1c98b96ccfbfbba9",
+  "who": "pix",
+  "text": "Each tree here is a commit: a saved moment of the code, with a short message.",
+  "match": 1.0,
+  "files": [
+   "games/git-garden/game.js"
+  ]
+ },
+ "fafc0526": {
+  "key": "8a6c1d2b37fac9a4",
+  "who": "pix",
+  "text": "First git add puts a file in Sprout's basket. Then git commit -m \"message\" plants the tree!",
+  "match": 0.973,
+  "files": [
+   "games/git-garden/game.js"
+  ]
+ },
+ "c91369e3": {
+  "key": "ce63309b03afcd29",
+  "who": "hoot",
+  "text": "I made the NDVI code faster! It's saved as a commit on this laptop.",
+  "match": 1.0,
+  "files": [
+   "games/git-garden/game.js"
+  ]
+ },
+ "c72bce06": {
+  "key": "2c2e6676f6b60f9e",
+  "who": "pix",
+  "text": "Make a branch: a side path. Try ideas there, then merge it back when it works.",
+  "match": 1.0,
+  "files": [
+   "games/git-garden/game.js"
+  ]
+ },
+ "9675141d": {
+  "key": "2a1b839a6f29b23f",
+  "who": "pix",
+  "text": "Send it with git push to github.com. ReSeed's workflow files tell GitHub Actions robots to test every push.",
+  "match": 1.0,
+  "files": [
+   "games/git-garden/game.js"
+  ]
+ },
+ "6fb4c875": {
+  "key": "8d0ed5605f43a49b",
+  "who": "tuki",
+  "text": "Websites use HTML. Tags like h1 for headings and p for paragraphs tell the browser what each part is.",
+  "match": 1.0,
+  "files": [
+   "games/git-garden/game.js"
+  ]
+ },
+ "39ea83b0": {
+  "key": "2f89aee186c0b813",
+  "who": "tuki",
+  "text": "Build your own page with a heading, a sentence, a picture and a link. It changes live!",
+  "match": 1.0,
+  "files": [
+   "games/git-garden/game.js"
+  ]
+ },
+ "0e576b72": {
+  "key": "d467e09039d50ee3",
+  "who": "pix",
+  "text": "airesearchcenter.com hangs a frame on its wall that shows the shop window. Deliver each parcel!",
+  "match": 1.0,
+  "files": [
+   "games/git-garden/game.js"
+  ]
+ },
+ "57e535e7": {
+  "key": "b744c73dab8ed775",
+  "who": "pix",
+  "text": "Three places, three jobs. github.com is the workshop. github.io is the shop window.",
+  "match": 1.0,
+  "files": [
+   "games/git-garden/game.js"
+  ]
+ },
+ "278a21ca": {
+  "key": "8a20ab2e18c0d630",
+  "who": "hoot",
+  "text": "I wrote rolls.py to count the seed rolls. Please save it in the garden!",
+  "match": 1.0,
+  "files": [
+   "games/git-garden/game.js"
+  ]
+ },
+ "f14e6562": {
+  "key": "c28e14be955850b1",
+  "who": "pix",
+  "text": "Meanwhile, I fixed a typo on main. Now the garden has two paths!",
+  "match": 1.0,
+  "files": [
+   "games/git-garden/game.js"
+  ]
+ },
+ "6d3d1f95": {
+  "key": "b99a7e902730f0c8",
+  "who": "koa",
+  "text": "Bees on the main path! A branch let us try the idea safely, then share it.",
+  "match": 1.0,
+  "files": [
+   "games/git-garden/game.js"
+  ]
+ },
+ "87e256d0": {
+  "key": "86df6dcaa8f80c13",
+  "who": "pix",
+  "text": "See? The older lines are real ReSeed commits, like c04a049. Your three trees are on top!",
+  "match": 1.0,
+  "files": [
+   "games/git-garden/game.js"
+  ]
+ },
+ "cd81887a": {
+  "key": "7999207cf2d7e6ba",
+  "who": "pix",
+  "text": "Red ✗ on pytest! The website still updated: Pages publishes site/ on every push to main, and the bug hides in the Python code.",
+  "match": 1.0,
+  "files": [
+   "games/git-garden/game.js"
+  ]
+ },
+ "1c28f8a3": {
+  "key": "4d0f5c97310bbb28",
+  "who": "hoot",
+  "text": "Thank you! Now save the fix as a commit and push again.",
+  "match": 1.0,
+  "files": [
+   "games/git-garden/game.js"
+  ]
+ },
+ "e95ed61a": {
+  "key": "c21491635d3ed79f",
+  "who": "tuki",
+  "text": "💡 Use the ＋ buttons to add each tag. Then change the words between the tags to your own!",
+  "match": 1.0,
+  "files": [
+   "games/git-garden/game.js"
+  ]
+ },
+ "b4427328": {
+  "key": "0be9774e1dc2983e",
+  "who": "sprout",
+  "text": "All green! Every test passes, and the website is live at khamydoan.github.io/reseed.",
+  "match": 1.0,
+  "files": [
+   "games/git-garden/game.js"
+  ]
+ },
+ "7ad0d32c": {
+  "key": "00a6782f4a01724e",
+  "who": "sprout",
+  "text": "Hi, I'm Sprout! I'm a seed drone, and a forest far away needs our help.",
+  "match": 1.0,
+  "files": [
+   "games/key-garden/game.js"
+  ]
+ },
+ "a2e355ce": {
+  "key": "f5de627788242af4",
+  "who": "sprout",
+  "text": "Typing helps us tell ReSeed what to do. So let's train your fingers first!",
+  "match": 1.0,
+  "files": [
+   "games/key-garden/game.js"
+  ]
+ },
+ "789fc736": {
+  "key": "218a7bc320472670",
+  "who": "pix",
+  "text": "I'm Pix. Every key you type right plants a seed in this garden. Ready?",
+  "match": 1.0,
+  "files": [
+   "games/key-garden/game.js"
+  ]
+ },
+ "c0f6d429": {
+  "key": "cf8a2d4ecf19b29e",
+  "who": "sprout",
+  "text": "Look at that garden! Your fingers know the whole keyboard now.",
+  "match": 1.0,
+  "files": [
+   "games/key-garden/game.js"
+  ]
+ },
+ "478eb2e4": {
+  "key": "d49ccaefc88c2994",
+  "who": "koa",
+  "text": "G'day! I want to try a bee garden without messing up main, the main path.",
+  "match": 1.0,
+  "files": [
+   "games/git-garden/game.js"
+  ]
+ },
+ "21b5c61f": {
+  "key": "073032c998823d53",
+  "who": "mo",
+  "text": "Perfect timing. Come to my workshop next: we need to build the mission computer!",
+  "match": 1.0,
+  "files": [
+   "games/key-garden/game.js"
+  ]
+ },
+ "73feceb3": {
+  "key": "48f0873fe576d209",
+  "who": "koa",
+  "text": "I added a hello to README.md. Can you save that too?",
+  "match": 1.0,
+  "files": [
+   "games/git-garden/game.js"
+  ]
+ },
+ "4f7cbdf1": {
+  "key": "99770cbdc1012046",
+  "who": "pix",
+  "text": "Rest your fingers on the home row: A S D F for the left hand, J K L ; for the right.",
+  "match": 1.0,
+  "files": [
+   "games/key-garden/game.js"
+  ]
+ },
+ "e0850914": {
+  "key": "6c2bbd0c3b89277b",
+  "who": "pix",
+  "text": "Now reach up to the top row, then come back home. Some keys need a little sideways reach too.",
+  "match": 1.0,
+  "files": [
+   "games/key-garden/game.js"
+  ]
+ },
+ "9e15161d": {
+  "key": "a9d20794f87d9815",
+  "who": "pix",
+  "text": "Feel the little bumps on F and J? Those are your home bases. Type the glowing seed. The big key at the bottom is Space.",
+  "match": 1.0,
+  "files": [
+   "games/key-garden/game.js"
+  ]
+ },
+ "858e24d9": {
+  "key": "010f980f1219a63e",
+  "who": "hoot",
+  "text": "Coders type capitals and symbols all day. Hold Shift with the pinky on the other hand.",
+  "match": 1.0,
+  "files": [
+   "games/key-garden/game.js"
+  ]
+ },
+ "ab95f864": {
+  "key": "930e625e83cb6c76",
+  "who": "koa",
+  "text": "G'day! Bees love the bottom row. Reach down for Z X C V B N M, then back home.",
+  "match": 1.0,
+  "files": [
+   "games/key-garden/game.js"
+  ]
+ },
+ "2a8c2e4c": {
+  "key": "ac7fc49b018f7890",
+  "who": "hoot",
+  "text": "Watch the keyboard: it lights up Shift too. Try my favourite spell: print(\"hi\").",
+  "match": 1.0,
+  "files": [
+   "games/key-garden/game.js"
+  ]
+ },
+ "4796d026": {
+  "key": "f31b17dd22763717",
+  "who": "koa",
+  "text": "The wind is blowing seeds everywhere! Type a word to catch it and plant it.",
+  "match": 1.0,
+  "files": [
+   "games/key-garden/game.js"
+  ]
+ },
+ "c4c18df5": {
+  "key": "174b9fe936e1887f",
+  "who": "koa",
+  "text": "How fast should the seeds fall? You can change it next time.",
+  "match": 1.0,
+  "files": [
+   "games/key-garden/game.js"
+  ]
+ },
+ "f2ee67ab": {
+  "key": "21ce990dbd62707d",
+  "who": "koa",
+  "text": "Missed ones land in the recovery tray, so no seed is lost. Careful beats fast!",
+  "match": 1.0,
+  "files": [
+   "games/key-garden/game.js"
+  ]
+ },
+ "6ec0bfd3": {
+  "key": "78a8a1fdd5613296",
+  "who": "pix",
+  "text": "Move with the arrow keys and jump with Space. Hold toward a wall to stick, then jump again!",
+  "match": 1.0,
+  "files": [
+   "games/lab-escape/game.js"
+  ]
+ },
+ "96b33426": {
+  "key": "998db1ba3543fc50",
+  "who": "mo",
+  "text": "Pix is locked behind one of those coloured doors. Open the right one!",
+  "match": 1.0,
+  "files": [
+   "games/lab-escape/game.js"
+  ]
+ },
+ "791483cb": {
+  "key": "d3764af294fbe83a",
+  "who": "hoot",
+  "text": "Whoo, the disk room! Remember: in Python, the first item in a list is number 0.",
+  "match": 1.0,
+  "files": [
+   "games/lab-escape/game.js"
+  ]
+ },
+ "3eb78ba2": {
+  "key": "42ae269ab84c88cb",
+  "who": "pix",
+  "text": "Network room! Data travels in packets, and a port number picks which program answers.",
+  "match": 1.0,
+  "files": [
+   "games/lab-escape/game.js"
+  ]
+ },
+ "aaaa7c94": {
+  "key": "eaea2d6397135def",
+  "who": "mo",
+  "text": "Tuki is behind the lasers. A loop can switch off every laser in a list!",
+  "match": 1.0,
+  "files": [
+   "games/lab-escape/game.js"
+  ]
+ },
+ "2aaa24b9": {
+  "key": "5d8a4dbb99de74a4",
+  "who": "sprout",
+  "text": "Then the lift takes us up to the cloud roof. Our seed drone is waiting!",
+  "match": 1.0,
+  "files": [
+   "games/lab-escape/game.js"
+  ]
+ },
+ "f2682c5c": {
+  "key": "558580d27ead1ea4",
+  "who": "pix",
+  "text": "Alert! The Glitch Bugs locked our friends inside the server lab!",
+  "match": 1.0,
+  "files": [
+   "games/lab-escape/game.js"
+  ]
+ },
+ "45f9a18d": {
+  "key": "d330f531b8da9e71",
+  "who": "mo",
+  "text": "Thanks for the rescue! Next door: the RAM room, then the hot GPU room.",
+  "match": 1.0,
+  "files": [
+   "games/lab-escape/game.js"
+  ]
+ },
+ "f1605e82": {
+  "key": "0ffc05b3d563d216",
+  "who": "sprout",
+  "text": "I'm small, but I'm sticky. Let's escape room by room!",
+  "match": 1.0,
+  "files": [
+   "games/lab-escape/game.js"
+  ]
+ },
+ "567b0ef1": {
+  "key": "41c5e434173199db",
+  "who": "koa",
+  "text": "We made it out! Now the seed drone can fly back to the forest.",
+  "match": 1.0,
+  "files": [
+   "games/lab-escape/game.js"
+  ]
+ },
+ "f034dedf": {
+  "key": "058fda2091e1f60a",
+  "who": "mo",
+  "text": "Free at last! The CPU runs much cooler now. Let's go!",
+  "match": 1.0,
+  "files": [
+   "games/lab-escape/game.js"
+  ]
+ },
+ "d7bd6d98": {
+  "key": "6fd4725e0087c1db",
+  "who": "sprout",
+  "text": "You read code, changed it, and the whole lab obeyed. You're a real ReSeed engineer!",
+  "match": 1.0,
+  "files": [
+   "games/lab-escape/game.js"
+  ]
+ },
+ "edb5c4b6": {
+  "key": "d72a21fb56d6a4d0",
+  "who": "tuki",
+  "text": "Squawk! Packet delivered. I'm coming with you!",
+  "match": 1.0,
+  "files": [
+   "games/lab-escape/game.js"
+  ]
+ },
+ "edfea323": {
+  "key": "01aba394a2104096",
+  "who": "pix",
+  "text": "Index 2, the green door! You count like a real Python coder.",
+  "match": 1.0,
+  "files": [
+   "games/lab-escape/game.js"
+  ]
+ },
+ "395643e1": {
+  "key": "728d3ee55e0f01f3",
+  "who": "koa",
+  "text": "G'day, mate! Get us to the roof. I'll fly the seed drone!",
+  "match": 1.0,
+  "files": [
+   "games/lab-escape/game.js"
+  ]
+ },
+ "01c9c1a9": {
+  "key": "890774906a484333",
+  "who": "koa",
+  "text": "Hold on tight! Next stop: a forest that needs us.",
+  "match": 1.0,
+  "files": [
+   "games/lab-escape/game.js"
+  ]
+ },
+ "860060e0": {
+  "key": "2d6d0838e36b9eac",
+  "who": "hoot",
+  "text": "Giant AI brains need giant computers. Let's learn how people run them on GPUs!",
+  "match": 1.0,
+  "files": [
+   "games/llm-garage/game.js"
+  ]
+ },
+ "3b3fc16c": {
+  "key": "700b1fa09d1bf1d4",
+  "who": "pix",
+  "text": "I'll bring a command window to type in. Welcome to the Model Garage!",
+  "match": 1.0,
+  "files": [
+   "games/llm-garage/game.js"
+  ]
+ },
+ "94479357": {
+  "key": "49ab5882ad7df0bf",
+  "who": "hoot",
+  "text": "Hoo! ReSeed's demo server asks a giant AI, gpt-6-astra, for a second opinion on forest pictures.",
+  "match": 1.0,
+  "files": [
+   "games/llm-garage/game.js"
+  ]
+ },
+ "95438280": {
+  "key": "6ccf1fdbf3ea43eb",
+  "who": "hoot",
+  "text": "You can chop tokens, park models and fix out-of-memory crashes. Splendid work!",
+  "match": 1.0,
+  "files": [
+   "games/llm-garage/game.js"
+  ]
+ },
+ "44eff668": {
+  "key": "b69fa5d16daf1350",
+  "who": "sprout",
+  "text": "Next stop: Score island, where we measure how green the forest is!",
+  "match": 1.0,
+  "files": [
+   "games/llm-garage/game.js"
+  ]
+ },
+ "05d2ddf2": {
+  "key": "ca56f946b0fd237e",
+  "who": "hoot",
+  "text": "AI language models don't read letters. They read tokens: little chunks of text.",
+  "match": 1.0,
+  "files": [
+   "games/llm-garage/game.js"
+  ]
+ },
+ "63dde563": {
+  "key": "a6d1fc7818331f42",
+  "who": "hoot",
+  "text": "Short, common words stay whole, and long or made-up words get chopped. You run the chopper!",
+  "match": 1.0,
+  "files": [
+   "games/llm-garage/game.js"
+  ]
+ },
+ "71e34a0b": {
+  "key": "19264b0dc8843f1d",
+  "who": "hoot",
+  "text": "In this game, a model's weights must fit in GPU memory: billions of settings × bytes each. 16 bits are 2 bytes, and 4 bits are half a byte.",
+  "match": 0.983,
+  "files": [
+   "games/llm-garage/game.js"
+  ]
+ },
+ "c062adec": {
+  "key": "45777dd2352fe62f",
+  "who": "pix",
+  "text": "Two ways to serve an AI model. vLLM is a big kitchen that cooks for many users at once on server GPUs.",
+  "match": 1.0,
+  "files": [
+   "games/llm-garage/game.js"
+  ]
+ },
+ "6d4c9abc": {
+  "key": "24bce054001e839f",
+  "who": "pix",
+  "text": "llama.cpp is a food truck: it runs a GGUF model that fits on your laptop. Send each customer to the right one!",
+  "match": 1.0,
+  "files": [
+   "games/llm-garage/game.js"
+  ]
+ },
+ "70f2feb3": {
+  "key": "cf62bd03f8e4eeb5",
+  "who": "pix",
+  "text": "Time to start a pretend AI model server! Type the commands in the command window, then fix the crashes.",
+  "match": 1.0,
+  "files": [
+   "games/llm-garage/game.js"
+  ]
+ },
+ "983af438": {
+  "key": "acca74ec8bdb3df3",
+  "who": "hoot",
+  "text": "If you see CUDA out of memory, the model didn't fit. Read the gauge and pick a fix.",
+  "match": 1.0,
+  "files": [
+   "games/llm-garage/game.js"
+  ]
+ },
+ "f1524d54": {
+  "key": "9fd8ac1fefc2cfa2",
+  "who": "hoot",
+  "text": "How many tokens did this sentence make? Count the blocks!",
+  "match": 1.0,
+  "files": [
+   "games/llm-garage/game.js"
+  ]
+ },
+ "9657cd05": {
+  "key": "8443279370522f3a",
+  "who": "hoot",
+  "text": "Last job: a long chat! Watch the KV cache grow as the chat gets longer.",
+  "match": 1.0,
+  "files": [
+   "games/llm-garage/game.js"
+  ]
+ },
+ "e51252de": {
+  "key": "aba94716ffa3c8d9",
+  "who": "pix",
+  "text": "Open the big kitchen on the server GPUs! Which command starts it?",
+  "match": 1.0,
+  "files": [
+   "games/llm-garage/game.js"
+  ]
+ },
+ "da6e1a92": {
+  "key": "5fc2ea9930f44842",
+  "who": "hoot",
+  "text": "Rush hour: twelve hungry customers wait at each place! Who serves all twelve first?",
+  "match": 1.0,
+  "files": [
+   "games/llm-garage/game.js"
+  ]
+ },
+ "565fb158": {
+  "key": "e3f3a7146cd73f7a",
+  "who": "pix",
+  "text": "Crash! CUDA out of memory means it didn't fit, so read the gauge and pick a fix.",
+  "match": 1.0,
+  "files": [
+   "games/llm-garage/game.js"
+  ]
+ },
+ "93a04d89": {
+  "key": "96ee3da0a8cf57ad",
+  "who": "hoot",
+  "text": "💡 Short words we use every day stay whole. Names and made-up words get chopped!",
+  "match": 1.0,
+  "files": [
+   "games/llm-garage/game.js"
+  ]
+ },
+ "5f3cb1f6": {
+  "key": "8a51a7307e5847b7",
+  "who": "hoot",
+  "text": "💡 Is it the weights or the KV cache that is too big? Check the gauge and the 📌 rule.",
+  "match": 1.0,
+  "files": [
+   "games/llm-garage/game.js"
+  ]
+ },
+ "d0239d58": {
+  "key": "e3901a870da733b4",
+  "who": "hoot",
+  "text": "💡 Multiply first: billions of settings × bytes for each one. Then add the KV cache, and find a garage with room.",
+  "match": 1.0,
+  "files": [
+   "games/llm-garage/game.js"
+  ]
+ },
+ "dc010116": {
+  "key": "68e8646c83630a87",
+  "who": "pix",
+  "text": "Now start the food truck on a laptop. Which command?",
+  "match": 1.0,
+  "files": [
+   "games/llm-garage/game.js"
+  ]
+ },
+ "42de1630": {
+  "key": "6e272b9f4fae6b00",
+  "who": "koa",
+  "text": "G'day, I'm Koa! Our seed drone can fly a whole mission by itself, if we give it a program.",
+  "match": 1.0,
+  "files": [
+   "games/mission-coder/game.js"
+  ]
+ },
+ "b218f1c5": {
+  "key": "1746fc8676bfd508",
+  "who": "hoot",
+  "text": "Add room for the KV cache, the model's notes while it chats. These models are made-up examples.",
+  "match": 1.0,
+  "files": [
+   "games/llm-garage/game.js"
+  ]
+ },
+ "87a24b65": {
+  "key": "ed49146ff9317b10",
+  "who": "sprout",
+  "text": "A program is a list of steps for me. Snap the blocks together, press RUN, and I fly them!",
+  "match": 1.0,
+  "files": [
+   "games/mission-coder/game.js"
+  ]
+ },
+ "ae77a403": {
+  "key": "778e2ecc4fbcde65",
+  "who": "koa",
+  "text": "Loops, turns, GPS waypoints and a real demo flight. You're a true mission coder!",
+  "match": 1.0,
+  "files": [
+   "games/mission-coder/game.js"
+  ]
+ },
+ "a24a7c54": {
+  "key": "964c5d1375ef5f58",
+  "who": "sprout",
+  "text": "Next, let's see what grows back. Regrow Rescue is waiting!",
+  "match": 1.0,
+  "files": [
+   "games/mission-coder/game.js"
+  ]
+ },
+ "a1517484": {
+  "key": "f91ade4ce23a0f90",
+  "who": "koa",
+  "text": "Seed every brown square, then end with returnhome(). Then press RUN!",
+  "match": 1.0,
+  "files": [
+   "games/mission-coder/game.js"
+  ]
+ },
+ "a3d6cb02": {
+  "key": "d7524eae88730a96",
+  "who": "koa",
+  "text": "Tap blocks or drag them into Your program. forward(n) flies n squares and drop() drops seeds.",
+  "match": 1.0,
+  "files": [
+   "games/mission-coder/game.js"
+  ]
+ },
+ "656ce2af": {
+  "key": "3a215d9ad6318f82",
+  "who": "koa",
+  "text": "This patch has a corner, and a giant Brazil nut tree blocks the way. Time to turn!",
+  "match": 1.0,
+  "files": [
+   "games/mission-coder/game.js"
+  ]
+ },
+ "2e04ebd1": {
+  "key": "7f8862dc287a56b4",
+  "who": "sprout",
+  "text": "turnleft() and turnright() turn me on the spot. Watch the yellow arrow on my nose.",
+  "match": 1.0,
+  "files": [
+   "games/mission-coder/game.js"
+  ]
+ },
+ "693cfd8f": {
+  "key": "31f96ac02e21738b",
+  "who": "koa",
+  "text": "Real seed drones fly a lawnmower path: straight lines one swath apart, back and forth.",
+  "match": 1.0,
+  "files": [
+   "games/mission-coder/game.js"
+  ]
+ },
+ "a19bc4b5": {
+  "key": "35da4322016cd91f",
+  "who": "pix",
+  "text": "Put blocks inside repeat n: and the drone does them n times. A repeat can even go inside another repeat!",
+  "match": 1.0,
+  "files": [
+   "games/mission-coder/game.js"
+  ]
+ },
+ "8b26d7bf": {
+  "key": "0a1947fe9450ffd0",
+  "who": "koa",
+  "text": "Tap the waypoints on the map in order. Then we save the flight as a .waypoints file!",
+  "match": 1.0,
+  "files": [
+   "games/mission-coder/game.js"
+  ]
+ },
+ "1d1d5e2d": {
+  "key": "af2ddc0c8615addb",
+  "who": "koa",
+  "text": "Demo day! The real ReSeed test flight hops 1 metre, then jerks back so the seeds fly out.",
+  "match": 1.0,
+  "files": [
+   "games/mission-coder/game.js"
+  ]
+ },
+ "15bfef3f": {
+  "key": "1e328e304166089f",
+  "who": "tuki",
+  "text": "Real drones can use GPS to find their way beyond our game grid. Every spot on Earth has a latitude and a longitude.",
+  "match": 1.0,
+  "files": [
+   "games/mission-coder/game.js"
+  ]
+ },
+ "0e7ea5ed": {
+  "key": "f130bb1f98eb2440",
+  "who": "sprout",
+  "text": "Oh no, the steps got shuffled! Put the flight script in order, then press Fly demo.",
+  "match": 1.0,
+  "files": [
+   "games/mission-coder/game.js"
+  ]
+ },
+ "653a2c7f": {
+  "key": "60bf853abe220eae",
+  "who": "tuki",
+  "text": "💡 Find the latitude on the left side first. Then slide along that row to the right longitude at the bottom.",
+  "match": 1.0,
+  "files": [
+   "games/mission-coder/game.js"
+  ]
+ },
+ "3651441d": {
+  "key": "20410e430e6ad0e4",
+  "who": "koa",
+  "text": "All six waypoints placed! It's the same lawnmower path, written in GPS numbers.",
+  "match": 1.0,
+  "files": [
+   "games/mission-coder/game.js"
+  ]
+ },
+ "72f1fb1c": {
+  "key": "a1ffd7d65b1681c9",
+  "who": "koa",
+  "text": "Brilliant! ReSeed writes files like this for each patch, with thousands of seed drops.",
+  "match": 1.0,
+  "files": [
+   "games/mission-coder/game.js"
+  ]
+ },
+ "01ee1e80": {
+  "key": "2d9876fa86b878d4",
+  "who": "koa",
+  "text": "This file holds flight instructions for drone-control software. Each row is one command, and CMD says which kind.",
+  "match": 1.0,
+  "files": [
+   "games/mission-coder/game.js"
+  ]
+ },
+ "2fc434b9": {
+  "key": "4ae3a8ebc99ba618",
+  "who": "koa",
+  "text": "Same order as the real script! GUIDED mode lets the program steer the drone, and LAND tells it to land.",
+  "match": 1.0,
+  "files": [
+   "games/mission-coder/game.js"
+  ]
+ },
+ "53c53bbd": {
+  "key": "ececc1edc9a5b989",
+  "who": "sprout",
+  "text": "💡 In this demo, take off before flying across the field. Put the jerk right after flying forward, like ReSeed's script.",
+  "match": 1.0,
+  "files": [
+   "games/mission-coder/game.js"
+  ]
+ },
+ "1c25f265": {
+  "key": "77a413d614652d8b",
+  "who": "sprout",
+  "text": "💡 Don't forget the last block: returnhome() brings me back to the H pad.",
+  "match": 0.875,
+  "files": [
+   "games/mission-coder/game.js"
+  ]
+ },
+ "3d0948aa": {
+  "key": "9eded78457022bba",
+  "who": "sprout",
+  "text": "💡 forward(2) takes me to the first brown square. Then drop(), forward(1), drop() and so on.",
+  "match": 1.0,
+  "files": [
+   "games/mission-coder/game.js"
+  ]
+ },
+ "39ecd2b0": {
+  "key": "b26facf68db9eae6",
+  "who": "sprout",
+  "text": "💡 Seed the two squares in the top row first. Then turnright() to face down the patch.",
+  "match": 1.0,
+  "files": [
+   "games/mission-coder/game.js"
+  ]
+ },
+ "b33aa0fd": {
+  "key": "51c3ac391ca70280",
+  "who": "sprout",
+  "text": "💡 After the turn, use forward(1) and drop() twice. Finish with returnhome().",
+  "match": 1.0,
+  "files": [
+   "games/mission-coder/game.js"
+  ]
+ },
+ "e4d69272": {
+  "key": "8f8498d24f1926bc",
+  "who": "sprout",
+  "text": "Look at those labels: urgent seeding! Let's drop seeds on every low number!",
+  "match": 1.0,
+  "files": [
+   "games/ndvi-goggles/game.js"
+  ]
+ },
+ "cdd81382": {
+  "key": "0c2c43cb64981859",
+  "who": "sprout",
+  "text": "💡 Try repeat 5: with forward(1) and drop() inside. That seeds a whole line!",
+  "match": 1.0,
+  "files": [
+   "games/mission-coder/game.js"
+  ]
+ },
+ "8f9f0e1b": {
+  "key": "d2d0f4385fa5eee2",
+  "who": "sprout",
+  "text": "💡 To turn around: forward(1), turnright(), forward(1), turnright(). The next line goes back the other way.",
+  "match": 1.0,
+  "files": [
+   "games/mission-coder/game.js"
+  ]
+ },
+ "9bef04d9": {
+  "key": "146c0c0fbf685511",
+  "who": "hoot",
+  "text": "Wait! Roads and rivers score low too, and ReSeed only seeds where ForestNet says a forest used to grow.",
+  "match": 1.0,
+  "files": [
+   "games/ndvi-goggles/game.js"
+  ]
+ },
+ "9478e1ff": {
+  "key": "8f2963fbb2f80f85",
+  "who": "hoot",
+  "text": "Welcome to Score island! I'm Professor Hoot, and I measure how healthy forests are.",
+  "match": 1.0,
+  "files": [
+   "games/ndvi-goggles/game.js"
+  ]
+ },
+ "4c129267": {
+  "key": "624353a6c9161962",
+  "who": "sprout",
+  "text": "From space, a farm and a forest can both look green. We need a cleverer way to see!",
+  "match": 1.0,
+  "files": [
+   "games/ndvi-goggles/game.js"
+  ]
+ },
+ "2da138ee": {
+  "key": "342a8b36c98c5a80",
+  "who": "hoot",
+  "text": "You can read the invisible glow of leaves now. That number is NDVI!",
+  "match": 1.0,
+  "files": [
+   "games/ndvi-goggles/game.js"
+  ]
+ },
+ "45094047": {
+  "key": "833819bb6039bc8b",
+  "who": "hoot",
+  "text": "Put on the near-infrared goggles! They show a light our eyes cannot see.",
+  "match": 1.0,
+  "files": [
+   "games/ndvi-goggles/game.js"
+  ]
+ },
+ "f6fbfdcc": {
+  "key": "705078717346453a",
+  "who": "sprout",
+  "text": "Next, Spell Academy: we'll write the NDVI spell in real Python!",
+  "match": 1.0,
+  "files": [
+   "games/ndvi-goggles/game.js"
+  ]
+ },
+ "bb6cb695": {
+  "key": "03e23d88c87a5297",
+  "who": "hoot",
+  "text": "Slide them over the forest, lawn, road, lake, snow and roof. Hold still to scan each one.",
+  "match": 1.0,
+  "files": [
+   "games/ndvi-goggles/game.js"
+  ]
+ },
+ "df66867e": {
+  "key": "7a034debd752f6af",
+  "who": "sprout",
+  "text": "Tap a bin or press keys 1 to 5. Start at the top of the ladder.",
+  "match": 1.0,
+  "files": [
+   "games/ndvi-goggles/game.js"
+  ]
+ },
+ "2837395a": {
+  "key": "eac4e68b0f3a9642",
+  "who": "hoot",
+  "text": "ReSeed gives every NDVI number one of five health classes. The sorter only sees the number!",
+  "match": 1.0,
+  "files": [
+   "games/ndvi-goggles/game.js"
+  ]
+ },
+ "e2715cfd": {
+  "key": "e6798e0d732d5c1e",
+  "who": "tuki",
+  "text": "I brought real pictures from the Sentinel-2 satellite! This is your site, seen from space.",
+  "match": 1.0,
+  "files": [
+   "games/ndvi-goggles/game.js"
+  ]
+ },
+ "5168c0ec": {
+  "key": "aa838f21d9e67a11",
+  "who": "hoot",
+  "text": "Slide the goggles over it to see the real NDVI map. Then read the colour under each pin.",
+  "match": 1.0,
+  "files": [
+   "games/ndvi-goggles/game.js"
+  ]
+ },
+ "cc2c1fb8": {
+  "key": "0c29e3eb11f0203b",
+  "who": "hoot",
+  "text": "Leaves glow in near-infrared. What else glowed really bright?",
+  "match": 1.0,
+  "files": [
+   "games/ndvi-goggles/game.js"
+  ]
+ },
+ "60c6d6c8": {
+  "key": "2f3c83fba4dbd57a",
+  "who": "hoot",
+  "text": "Yes! Snow also bounces back lots of red light, so we compare NIR with red to find real leaves.",
+  "match": 1.0,
+  "files": [
+   "games/ndvi-goggles/game.js"
+  ]
+ },
+ "29b6ac07": {
+  "key": "39b0ac17a840d40c",
+  "who": "hoot",
+  "text": "Snow fooled us, so we use two numbers: NIR and Red. Leaves bounce NIR and soak up red.",
+  "match": 1.0,
+  "files": [
+   "games/ndvi-goggles/game.js"
+  ]
+ },
+ "dde8f066": {
+  "key": "21940b1b4b213082",
+  "who": "hoot",
+  "text": "The NDVI machine does (NIR − Red) ÷ (NIR + Red). You do the sums, it does the rest!",
+  "match": 1.0,
+  "files": [
+   "games/ndvi-goggles/game.js"
+  ]
+ },
+ "bc0c36a0": {
+  "key": "e91f5ac65df2cd11",
+  "who": "hoot",
+  "text": "Look again: the snow glowed bright white! Snow bounces back red light too, so we must compare NIR with red.",
+  "match": 1.0,
+  "files": [
+   "games/ndvi-goggles/game.js"
+  ]
+ },
+ "c97a4e81": {
+  "key": "b3e4d0de7de5ab39",
+  "who": "hoot",
+  "text": "You can't push it past the ends: NDVI stays between −1 and +1. Only 0 and 0 gives no answer at all!",
+  "match": 1.0,
+  "files": [
+   "games/ndvi-goggles/game.js"
+  ]
+ },
+ "95dda381": {
+  "key": "a57d4e05031b0f2a",
+  "who": "hoot",
+  "text": "Perfect: low NDVI is a clue, not a reason. The next island checks it isn't just winter!",
+  "match": 1.0,
+  "files": [
+   "games/ndvi-goggles/game.js"
+  ]
+ },
+ "dde58fba": {
+  "key": "c6c819bf1067e84b",
+  "who": "tuki",
+  "text": "That's the real NDVI map ReSeed made for your site! Now let's watch NDVI change over a year.",
+  "match": 1.0,
+  "files": [
+   "games/ndvi-goggles/game.js"
+  ]
+ },
+ "4351d84e": {
+  "key": "41a3ef757b4a8dfc",
+  "who": "tuki",
+  "text": "Here is your site's wave too. Every month had a clear picture this year!",
+  "match": 1.0,
+  "files": [
+   "games/ndvi-goggles/game.js"
+  ]
+ },
+ "1441dce0": {
+  "key": "bc0cfd4bd8076ac9",
+  "who": "sprout",
+  "text": "💡 Hold the goggles still over a thing until the yellow ring fills. Space hops to the next one.",
+  "match": 1.0,
+  "files": [
+   "games/ndvi-goggles/game.js"
+  ]
+ },
+ "d8aefb54": {
+  "key": "b695f4a2e8c47d04",
+  "who": "tuki",
+  "text": "Here is your site's wave too. Gaps are months with no clear picture, often because of clouds, so ReSeed leaves a gap instead of guessing.",
+  "match": 1.0,
+  "files": [
+   "games/ndvi-goggles/game.js"
+  ]
+ },
+ "c9540d92": {
+  "key": "3dbbe44f5d81b580",
+  "who": "pix",
+  "text": "Permission denied! Changing the whole computer needs boss powers.",
+  "match": 1.0,
+  "files": [
+   "games/os-install/game.js"
+  ]
+ },
+ "f4730bae": {
+  "key": "628a997c16ff409c",
+  "who": "pix",
+  "text": "For this update, put sudo in front to use boss powers. Only use sudo with commands you trust!",
+  "match": 1.0,
+  "files": [
+   "games/os-install/game.js"
+  ]
+ },
+ "03a47418": {
+  "key": "0799bd44fed56e8a",
+  "who": "mo",
+  "text": "Next stop, Driver Tower. Let's wake up the graphics card too!",
+  "match": 1.0,
+  "files": [
+   "games/os-install/game.js"
+  ]
+ },
+ "ed964b84": {
+  "key": "9d803034256c0140",
+  "who": "pix",
+  "text": "Our mission computer needs an operating system: the boss program that helps run all the others. Let's install one!",
+  "match": 1.0,
+  "files": [
+   "games/os-install/game.js"
+  ]
+ },
+ "cf97b18b": {
+  "key": "0e4ca624f6d10410",
+  "who": "pix",
+  "text": "Ubuntu is installed and up to date. The mission computer is awake!",
+  "match": 1.0,
+  "files": [
+   "games/os-install/game.js"
+  ]
+ },
+ "bb091706": {
+  "key": "eece5694490619cc",
+  "who": "pix",
+  "text": "First we need a bootable USB stick: a stick with an operating system installer on it.",
+  "match": 1.0,
+  "files": [
+   "games/os-install/game.js"
+  ]
+ },
+ "a7860819": {
+  "key": "6a0eccecaa6d4f54",
+  "who": "mo",
+  "text": "Then we tell the computer to start from the stick. Careful which drive you pick!",
+  "match": 1.0,
+  "files": [
+   "games/os-install/game.js"
+  ]
+ },
+ "40380dc1": {
+  "key": "f8656bd088cf49c5",
+  "who": "pix",
+  "text": "There are many operating systems. Each one is great at different jobs.",
+  "match": 1.0,
+  "files": [
+   "games/os-install/game.js"
+  ]
+ },
+ "db16d665": {
+  "key": "80c8af86a356448a",
+  "who": "pix",
+  "text": "Then make a pretend user with a strong password. Never type a real password into a game!",
+  "match": 1.0,
+  "files": [
+   "games/os-install/game.js"
+  ]
+ },
+ "639d0471": {
+  "key": "b13c695bffc8e98c",
+  "who": "pix",
+  "text": "First boot! Log in, open the Terminal, and let's update the computer.",
+  "match": 1.0,
+  "files": [
+   "games/os-install/game.js"
+  ]
+ },
+ "540792c8": {
+  "key": "5ddf33408ac6aee9",
+  "who": "mo",
+  "text": "This used disk is full of old stuff. Let's look inside, then split it into partitions, like rooms in a house.",
+  "match": 1.0,
+  "files": [
+   "games/os-install/game.js"
+  ]
+ },
+ "638a7c9d": {
+  "key": "d6c208fe74ff4448",
+  "who": "pix",
+  "text": "These three operating systems each have a package manager: an app store you can talk to by typing.",
+  "match": 1.0,
+  "files": [
+   "games/os-install/game.js"
+  ]
+ },
+ "7f42f2b6": {
+  "key": "38d77b3ee7af05f6",
+  "who": "sprout",
+  "text": "Send each mission to the best one: Ubuntu, Windows or RHEL.",
+  "match": 1.0,
+  "files": [
+   "games/os-install/game.js"
+  ]
+ },
+ "3309b08a": {
+  "key": "10964697cdb1830e",
+  "who": "sprout",
+  "text": "Match each one to its truck, then install git on all three computers!",
+  "match": 1.0,
+  "files": [
+   "games/os-install/game.js"
+  ]
+ },
+ "c26c07c4": {
+  "key": "a042ebc175a270b4",
+  "who": "pix",
+  "text": "Yes! ReSeed's test robot runs ubuntu-latest, and our project computer runs Ubuntu 24.04.",
+  "match": 1.0,
+  "files": [
+   "games/os-install/game.js"
+  ]
+ },
+ "5d4513e8": {
+  "key": "3584ed3cf24423e8",
+  "who": "pix",
+  "text": "It could work, but ReSeed uses Ubuntu: it's free, and the test robot runs ubuntu-latest.",
+  "match": 1.0,
+  "files": [
+   "games/os-install/game.js"
+  ]
+ },
+ "7d4817b6": {
+  "key": "74d453c8ae2d500e",
+  "who": "mo",
+  "text": "Noooo, my cat photos were on that disk! Quick, press Undo!",
+  "match": 1.0,
+  "files": [
+   "games/os-install/game.js"
+  ]
+ },
+ "a6b14d4f": {
+  "key": "21898e8b6f60120f",
+  "who": "pix",
+  "text": "Python 3.12: the same version ReSeed's test robot uses!",
+  "match": 1.0,
+  "files": [
+   "games/os-install/game.js"
+  ]
+ },
+ "177afed3": {
+  "key": "1b6f538e43efe4cd",
+  "who": "pix",
+  "text": "Now install git on all three computers. Fill the blank in each recipe!",
+  "match": 1.0,
+  "files": [
+   "games/os-install/game.js"
+  ]
+ },
+ "a9f90ceb": {
+  "key": "c6650ca7b084d0a1",
+  "who": "mo",
+  "text": "Our mission computer is built, but its screen is empty. It has no brain yet!",
+  "match": 1.0,
+  "files": [
+   "games/os-install/game.js"
+  ]
+ },
+ "11da7b97": {
+  "key": "d83e97b1bf173ed9",
+  "who": "tuki",
+  "text": "Squawk, I'm Tuki! Satellite pictures often travel across the internet before they reach us.",
+  "match": 1.0,
+  "files": [
+   "games/packet-post/game.js"
+  ]
+ },
+ "8f0bdcb1": {
+  "key": "04836ac221ad5ed0",
+  "who": "tuki",
+  "text": "Big pictures get cut into small packets. Let's run the Packet Post and deliver them all!",
+  "match": 1.0,
+  "files": [
+   "games/packet-post/game.js"
+  ]
+ },
+ "eb8bc517": {
+  "key": "44235360db532a51",
+  "who": "tuki",
+  "text": "Handshakes, parcels, live video, phone books and doors. You run the internet's post office now!",
+  "match": 1.0,
+  "files": [
+   "games/packet-post/game.js"
+  ]
+ },
+ "b6c88a58": {
+  "key": "2bb516dc6727935d",
+  "who": "hoot",
+  "text": "Hoo, your forest pictures reached my lab safely! Next stop: is it really a forest?",
+  "match": 1.0,
+  "files": [
+   "games/packet-post/game.js"
+  ]
+ },
+ "93981ab6": {
+  "key": "8f70323d40debd71",
+  "who": "tuki",
+  "text": "Before TCP sends a picture, two computers shake hands: SYN, SYN-ACK, ACK.",
+  "match": 1.0,
+  "files": [
+   "games/packet-post/game.js"
+  ]
+ },
+ "fbaa7ee9": {
+  "key": "4d10d63694961eb2",
+  "who": "tuki",
+  "text": "Your forest picture is too big for one trip. Cut it into numbered packets and send them through the routers!",
+  "match": 1.0,
+  "files": [
+   "games/packet-post/game.js"
+  ]
+ },
+ "bc7a623a": {
+  "key": "46be5ac07d64ffd2",
+  "who": "tuki",
+  "text": "Send SYN, then press ACK right when the SYN-ACK reaches your ring. Keys 1, 2 and 3 work too!",
+  "match": 1.0,
+  "files": [
+   "games/packet-post/game.js"
+  ]
+ },
+ "197ae44c": {
+  "key": "203ff6ca77b025c9",
+  "who": "hoot",
+  "text": "Packets may arrive mixed up, or not at all. Check the numbers, ask for a resend, then rebuild the picture.",
+  "match": 1.0,
+  "files": [
+   "games/packet-post/game.js"
+  ]
+ },
+ "34216dc1": {
+  "key": "279d62efa68d56ac",
+  "who": "koa",
+  "text": "G'day, my drone streams live video with UDP! Each video picture, a frame, travels as 4 packets that can get lost or mixed up.",
+  "match": 1.0,
+  "files": [
+   "games/packet-post/game.js"
+  ]
+ },
+ "9ed21875": {
+  "key": "3f238bd64b4ed561",
+  "who": "koa",
+  "text": "In this game, one missing piece means Conceal: patch it with the last frame's piece. Two or more missing means Skip that frame.",
+  "match": 1.0,
+  "files": [
+   "games/packet-post/game.js"
+  ]
+ },
+ "eb177d6e": {
+  "key": "49882543e791e275",
+  "who": "tuki",
+  "text": "DNS is the internet's phone book. Find each name, and remember: your laptop keeps a cache of answers.",
+  "match": 1.0,
+  "files": [
+   "games/packet-post/game.js"
+  ]
+ },
+ "08927b5e": {
+  "key": "7f21cfa0b07970dd",
+  "who": "pix",
+  "text": "One computer has thousands of numbered doors called ports. Each program listens at its own door.",
+  "match": 1.0,
+  "files": [
+   "games/packet-post/game.js"
+  ]
+ },
+ "9d589c3b": {
+  "key": "f22759a5da331784",
+  "who": "tuki",
+  "text": "To send packets, computers need an IP address. Older IPv4 addresses are four numbers with dots; newer IPv6 ones are longer.",
+  "match": 1.0,
+  "files": [
+   "games/packet-post/game.js"
+  ]
+ },
+ "d5830b19": {
+  "key": "38ed3fc907bfc67f",
+  "who": "tuki",
+  "text": "A packet of this frame got lost! Should the video app wait for it to be sent again?",
+  "match": 1.0,
+  "files": [
+   "games/packet-post/game.js"
+  ]
+ },
+ "00388397": {
+  "key": "37960944c19a88f2",
+  "who": "pix",
+  "text": "Read the label and pick the door: 443 HTTPS, 80 HTTP, 22 SSH, 8000 for python -m reseed serve.",
+  "match": 1.0,
+  "files": [
+   "games/packet-post/game.js"
+  ]
+ },
+ "7a6b52e3": {
+  "key": "8aee852728e0949d",
+  "who": "hoot",
+  "text": "Hoo, a perfect picture! Now a bigger one: twelve packets, and two Glitch Bugs on the road!",
+  "match": 1.0,
+  "files": [
+   "games/packet-post/game.js"
+  ]
+ },
+ "0f7ce987": {
+  "key": "5527e93892525cdd",
+  "who": "koa",
+  "text": "Right, there's no time to wait here! Patch the hole or skip the frame, and keep going.",
+  "match": 1.0,
+  "files": [
+   "games/packet-post/game.js"
+  ]
+ },
+ "bb98b015": {
+  "key": "315452fca2eed276",
+  "who": "pix",
+  "text": "So which brain should our ReSeed mission computer get?",
+  "match": 1.0,
+  "files": [
+   "games/os-install/game.js"
+  ]
+ },
+ "5cade4a2": {
+  "key": "7d9427edaaf4583d",
+  "who": "koa",
+  "text": "The video froze, and my drone already flew past! UDP never resends by itself, and live video rarely has time to wait.",
+  "match": 1.0,
+  "files": [
+   "games/packet-post/game.js"
+  ]
+ },
+ "1c31a90f": {
+  "key": "a0b70c47817b33cc",
+  "who": "hoot",
+  "text": "💡 Find the smallest number in the tray first, then the next one up.",
+  "match": 1.0,
+  "files": [
+   "games/packet-post/game.js"
+  ]
+ },
+ "847a533f": {
+  "key": "492d38ebddc36caf",
+  "who": "tuki",
+  "text": "💡 Watch the shrinking ring. Press the glowing button when the ring hugs the envelope!",
+  "match": 1.0,
+  "files": [
+   "games/packet-post/game.js"
+  ]
+ },
+ "82f57100": {
+  "key": "654da977163bf56c",
+  "who": "hoot",
+  "text": "💡 Count along the tray: 1, 2, 3… The number you cannot find is the missing one.",
+  "match": 1.0,
+  "files": [
+   "games/packet-post/game.js"
+  ]
+ },
+ "4d05187e": {
+  "key": "4ee5e1c44efcb3ea",
+  "who": "koa",
+  "text": "💡 One red hole means Conceal, two or more mean Skip. Decide before the ring runs out!",
+  "match": 1.0,
+  "files": [
+   "games/packet-post/game.js"
+  ]
+ },
+ "f7ea44e5": {
+  "key": "bf27cadb7beca80e",
+  "who": "tuki",
+  "text": "💡 Read the name letter by letter. Open its first-letter tab, then find the exact same name.",
+  "match": 1.0,
+  "files": [
+   "games/packet-post/game.js"
+  ]
+ },
+ "07399126": {
+  "key": "e3203e3ff9557c3f",
+  "who": "pix",
+  "text": "💡 A number after a colon, like :8000, names the door. With no number, https means 443, http means 80 and ssh means 22.",
+  "match": 1.0,
+  "files": [
+   "games/packet-post/game.js"
+  ]
+ },
+ "af33d919": {
+  "key": "3118629ff360de0c",
+  "who": "pix",
+  "text": "ReSeed looks for a 0.20 greenness drop from an earlier peak, in two recent growing seasons. That's a clue to forest loss.",
+  "match": 1.0,
+  "files": [
+   "games/patch-painter/game.js"
+  ]
+ },
+ "2ff421fc": {
+  "key": "952128199bcf38f8",
+  "who": "pix",
+  "text": "It's called DECLINEABS in config.py. Want to see the real mask ReSeed painted?",
+  "match": 1.0,
+  "files": [
+   "games/patch-painter/game.js"
+  ]
+ },
+ "f2bf5c12": {
+  "key": "ac13e0cbb2130305",
+  "who": "sprout",
+  "text": "Then the drones know exactly where to fly. Grab your paint bucket!",
+  "match": 1.0,
+  "files": [
+   "games/patch-painter/game.js"
+  ]
+ },
+ "0835eabe": {
+  "key": "3c534497bdb599eb",
+  "who": "pix",
+  "text": "Hey, I'm Pix! Satellites found where forest got lost, so now we draw the exact patches.",
+  "match": 1.0,
+  "files": [
+   "games/patch-painter/game.js"
+  ]
+ },
+ "4a0b89d7": {
+  "key": "a39b785edfae6989",
+  "who": "pix",
+  "text": "Patches found, measured, sorted and split. That's real map coding!",
+  "match": 1.0,
+  "files": [
+   "games/patch-painter/game.js"
+  ]
+ },
+ "ad54460d": {
+  "key": "0bf1c4666ec7c3cb",
+  "who": "koa",
+  "text": "Beaut, now I know exactly where to fly! See you on Fly island.",
+  "match": 1.0,
+  "files": [
+   "games/patch-painter/game.js"
+  ]
+ },
+ "a689f656": {
+  "key": "0c657533ecb870a6",
+  "who": "pix",
+  "text": "Each square is a pixel. Its number says how much greener it used to be.",
+  "match": 1.0,
+  "files": [
+   "games/patch-painter/game.js"
+  ]
+ },
+ "543d8a49": {
+  "key": "f016bd8de3f75018",
+  "who": "pix",
+  "text": "Lit squares that touch make one patch. My paint bucket finds them with flood fill.",
+  "match": 1.0,
+  "files": [
+   "games/patch-painter/game.js"
+  ]
+ },
+ "e1ae2e69": {
+  "key": "0c145c9642558987",
+  "who": "pix",
+  "text": "Slide the threshold: squares at or above it light up. Light up the lost forest, not the noise!",
+  "match": 1.0,
+  "files": [
+   "games/patch-painter/game.js"
+  ]
+ },
+ "b23ccfce": {
+  "key": "db3b4d3cf1b37736",
+  "who": "pix",
+  "text": "Tap a lit square. The paint spreads up, down, left and right, like water!",
+  "match": 1.0,
+  "files": [
+   "games/patch-painter/game.js"
+  ]
+ },
+ "b64a1041": {
+  "key": "c9e75244ce1ec385",
+  "who": "pix",
+  "text": "One pixel is 10 m by 10 m. That's 0.01 hectares.",
+  "match": 1.0,
+  "files": [
+   "games/patch-painter/game.js"
+  ]
+ },
+ "f4a75cff": {
+  "key": "03e4015689751d04",
+  "who": "pix",
+  "text": "Let's count a big square first. Tap it with the bucket!",
+  "match": 1.0,
+  "files": [
+   "games/patch-painter/game.js"
+  ]
+ },
+ "f0f774f3": {
+  "key": "847a83e282d12fd7",
+  "who": "pix",
+  "text": "The drones need the biggest patches first. Let's sort them, largest first!",
+  "match": 1.0,
+  "files": [
+   "games/patch-painter/game.js"
+  ]
+ },
+ "33c84950": {
+  "key": "1c2792083782b651",
+  "who": "sprout",
+  "text": "These are the real patch sizes from your site. Compare two cards at a time.",
+  "match": 1.0,
+  "files": [
+   "games/patch-painter/game.js"
+  ]
+ },
+ "4f1beb13": {
+  "key": "963be6298aefff30",
+  "who": "koa",
+  "text": "G'day! ReSeed plans at most 50 hectares per mission, so bigger patches need cutting.",
+  "match": 1.0,
+  "files": [
+   "games/patch-painter/game.js"
+  ]
+ },
+ "07f35e0a": {
+  "key": "4d1fb0713582b97f",
+  "who": "pix",
+  "text": "Map two: land burned by a fire. Its edges are trickier!",
+  "match": 1.0,
+  "files": [
+   "games/patch-painter/game.js"
+  ]
+ },
+ "67d74462": {
+  "key": "6939feeb06083137",
+  "who": "pix",
+  "text": "Slide the threshold up a bit. Then fewer squares light up.",
+  "match": 1.0,
+  "files": [
+   "games/patch-painter/game.js"
+  ]
+ },
+ "98029b64": {
+  "key": "7b2bb64aad5613a3",
+  "who": "pix",
+  "text": "First, pick the patch for our first mission. Then slice the giant into drone-sized squares!",
+  "match": 1.0,
+  "files": [
+   "games/patch-painter/game.js"
+  ]
+ },
+ "7b2918b2": {
+  "key": "cceeb6f7b210d668",
+  "who": "pix",
+  "text": "Some lost squares stayed dark. Slide the threshold down a bit.",
+  "match": 1.0,
+  "files": [
+   "games/patch-painter/game.js"
+  ]
+ },
+ "fdd88bdb": {
+  "key": "6bbc5b5cdc21d82c",
+  "who": "pix",
+  "text": "💡 Look at the bar chart. Put the red line in the gap between the two hills.",
+  "match": 1.0,
+  "files": [
+   "games/patch-painter/game.js"
+  ]
+ },
+ "64172850": {
+  "key": "d8afb3ca2dbe85e1",
+  "who": "pix",
+  "text": "You predicted it! Blobs that only touch at a corner are separate patches.",
+  "match": 1.0,
+  "files": [
+   "games/patch-painter/game.js"
+  ]
+ },
+ "e9004a64": {
+  "key": "e4f92d3f19510f84",
+  "who": "pix",
+  "text": "Tricky, right? Blobs that only touch at a corner are separate patches.",
+  "match": 1.0,
+  "files": [
+   "games/patch-painter/game.js"
+  ]
+ },
+ "54ee274a": {
+  "key": "3f94c7d75e8dfc06",
+  "who": "pix",
+  "text": "Whoa, the paint stopped at a corner! Only up, down, left and right count as neighbours.",
+  "match": 1.0,
+  "files": [
+   "games/patch-painter/game.js"
+  ]
+ },
+ "a8883861": {
+  "key": "0d636ea3a6a700d3",
+  "who": "pix",
+  "text": "💡 Tap any cream square. The paint does the rest!",
+  "match": 1.0,
+  "files": [
+   "games/patch-painter/game.js"
+  ]
+ },
+ "a6bc301d": {
+  "key": "aa448c98e75a78f5",
+  "who": "pix",
+  "text": "💡 On this game map, lost forest has big drops and healthy forest only wiggles. Find the gap!",
+  "match": 1.0,
+  "files": [
+   "games/patch-painter/game.js"
+  ]
+ },
+ "89ca24bd": {
+  "key": "dd6e2a4584fb8e4a",
+  "who": "pix",
+  "text": "Not quite! Think of 100 pennies: how many dollars is that?",
+  "match": 1.0,
+  "files": [
+   "games/patch-painter/game.js"
+  ]
+ },
+ "9bb0b9e9": {
+  "key": "9b2150374d95cde0",
+  "who": "pix",
+  "text": "Speckle swept! Only patches of half a hectare or more stay on ReSeed's map.",
+  "match": 1.0,
+  "files": [
+   "games/patch-painter/game.js"
+  ]
+ },
+ "bef154e3": {
+  "key": "e21ceaaff12b9003",
+  "who": "pix",
+  "text": "Yes! One hectare is 100 m by 100 m, a bit bigger than a soccer field.",
+  "match": 1.0,
+  "files": [
+   "games/patch-painter/game.js"
+  ]
+ },
+ "2b88ffb5": {
+  "key": "af5757c34110c61a",
+  "who": "pix",
+  "text": "💡 50 pixels make 0.5 ha. Fewer than 50 pixels means sweep it!",
+  "match": 1.0,
+  "files": [
+   "games/patch-painter/game.js"
+  ]
+ },
+ "be0028b8": {
+  "key": "b87764e37463f5d0",
+  "who": "pix",
+  "text": "Now sweep the speckle! ReSeed skips patches smaller than 0.5 ha, even though some may be real.",
+  "match": 1.0,
+  "files": [
+   "games/patch-painter/game.js"
+  ]
+ },
+ "4829d562": {
+  "key": "420228897ac94835",
+  "who": "pix",
+  "text": "💡 Each pixel is 0.01 ha. So 50 pixels make 0.5 ha.",
+  "match": 1.0,
+  "files": [
+   "games/patch-painter/game.js"
+  ]
+ },
+ "47b5b13e": {
+  "key": "84db69369f30a8c7",
+  "who": "pix",
+  "text": "Sorted, just like ReSeed's list: rank 1 is the biggest. Now race the computer!",
+  "match": 1.0,
+  "files": [
+   "games/patch-painter/game.js"
+  ]
+ },
+ "d2129623": {
+  "key": "4fd416e6221e600c",
+  "who": "pix",
+  "text": "💡 Only two cards at a time. Bigger one on the left!",
+  "match": 1.0,
+  "files": [
+   "games/patch-painter/game.js"
+  ]
+ },
+ "4bdafbf8": {
+  "key": "d765a371a317ee08",
+  "who": "pix",
+  "text": "Python's sort() is called Timsort. For short lists like ours, it uses insertion sort: tuck each card into its spot!",
+  "match": 1.0,
+  "files": [
+   "games/patch-painter/game.js"
+  ]
+ },
+ "36077244": {
+  "key": "2713893f621c126d",
+  "who": "pix",
+  "text": "💡 Read the numbers. The bigger number must sit on the left.",
+  "match": 1.0,
+  "files": [
+   "games/patch-painter/game.js"
+  ]
+ },
+ "98afbf1e": {
+  "key": "83c99692cd3960b8",
+  "who": "pix",
+  "text": "💡 Skip every card over 50 ha. The first one left is the winner!",
+  "match": 1.0,
+  "files": [
+   "games/patch-painter/game.js"
+  ]
+ },
+ "f806993f": {
+  "key": "6db7100f7e3c4e47",
+  "who": "pix",
+  "text": "Your site has no giant patch. Let's help the team in Rondônia with theirs!",
+  "match": 1.0,
+  "files": [
+   "games/patch-painter/game.js"
+  ]
+ },
+ "80c920c6": {
+  "key": "6334d18e1087390b",
+  "who": "koa",
+  "text": "Bonzer, that's our first mission patch! The real ReSeed run picked the same one in pipeline.py.",
+  "match": 1.0,
+  "files": [
+   "games/patch-painter/game.js"
+  ]
+ },
+ "eeb10334": {
+  "key": "833b458f39161588",
+  "who": "pix",
+  "text": "💡 A 700 m square is 49 hectares. Try it!",
+  "match": 1.0,
+  "files": [
+   "games/patch-painter/game.js"
+  ]
+ },
+ "dc71b29d": {
+  "key": "f36c403ce2211e3d",
+  "who": "pix",
+  "text": "100 pixels, and each one is 0.01 hectares. How many hectares is that?",
+  "match": 1.0,
+  "files": [
+   "games/patch-painter/game.js"
+  ]
+ },
+ "0c367d4e": {
+  "key": "4722e7f54198e8bb",
+  "who": "pix",
+  "text": "ReSeed does this in splitpatch: squares about 707 m wide. A 707 m square is about 50 hectares.",
+  "match": 1.0,
+  "files": [
+   "games/patch-painter/game.js"
+  ]
+ },
+ "03fb6b64": {
+  "key": "2fe089cc247c3fd5",
+  "who": "pix",
+  "text": "A brand-new cauldron! But look at the prompt: it still says (base).",
+  "match": 1.0,
+  "files": [
+   "games/potion-lab/game.js"
+  ]
+ },
+ "e3d1b797": {
+  "key": "7af0f84e83626974",
+  "who": "pix",
+  "text": "Step into the new cauldron with conda activate reseed. Then potions pour there, not into base.",
+  "match": 1.0,
+  "files": [
+   "games/potion-lab/game.js"
+  ]
+ },
+ "daac481f": {
+  "key": "16d9f8632c132d58",
+  "who": "pix",
+  "text": "Whoosh, that was fast! Inside a uv project, uv add rasterio also writes the potion into pyproject.toml.",
+  "match": 1.0,
+  "files": [
+   "games/potion-lab/game.js"
+  ]
+ },
+ "8489c96e": {
+  "key": "e555e145cd8ff7dc",
+  "who": "pix",
+  "text": "Now the built-in way, with no uv at all. First step out of this cauldron with deactivate.",
+  "match": 1.0,
+  "files": [
+   "games/potion-lab/game.js"
+  ]
+ },
+ "2024f764": {
+  "key": "63e40deae5fb14f2",
+  "who": "pix",
+  "text": "Welcome to my Potion Lab! Code libraries are potions here, and every project brews in its own cauldron.",
+  "match": 1.0,
+  "files": [
+   "games/potion-lab/game.js"
+  ]
+ },
+ "d1ed0eb9": {
+  "key": "8a86d6989fdc2d98",
+  "who": "hoot",
+  "text": "A cauldron is an environment. Keep each project's potions apart, and nothing bubbles over!",
+  "match": 1.0,
+  "files": [
+   "games/potion-lab/game.js"
+  ]
+ },
+ "ee57186c": {
+  "key": "d872052c8708cd10",
+  "who": "pix",
+  "text": "You are a real potion master now. conda, uv and venv all obey you!",
+  "match": 1.0,
+  "files": [
+   "games/potion-lab/game.js"
+  ]
+ },
+ "ba0f1280": {
+  "key": "df1a6cebbc86d5d9",
+  "who": "mo",
+  "text": "Next stop: my workshop. Every cauldron needs a computer to sit on!",
+  "match": 1.0,
+  "files": [
+   "games/potion-lab/game.js"
+  ]
+ },
+ "bd75dcb0": {
+  "key": "30fd0a7c22ab7dd3",
+  "who": "pix",
+  "text": "Let's brew a cauldron for ReSeed with conda. Type the spell in my terminal, or type the start and press Tab.",
+  "match": 1.0,
+  "files": [
+   "games/potion-lab/game.js"
+  ]
+ },
+ "95d6c0e2": {
+  "key": "988f031db11ce905",
+  "who": "hoot",
+  "text": "Typing every potion by hand is slow. ReSeed keeps a recipe file called environment.yml.",
+  "match": 1.0,
+  "files": [
+   "games/potion-lab/game.js"
+  ]
+ },
+ "eae18f55": {
+  "key": "d489a51c31395318",
+  "who": "pix",
+  "text": "The prompt starts with (base). That is conda's own cauldron, so we keep project potions out of it.",
+  "match": 0.882,
+  "files": [
+   "games/potion-lab/game.js"
+  ]
+ },
+ "3d557610": {
+  "key": "3d2f32d5b396b8b6",
+  "who": "pix",
+  "text": "We're in the ndvi-app folder. Make the cauldron, step in, then pour in rasterio!",
+  "match": 1.0,
+  "files": [
+   "games/potion-lab/game.js"
+  ]
+ },
+ "81d9dc94": {
+  "key": "ce1a8e986ea50e5a",
+  "who": "pix",
+  "text": "Meet uv, a super-fast potion tool. It brews a cauldron called .venv right inside your project folder.",
+  "match": 1.0,
+  "files": [
+   "games/potion-lab/game.js"
+  ]
+ },
+ "be945012": {
+  "key": "734996caf66a0347",
+  "who": "mo",
+  "text": "Two map tools need potions for a mission. But careful: they disagree about numpy!",
+  "match": 1.0,
+  "files": [
+   "games/potion-lab/game.js"
+  ]
+ },
+ "825bf7ad": {
+  "key": "77392f5b8c147729",
+  "who": "pix",
+  "text": "The lab is open and orders are coming in! Each one says which cauldron needs which potion.",
+  "match": 1.0,
+  "files": [
+   "games/potion-lab/game.js"
+  ]
+ },
+ "ee849083": {
+  "key": "56d7f5370b38340f",
+  "who": "hoot",
+  "text": "Read the real recipe and answer my questions. Then one spell brews it all!",
+  "match": 1.0,
+  "files": [
+   "games/potion-lab/game.js"
+  ]
+ },
+ "42e67298": {
+  "key": "c3290fd9f4eb24a4",
+  "who": "pix",
+  "text": "Look at the start of the prompt line. (reseed) means the reseed cauldron is active.",
+  "match": 1.0,
+  "files": [
+   "games/potion-lab/game.js"
+  ]
+ },
+ "96e9faac": {
+  "key": "e38f131393a7dee0",
+  "who": "hoot",
+  "text": "The first line starts with #, a note for humans. It even tells you the spell!",
+  "match": 1.0,
+  "files": [
+   "games/potion-lab/game.js"
+  ]
+ },
+ "b08eb4f3": {
+  "key": "17df9e3af70e752f",
+  "who": "pix",
+  "text": "Check the prompt, conda activate the right cauldron, then pip install. Type conda env list to see them all.",
+  "match": 1.0,
+  "files": [
+   "games/potion-lab/game.js"
+  ]
+ },
+ "b05836b2": {
+  "key": "b54aece3d606dd73",
+  "who": "hoot",
+  "text": "Every potion is in. Now ask ReSeed to list its demo sites!",
+  "match": 1.0,
+  "files": [
+   "games/potion-lab/game.js"
+  ]
+ },
+ "463a1304": {
+  "key": "bae0030f7f192b1d",
+  "who": "pix",
+  "text": "Where do uv and venv keep their cauldron?",
+  "match": 1.0,
+  "files": [
+   "games/potion-lab/game.js"
+  ]
+ },
+ "e6465c0d": {
+  "key": "eaa70e5c9aacc3d2",
+  "who": "mo",
+  "text": "Uh-oh, it bubbled over! Why?",
+  "match": 1.0,
+  "files": [
+   "games/potion-lab/game.js"
+  ]
+ },
+ "a248a450": {
+  "key": "bcd443465f9d6f2d",
+  "who": "pix",
+  "text": "Look at the folders! Each .venv cauldron sits right inside its project folder.",
+  "match": 1.0,
+  "files": [
+   "games/potion-lab/game.js"
+  ]
+ },
+ "2f943d8d": {
+  "key": "9149568e1cb491f9",
+  "who": "mo",
+  "text": "Exactly: one needs numpy below 2, the other needs 2 or newer. No single cauldron can hold both.",
+  "match": 1.0,
+  "files": [
+   "games/potion-lab/game.js"
+  ]
+ },
+ "ec346a18": {
+  "key": "0ea219a486362ea5",
+  "who": "sprout",
+  "text": "Fun fact: we built these very games inside a conda environment called games!",
+  "match": 1.0,
+  "files": [
+   "games/potion-lab/game.js"
+  ]
+ },
+ "2136a4ea": {
+  "key": "51f70bf3a93781e7",
+  "who": "mo",
+  "text": "These two tools run separately, so each can get its own cauldron. Take old-map-tool out, then brew it a cauldron called maps.",
+  "match": 1.0,
+  "files": [
+   "games/potion-lab/game.js"
+  ]
+ },
+ "d5809e2e": {
+  "key": "d28795dd3381245a",
+  "who": "koa",
+  "text": "Planting seeds is only the start. A forest also needs its animals back!",
+  "match": 1.0,
+  "files": [
+   "games/regrow-rescue/game.js"
+  ]
+ },
+ "e13d2060": {
+  "key": "172143f9a736fb40",
+  "who": "sprout",
+  "text": "We pick helpers, type fast, and watch the years fly by. Let's go!",
+  "match": 1.0,
+  "files": [
+   "games/regrow-rescue/game.js"
+  ]
+ },
+ "64e1041e": {
+  "key": "4cd913e9bd86c95c",
+  "who": "mo",
+  "text": "old-map-tool needs numpy below 2. new-ndvi-tool needs numpy 2 or newer. Let's try one cauldron first.",
+  "match": 1.0,
+  "files": [
+   "games/potion-lab/game.js"
+  ]
+ },
+ "0a1cb355": {
+  "key": "c9e6f2d8ec4b557f",
+  "who": "koa",
+  "text": "Five forests are growing back, and their animals are home!",
+  "match": 1.0,
+  "files": [
+   "games/regrow-rescue/game.js"
+  ]
+ },
+ "f782c4bb": {
+  "key": "596afb08f9331ead",
+  "who": "pix",
+  "text": "Quick check! How can you tell which cauldron is active?",
+  "match": 1.0,
+  "files": [
+   "games/potion-lab/game.js"
+  ]
+ },
+ "66b6e7df": {
+  "key": "28ba03ad47d590c7",
+  "who": "mo",
+  "text": "Read the red line: old-map-tool needs numpy below 2, but now numpy 2 is inside. Both can't be true at once!",
+  "match": 1.0,
+  "files": [
+   "games/potion-lab/game.js"
+  ]
+ },
+ "fb317be0": {
+  "key": "3a7c9468a55e54b7",
+  "who": "koa",
+  "text": "The Dixie Fire burned these Sierra Nevada slopes. Pine, cedar and black oak seeds are ready.",
+  "match": 1.0,
+  "files": [
+   "games/regrow-rescue/game.js"
+  ]
+ },
+ "8d4dfba4": {
+  "key": "453d42e66246bf26",
+  "who": "koa",
+  "text": "New trick: the crates float down. Type the word before a crate lands!",
+  "match": 1.0,
+  "files": [
+   "games/regrow-rescue/game.js"
+  ]
+ },
+ "73915c9e": {
+  "key": "bf1ddb0b6eb963e3",
+  "who": "koa",
+  "text": "Four animals need different things. Read carefully!",
+  "match": 1.0,
+  "files": [
+   "games/regrow-rescue/game.js"
+  ]
+ },
+ "8f703e7e": {
+  "key": "3da2fb46ce1a6917",
+  "who": "hoot",
+  "text": "Our Ozarks forest was only bare for winter. But here a storm knocked trees down, so we help the gap.",
+  "match": 1.0,
+  "files": [
+   "games/regrow-rescue/game.js"
+  ]
+ },
+ "d3ade246": {
+  "key": "c3844254c68b0633",
+  "who": "tuki",
+  "text": "Last stop: Borneo! Orangutans, hornbills and gibbons are waiting for their forest.",
+  "match": 1.0,
+  "files": [
+   "games/regrow-rescue/game.js"
+  ]
+ },
+ "35b8764c": {
+  "key": "51e3f21498e6bb43",
+  "who": "koa",
+  "text": "Some seeds can't ride a drone. Think before you load!",
+  "match": 1.0,
+  "files": [
+   "games/regrow-rescue/game.js"
+  ]
+ },
+ "5d981445": {
+  "key": "3755dcd78f932a73",
+  "who": "koa",
+  "text": "The drone is full. Tap a slot to unload something first.",
+  "match": 1.0,
+  "files": [
+   "games/regrow-rescue/game.js"
+  ]
+ },
+ "9122b5da": {
+  "key": "a4c1ccc340cbfcc9",
+  "who": "sprout",
+  "text": "Read what each animal needs, then load the right habitat helpers on my drone.",
+  "match": 1.0,
+  "files": [
+   "games/regrow-rescue/game.js"
+  ]
+ },
+ "c8682c97": {
+  "key": "1d249b989d176f82",
+  "who": "sprout",
+  "text": "Now type the growing word to jump 3 years ahead. Watch the NDVI chart climb!",
+  "match": 1.0,
+  "files": [
+   "games/regrow-rescue/game.js"
+  ]
+ },
+ "f4182443": {
+  "key": "2155eb4ad20168c8",
+  "who": "koa",
+  "text": "An animal came home! Type its name to say welcome.",
+  "match": 1.0,
+  "files": [
+   "games/regrow-rescue/game.js"
+  ]
+ },
+ "aaff9170": {
+  "key": "6275bcf7546e9c86",
+  "who": "koa",
+  "text": "My drones are ready. Next stop: the Fly island!",
+  "match": 1.0,
+  "files": [
+   "games/roll-factory/game.js"
+  ]
+ },
+ "de37c1a2": {
+  "key": "39f24534a276f1a9",
+  "who": "mo",
+  "text": "Welcome to the Roll Factory, I'm Mo! We turn old toilet-paper rolls into seed pods for the drones.",
+  "match": 1.0,
+  "files": [
+   "games/roll-factory/game.js"
+  ]
+ },
+ "167fc8a0": {
+  "key": "13f287ce3f8aef38",
+  "who": "pix",
+  "text": "First we fill rolls with our own hands. Then we crack the factory's secret formulas!",
+  "match": 1.0,
+  "files": [
+   "games/roll-factory/game.js"
+  ]
+ },
+ "82ca9a1d": {
+  "key": "da79e29b2583dc2e",
+  "who": "mo",
+  "text": "The factory is humming! Seeds, rolls, trips and batteries: all planned.",
+  "match": 1.0,
+  "files": [
+   "games/roll-factory/game.js"
+  ]
+ },
+ "51061761": {
+  "key": "2e2cf143ad8bf4ee",
+  "who": "mo",
+  "text": "This empty roll is a seed pod. Tap the dashed slots, or hold Space, to fill it with acorns.",
+  "match": 1.0,
+  "files": [
+   "games/roll-factory/game.js"
+  ]
+ },
+ "3243b54e": {
+  "key": "1c7ac121d7c57286",
+  "who": "koa",
+  "text": "My field drone carries 4 rolls per trip. Load the rolls and launch!",
+  "match": 1.0,
+  "files": [
+   "games/roll-factory/game.js"
+  ]
+ },
+ "6be53258": {
+  "key": "94f7f6b426d2362a",
+  "who": "mo",
+  "text": "Different seeds, different sizes! A tiny pine seed is nothing like a big acorn.",
+  "match": 1.0,
+  "files": [
+   "games/roll-factory/game.js"
+  ]
+ },
+ "cefea148": {
+  "key": "71443b2f9cf3a28f",
+  "who": "mo",
+  "text": "Press Space to load a roll and Enter to launch. Don't leave any rolls behind!",
+  "match": 1.0,
+  "files": [
+   "games/roll-factory/game.js"
+  ]
+ },
+ "36d41387": {
+  "key": "f8daba1552dec0a7",
+  "who": "pix",
+  "text": "Time for the real thing: your site's mission, with ReSeed's real numbers!",
+  "match": 1.0,
+  "files": [
+   "games/roll-factory/game.js"
+  ]
+ },
+ "d47244ba": {
+  "key": "aba7676decc1278a",
+  "who": "pix",
+  "text": "Guess first, then stuff each seed into a roll and count what comes out.",
+  "match": 1.0,
+  "files": [
+   "games/roll-factory/game.js"
+  ]
+ },
+ "a7932dec": {
+  "key": "4e028221dce08fb5",
+  "who": "mo",
+  "text": "Each machine needs one answer. Remember: rolls, batteries and days always round up.",
+  "match": 1.0,
+  "files": [
+   "games/roll-factory/game.js"
+  ]
+ },
+ "4fd9214d": {
+  "key": "40e020644cfe40ce",
+  "who": "mo",
+  "text": "Full to the brim, but is it really full? Let's pour in some water and see!",
+  "match": 1.0,
+  "files": [
+   "games/roll-factory/game.js"
+  ]
+ },
+ "bc69a847": {
+  "key": "846411172fde9a79",
+  "who": "koa",
+  "text": "All delivered, but we used some extra trips! Taking full loads would need fewer.",
+  "match": 1.0,
+  "files": [
+   "games/roll-factory/game.js"
+  ]
+ },
+ "f53c1f78": {
+  "key": "e64c6c144e3071a1",
+  "who": "koa",
+  "text": "All delivered! Two full trips, and one trip with just two rolls.",
+  "match": 1.0,
+  "files": [
+   "games/roll-factory/game.js"
+  ]
+ },
+ "8e85d021": {
+  "key": "bbaf3a538927e5ec",
+  "who": "pix",
+  "text": "Smaller seeds, more per roll! The factory uses one tiny formula for all of them, ready to crack it?",
+  "match": 1.0,
+  "files": [
+   "games/roll-factory/game.js"
+  ]
+ },
+ "22d0cdfc": {
+  "key": "6fcf888ea5baaff0",
+  "who": "mo",
+  "text": "Mission planned! Rolls stuffed, batteries counted, and way cheaper than planting by hand.",
+  "match": 1.0,
+  "files": [
+   "games/roll-factory/game.js"
+  ]
+ },
+ "bac10ff8": {
+  "key": "e8f5cdddc6585f70",
+  "who": "koa",
+  "text": "No wind today. Press DROP and watch where the acorns land.",
+  "match": 1.0,
+  "files": [
+   "games/seed-drop/game.js"
+  ]
+ },
+ "18796379": {
+  "key": "1f654883081d2966",
+  "who": "koa",
+  "text": "The acorns kept flying forward with the drone! That is inertia.",
+  "match": 1.0,
+  "files": [
+   "games/seed-drop/game.js"
+  ]
+ },
+ "5635fe1d": {
+  "key": "114469a8dc92cc8b",
+  "who": "koa",
+  "text": "This patch is close to the flag. Change the speed or height, then drop.",
+  "match": 1.0,
+  "files": [
+   "games/seed-drop/game.js"
+  ]
+ },
+ "9739ee16": {
+  "key": "9df04a5975a24681",
+  "who": "koa",
+  "text": "Now a far patch. Fast seeds fly farther, and high seeds fall for longer.",
+  "match": 1.0,
+  "files": [
+   "games/seed-drop/game.js"
+  ]
+ },
+ "d22aa19f": {
+  "key": "666706d0c1ff0255",
+  "who": "koa",
+  "text": "These Paricá seeds from the Amazon fall slower than acorns. The drone just hovers.",
+  "match": 1.0,
+  "files": [
+   "games/seed-drop/game.js"
+  ]
+ },
+ "48fb98fe": {
+  "key": "e9087a4e9702d65f",
+  "who": "koa",
+  "text": "💡 Slow down! At 1 m/s the acorns barely move forward.",
+  "match": 0.957,
+  "files": [
+   "games/seed-drop/game.js"
+  ]
+ },
+ "c8cf1714": {
+  "key": "58900d091f215930",
+  "who": "koa",
+  "text": "💡 Fly lower and slower. Low seeds spend less time in the wind.",
+  "match": 1.0,
+  "files": [
+   "games/seed-drop/game.js"
+  ]
+ },
+ "f930a8ac": {
+  "key": "c585132bd1559326",
+  "who": "koa",
+  "text": "Now real wind, 4 m/s from behind. It blows harder high up: look at the arrows.",
+  "match": 0.971,
+  "files": [
+   "games/seed-drop/game.js"
+  ]
+ },
+ "dc18d12f": {
+  "key": "efcfa288f09bddd0",
+  "who": "mo",
+  "text": "Which seed fits the MOST times into one roll?",
+  "match": 1.0,
+  "files": [
+   "games/roll-factory/game.js"
+  ]
+ },
+ "eedfcb02": {
+  "key": "95045cc6b8206156",
+  "who": "koa",
+  "text": "💡 Try 7 m/s and fly high, like 20 m or more.",
+  "match": 1.0,
+  "files": [
+   "games/seed-drop/game.js"
+  ]
+ },
+ "9fff9a5d": {
+  "key": "d1aec1fcb2e25ddd",
+  "who": "koa",
+  "text": "Uh oh, a headwind blows towards us. It pushes seeds backwards!",
+  "match": 1.0,
+  "files": [
+   "games/seed-drop/game.js"
+  ]
+ },
+ "9984f10b": {
+  "key": "f2f2bbfb3e422caa",
+  "who": "koa",
+  "text": "💡 Fly low (about 5 m) and fast (about 5 m/s).",
+  "match": 1.0,
+  "files": [
+   "games/seed-drop/game.js"
+  ]
+ },
+ "14174029": {
+  "key": "8b436a1a01f9775e",
+  "who": "koa",
+  "text": "Windy day: 5 m/s! Every seed has its own terminal velocity, its top falling speed.",
+  "match": 1.0,
+  "files": [
+   "games/seed-drop/game.js"
+  ]
+ },
+ "784f04fa": {
+  "key": "bbb0057c7ba7aef1",
+  "who": "koa",
+  "text": "💡 The patch is close. Pick the seed that falls fastest.",
+  "match": 1.0,
+  "files": [
+   "games/seed-drop/game.js"
+  ]
+ },
+ "6a8e7923": {
+  "key": "f48b8f586acc0e87",
+  "who": "koa",
+  "text": "Fast-falling seeds land near and slow ones drift far. Pick the seed for this patch.",
+  "match": 1.0,
+  "files": [
+   "games/seed-drop/game.js"
+  ]
+ },
+ "b9924082": {
+  "key": "1fc6594ef1429b15",
+  "who": "koa",
+  "text": "The Sierra needs pine seeds right here, close by. Same wind.",
+  "match": 1.0,
+  "files": [
+   "games/seed-drop/game.js"
+  ]
+ },
+ "63980934": {
+  "key": "8fa5d7689d8b159d",
+  "who": "koa",
+  "text": "Turn up my wind machine so the wind carries the seeds onto the patch.",
+  "match": 1.0,
+  "files": [
+   "games/seed-drop/game.js"
+  ]
+ },
+ "103c3766": {
+  "key": "6012ae5fa9006831",
+  "who": "koa",
+  "text": "💡 Fly lower, about 8 to 9 m. Less time falling means less drift.",
+  "match": 1.0,
+  "files": [
+   "games/seed-drop/game.js"
+  ]
+ },
+ "222f2f3a": {
+  "key": "247bbc298ca8d616",
+  "who": "koa",
+  "text": "💡 Try about 5 m/s of wind.",
+  "match": 0.933,
+  "files": [
+   "games/seed-drop/game.js"
+  ]
+ },
+ "aa71b182": {
+  "key": "cdb0713093f1560a",
+  "who": "koa",
+  "text": "💡 Backward flick throws the seeds back at about 3 m/s.",
+  "match": 0.957,
+  "files": [
+   "games/seed-drop/game.js"
+  ]
+ },
+ "7eef521f": {
+  "key": "5c6081fc2c88bdff",
+  "who": "koa",
+  "text": "This patch is far downwind. Which seed will the wind carry that far?",
+  "match": 1.0,
+  "files": [
+   "games/seed-drop/game.js"
+  ]
+ },
+ "fc384ac8": {
+  "key": "a87005d885a3e4f5",
+  "who": "koa",
+  "text": "This big meadow needs acorns spread out, not in one heap.",
+  "match": 1.0,
+  "files": [
+   "games/seed-drop/game.js"
+  ]
+ },
+ "d34fb4fa": {
+  "key": "9e12acbeba82cd94",
+  "who": "koa",
+  "text": "You can't change the seed now. What else can you change?",
+  "match": 1.0,
+  "files": [
+   "games/seed-drop/game.js"
+  ]
+ },
+ "09dce174": {
+  "key": "727d901d701ba9e3",
+  "who": "koa",
+  "text": "💡 Spin spread: the drone spins and seeds fly out in a ring.",
+  "match": 1.0,
+  "files": [
+   "games/seed-drop/game.js"
+  ]
+ },
+ "3a75bb6b": {
+  "key": "3d9c5d15195c3700",
+  "who": "koa",
+  "text": "A tall tree stands past the patch. The drone must brake, but the seeds must fly on.",
+  "match": 1.0,
+  "files": [
+   "games/seed-drop/game.js"
+  ]
+ },
+ "0925e9a3": {
+  "key": "8858125cf6808286",
+  "who": "koa",
+  "text": "💡 Pick the slowest-falling seed: the pine seed with its papery wing removed.",
+  "match": 1.0,
+  "files": [
+   "games/seed-drop/game.js"
+  ]
+ },
+ "f147e05c": {
+  "key": "b972cd2d3a605ee9",
+  "who": "koa",
+  "text": "💡 Jerk back: the drone brakes hard and the seeds keep going. That's our demo-day move!",
+  "match": 1.0,
+  "files": [
+   "games/seed-drop/game.js"
+  ]
+ },
+ "2a799583": {
+  "key": "3d5e77f646888081",
+  "who": "koa",
+  "text": "My drone has four ways to let seeds go: the release modes.",
+  "match": 1.0,
+  "files": [
+   "games/seed-drop/game.js"
+  ]
+ },
+ "a659fd96": {
+  "key": "12f214d221eb2bc7",
+  "who": "koa",
+  "text": "This is your forest! ReSeed's physics model estimated a seed drop for it, with the same math as this game.",
+  "match": 1.0,
+  "files": [
+   "games/seed-drop/game.js"
+  ]
+ },
+ "c07298af": {
+  "key": "d9e05b0ad7c855de",
+  "who": "koa",
+  "text": "G'day, I'm Koa from Kangaroo Island! Welcome to my seed drop range.",
+  "match": 1.0,
+  "files": [
+   "games/seed-drop/game.js"
+  ]
+ },
+ "9bfb9820": {
+  "key": "46405212c66666b8",
+  "who": "koa",
+  "text": "In this game, let go before each patch, a little upwind. My computer marks where the seeds should land.",
+  "match": 1.0,
+  "files": [
+   "games/seed-drop/game.js"
+  ]
+ },
+ "85067d38": {
+  "key": "93b0c410c3db46cf",
+  "who": "koa",
+  "text": "Press DROP when the red target sits on a patch. You have 4 rolls for 3 patches.",
+  "match": 1.0,
+  "files": [
+   "games/seed-drop/game.js"
+  ]
+ },
+ "a82a77c3": {
+  "key": "f252ca2b04a37a09",
+  "who": "koa",
+  "text": "We fly at 3 m/s, but the patch is right under the flag. Which mode cancels our speed?",
+  "match": 0.974,
+  "files": [
+   "games/seed-drop/game.js"
+  ]
+ },
+ "0b9bd8a4": {
+  "key": "bbada1566b8ab90d",
+  "who": "koa",
+  "text": "Seeds can drift as they fall. Their starting speed, gravity and moving air all shape their path.",
+  "match": 1.0,
+  "files": [
+   "games/seed-drop/game.js"
+  ]
+ },
+ "912ee5af": {
+  "key": "6c2c7f9dc7aa24cc",
+  "who": "sprout",
+  "text": "Next stop: Drone Academy. Let's earn your pilot wings!",
+  "match": 1.0,
+  "files": [
+   "games/seed-drop/game.js"
+  ]
+ },
+ "8d7d26d7": {
+  "key": "45ef46262a97a942",
+  "who": "sprout",
+  "text": "ReSeed simulates a cloud of seeds to estimate where they land. Let's learn to predict like it does!",
+  "match": 1.0,
+  "files": [
+   "games/seed-drop/game.js"
+  ]
+ },
+ "56ec7792": {
+  "key": "54dd3c885d1bbb9f",
+  "who": "koa",
+  "text": "Set the height and speed, then press DROP. The red flag is where the drone lets go.",
+  "match": 1.0,
+  "files": [
+   "games/seed-drop/game.js"
+  ]
+ },
+ "8bba3d78": {
+  "key": "59fe2d82e881cff7",
+  "who": "koa",
+  "text": "Wind pushes falling seeds sideways. Slow-falling seeds spend longer drifting.",
+  "match": 1.0,
+  "files": [
+   "games/seed-drop/game.js"
+  ]
+ },
+ "54ec5dd9": {
+  "key": "678369a1f9fba702",
+  "who": "koa",
+  "text": "Acorns fall fast, but pine seeds with their wings removed float down slowly. Let's use that!",
+  "match": 1.0,
+  "files": [
+   "games/seed-drop/game.js"
+  ]
+ },
+ "ac2c6bdb": {
+  "key": "90dbcc2b7fa087de",
+  "who": "koa",
+  "text": "Same seeds, four tricks: hatch drop, jerk back, backward flick and spin spread.",
+  "match": 1.0,
+  "files": [
+   "games/seed-drop/game.js"
+  ]
+ },
+ "91c0e8c1": {
+  "key": "e969ebc32db9b630",
+  "who": "sprout",
+  "text": "Now try the seed-drop estimate that ReSeed's model made for My Site.",
+  "match": 1.0,
+  "files": [
+   "games/seed-drop/game.js"
+  ]
+ },
+ "4b890dde": {
+  "key": "33f3cfef938f0278",
+  "who": "hoot",
+  "text": "Welcome to the Seed Library! Every native seed ReSeed can drop has a record here.",
+  "match": 1.0,
+  "files": [
+   "games/seed-library/game.js"
+  ]
+ },
+ "64897b40": {
+  "key": "b4ee05a8204811b1",
+  "who": "sprout",
+  "text": "A drone can only plant what we load. Let's find the right seeds for every forest!",
+  "match": 1.0,
+  "files": [
+   "games/seed-library/game.js"
+  ]
+ },
+ "2750224d": {
+  "key": "8c79c38ee3cba684",
+  "who": "hoot",
+  "text": "Tables, queries, keys and JSON: you did real database work today!",
+  "match": 1.0,
+  "files": [
+   "games/seed-library/game.js"
+  ]
+ },
+ "53177a9b": {
+  "key": "a774d3672a03a841",
+  "who": "koa",
+  "text": "The crates are packed with native seeds. Meet me on Fly island, mate!",
+  "match": 1.0,
+  "files": [
+   "games/seed-library/game.js"
+  ]
+ },
+ "63ef56a7": {
+  "key": "a851592b211c6116",
+  "who": "hoot",
+  "text": "This is the species table. Each row is one seed, and each column is one kind of fact.",
+  "match": 1.0,
+  "files": [
+   "games/seed-library/game.js"
+  ]
+ },
+ "822853e6": {
+  "key": "67e059b794e5d853",
+  "who": "hoot",
+  "text": "Read each library request at the top. Then click the right row, column or cell.",
+  "match": 1.0,
+  "files": [
+   "games/seed-library/game.js"
+  ]
+ },
+ "cb403dec": {
+  "key": "a6e5b6cd2bf7454b",
+  "who": "koa",
+  "text": "Hatch drop from 20 m at 4 m/s, with a 3 m/s wind from the side.",
+  "match": 1.0,
+  "files": [
+   "games/seed-drop/game.js"
+  ]
+ },
+ "25bd2e29": {
+  "key": "6d72bcfea7ccda27",
+  "who": "hoot",
+  "text": "Searching by hand is slow. A query asks the database for exactly the rows you need.",
+  "match": 1.0,
+  "files": [
+   "games/seed-library/game.js"
+  ]
+ },
+ "2c00dc31": {
+  "key": "0b20bcfb14131adf",
+  "who": "sprout",
+  "text": "Help letters are pouring in! Every forest needs its own native seeds.",
+  "match": 1.0,
+  "files": [
+   "games/seed-library/game.js"
+  ]
+ },
+ "a6ef7aa3": {
+  "key": "45998ae13d7038a7",
+  "who": "koa",
+  "text": "Bonza! You can predict where a seed cloud lands, just like ReSeed's physics model.",
+  "match": 1.0,
+  "files": [
+   "games/seed-drop/game.js"
+  ]
+ },
+ "ea6e4681": {
+  "key": "a2586f817956fcab",
+  "who": "pix",
+  "text": "Drag blocks into the strip, or just tap them. Then press Run and watch the shelves!",
+  "match": 1.0,
+  "files": [
+   "games/seed-library/game.js"
+  ]
+ },
+ "ca385eb4": {
+  "key": "6a9ddb8c46b9f96a",
+  "who": "hoot",
+  "text": "Pack three native seeds in each crate. The Glitch Bugs hid a wrong seed on every shelf!",
+  "match": 1.0,
+  "files": [
+   "games/seed-library/game.js"
+  ]
+ },
+ "a8ae2ae0": {
+  "key": "84abf16db3889d65",
+  "who": "hoot",
+  "text": "Two tables can hold hands with a key. The biome key links each seed to its forest.",
+  "match": 1.0,
+  "files": [
+   "games/seed-library/game.js"
+  ]
+ },
+ "4438d433": {
+  "key": "f6b63b80f7302e6a",
+  "who": "hoot",
+  "text": "Wonderful! Next level, a query finds rows for you in a blink.",
+  "match": 1.0,
+  "files": [
+   "games/seed-library/game.js"
+  ]
+ },
+ "3842465a": {
+  "key": "f3ee40ff73bd51c3",
+  "who": "hoot",
+  "text": "Whoa, every seed in the library came out! A WHERE block keeps only the rows you want.",
+  "match": 1.0,
+  "files": [
+   "games/seed-library/game.js"
+  ]
+ },
+ "3fc1256f": {
+  "key": "7619299f3f714f21",
+  "who": "pix",
+  "text": "Queries are like magic spells for data. You just wrote five of them!",
+  "match": 1.0,
+  "files": [
+   "games/seed-library/game.js"
+  ]
+ },
+ "2ed346f1": {
+  "key": "d7a2d1517bc88dce",
+  "who": "koa",
+  "text": "Guess first! How far from the drop point will the seeds land?",
+  "match": 1.0,
+  "files": [
+   "games/seed-drop/game.js"
+  ]
+ },
+ "662a53a7": {
+  "key": "f33a374940d1cae1",
+  "who": "pix",
+  "text": "Connect the keys first. Then see the same seed facts in three outfits: a table row, JSON and a Python dictionary.",
+  "match": 1.0,
+  "files": [
+   "games/seed-library/game.js"
+  ]
+ },
+ "26e64f6a": {
+  "key": "29ea280cf2ee3a84",
+  "who": "hoot",
+  "text": "All keys linked! A JOIN follows a key from one table into the other.",
+  "match": 1.0,
+  "files": [
+   "games/seed-library/game.js"
+  ]
+ },
+ "7f1016a4": {
+  "key": "829778a838494056",
+  "who": "pix",
+  "text": "Same seed, three outfits: a table row, JSON and a Python dict. Find each field in all three!",
+  "match": 1.0,
+  "files": [
+   "games/seed-library/game.js"
+  ]
+ },
+ "566e0e49": {
+  "key": "7c47b0043b46bc38",
+  "who": "hoot",
+  "text": "Hoo hoo, same plus sign but two different spells! Numbers add up, but strings just stick together.",
+  "match": 1.0,
+  "files": [
+   "games/spell-academy/game.js"
+  ]
+ },
+ "09feeb9a": {
+  "key": "ce27ca0dff13f277",
+  "who": "sprout",
+  "text": "Wait, zero comes first? Computers are funny, so my rotor number zero is my first rotor!",
+  "match": 1.0,
+  "files": [
+   "games/spell-academy/game.js"
+  ]
+ },
+ "8b3987c7": {
+  "key": "e7861b33798dc548",
+  "who": "hoot",
+  "text": "That's a real trap! ReSeed's own NDVI spell takes red first, so its code always passes red, then NIR.",
+  "match": 1.0,
+  "files": [
+   "games/spell-academy/game.js"
+  ]
+ },
+ "46cb278b": {
+  "key": "d8d2cf08fff629da",
+  "who": "koa",
+  "text": "Crikey, minus ten percent? Our game let that drone use more charge than it had!",
+  "match": 1.0,
+  "files": [
+   "games/spell-academy/game.js"
+  ]
+ },
+ "7afb99cf": {
+  "key": "3dbb3e90cf314e34",
+  "who": "hoot",
+  "text": "Let's add a game safety check: if the trip is too long, skip that flight.",
+  "match": 1.0,
+  "files": [
+   "games/spell-academy/game.js"
+  ]
+ },
+ "4190bc73": {
+  "key": "cb15f461a7277b5d",
+  "who": "hoot",
+  "text": "Welcome to my Spell Academy! Python spells tell a computer exactly what to do.",
+  "match": 1.0,
+  "files": [
+   "games/spell-academy/game.js"
+  ]
+ },
+ "ec6d89b0": {
+  "key": "ca34e75deb8b3e2a",
+  "who": "koa",
+  "text": "Beauty, Tuki skips that flight! Real pilots also plan the way home and keep spare power.",
+  "match": 1.0,
+  "files": [
+   "games/spell-academy/game.js"
+  ]
+ },
+ "6b6b810f": {
+  "key": "55776c69776185ce",
+  "who": "sprout",
+  "text": "Every spell has a crystal ball. Guess what it will show, then cast it and see!",
+  "match": 1.0,
+  "files": [
+   "games/spell-academy/game.js"
+  ]
+ },
+ "3015ee89": {
+  "key": "3b3bc3c7f0074943",
+  "who": "hoot",
+  "text": "You read, fixed and wrote real Python spells. ReSeed is built from spells just like these!",
+  "match": 1.0,
+  "files": [
+   "games/spell-academy/game.js"
+  ]
+ },
+ "90d0f30f": {
+  "key": "3e8cd850f6dc5c6f",
+  "who": "hoot",
+  "text": "A variable is a name for a value, like a label on a jar. print shows it in the crystal ball.",
+  "match": 1.0,
+  "files": [
+   "games/spell-academy/game.js"
+  ]
+ },
+ "0824dc94": {
+  "key": "39e98d0ffa672b2f",
+  "who": "sprout",
+  "text": "Let's build the NDVI spell from Goggles island!",
+  "match": 1.0,
+  "files": [
+   "games/spell-academy/game.js"
+  ]
+ },
+ "babe43ed": {
+  "key": "fbde122e01991b6b",
+  "who": "hoot",
+  "text": "A function is a spell you can use again and again. def makes it, and return sends back the answer.",
+  "match": 1.0,
+  "files": [
+   "games/spell-academy/game.js"
+  ]
+ },
+ "d6973fe2": {
+  "key": "f05a62b835f4c7ab",
+  "who": "hoot",
+  "text": "if, elif and else let a spell choose. Python checks from the top and stops at the first True.",
+  "match": 1.0,
+  "files": [
+   "games/spell-academy/game.js"
+  ]
+ },
+ "923a5776": {
+  "key": "94a99ebdce42c711",
+  "who": "hoot",
+  "text": "A for loop repeats a spell for every item in a list. Perfect for twelve months of NDVI!",
+  "match": 1.0,
+  "files": [
+   "games/spell-academy/game.js"
+  ]
+ },
+ "9d4985dc": {
+  "key": "76353091a7a41099",
+  "who": "hoot",
+  "text": "This is a challenge spell. Take your time, and the hints will help you.",
+  "match": 1.0,
+  "files": [
+   "games/spell-academy/game.js"
+  ]
+ },
+ "4431ed1e": {
+  "key": "65aa5e38f2252701",
+  "who": "hoot",
+  "text": "Hoo, welcome to Check island, detective! Before we save a forest, we must be sure it really is a forest.",
+  "match": 1.0,
+  "files": [
+   "games/tile-detective/game.js"
+  ]
+ },
+ "3a260396": {
+  "key": "d6346de5eb82e504",
+  "who": "sprout",
+  "text": "We cut pictures from space into little squares called tiles. Then we race the real AI, ForestNet!",
+  "match": 1.0,
+  "files": [
+   "games/tile-detective/game.js"
+  ]
+ },
+ "e8e68d1e": {
+  "key": "da2f457c57a8e3c4",
+  "who": "hoot",
+  "text": "Splendid detective work! You sorted tiles, raced ForestNet and used the 1-in-4 rule.",
+  "match": 1.0,
+  "files": [
+   "games/tile-detective/game.js"
+  ]
+ },
+ "c2040d80": {
+  "key": "c486b89e6d9a68ef",
+  "who": "sprout",
+  "text": "Next stop: Brain Builder. Let's find out how ForestNet's brain works inside!",
+  "match": 1.0,
+  "files": [
+   "games/tile-detective/game.js"
+  ]
+ },
+ "f6c8719a": {
+  "key": "8a2748a2c019441b",
+  "who": "koa",
+  "text": "And the drone class? I'm putting that one on my fridge!",
+  "match": 1.0,
+  "files": [
+   "games/spell-academy/game.js"
+  ]
+ },
+ "f57de5ee": {
+  "key": "4d29a41abdc952c6",
+  "who": "hoot",
+  "text": "Here is My Site from space, cut into tiles 640 m wide. Sort each glowing tile: forest, or not forest?",
+  "match": 1.0,
+  "files": [
+   "games/tile-detective/game.js"
+  ]
+ },
+ "5939cc47": {
+  "key": "30e9416502ac9228",
+  "who": "sprout",
+  "text": "Press F for forest and N for not forest, or tap the big buttons. Quick, detective!",
+  "match": 1.0,
+  "files": [
+   "games/tile-detective/game.js"
+  ]
+ },
+ "69689155": {
+  "key": "a88cbfff2bb09202",
+  "who": "hoot",
+  "text": "Some pictures are tricky: lawns, farm fields, winter forests. Race ForestNet and see who is right!",
+  "match": 1.0,
+  "files": [
+   "games/tile-detective/game.js"
+  ]
+ },
+ "23654b75": {
+  "key": "0501cd2586902fc5",
+  "who": "sprout",
+  "text": "We know the true answer for every picture. One step forward for each right answer!",
+  "match": 1.0,
+  "files": [
+   "games/tile-detective/game.js"
+  ]
+ },
+ "d5701fd9": {
+  "key": "7c8702d85c2b08a3",
+  "who": "hoot",
+  "text": "ReSeed only helps places that were forest. If at least 1 tile in 4 is forest, it is forest land.",
+  "match": 1.0,
+  "files": [
+   "games/tile-detective/game.js"
+  ]
+ },
+ "43051e98": {
+  "key": "015fc424ce47241a",
+  "who": "hoot",
+  "text": "If not, ReSeed says STOP and looks somewhere else. Guess first, then scan!",
+  "match": 1.0,
+  "files": [
+   "games/tile-detective/game.js"
+  ]
+ },
+ "d7ac122a": {
+  "key": "fc8f23055ec68907",
+  "who": "hoot",
+  "text": "A tricky case! This rainforest in Rondônia was cut down, and today much of it looks like cow pasture.",
+  "match": 1.0,
+  "files": [
+   "games/tile-detective/game.js"
+  ]
+ },
+ "35ea6a1c": {
+  "key": "92df3369ff9ac2ed",
+  "who": "hoot",
+  "text": "Which picture should ForestNet judge: the old one or the new one? You decide.",
+  "match": 1.0,
+  "files": [
+   "games/tile-detective/game.js"
+  ]
+ },
+ "09b62488": {
+  "key": "ebed4dbe58f3ac97",
+  "who": "hoot",
+  "text": "Now the real ForestNet sorts the same tiles. It runs right here, inside your web browser!",
+  "match": 1.0,
+  "files": [
+   "games/tile-detective/game.js"
+  ]
+ },
+ "c2d1c44f": {
+  "key": "d811851ac710dc7b",
+  "who": "hoot",
+  "text": "Perfect match! You and ForestNet think alike, detective.",
+  "match": 1.0,
+  "files": [
+   "games/tile-detective/game.js"
+  ]
+ },
+ "8875633f": {
+  "key": "102a57ab9751ae05",
+  "who": "hoot",
+  "text": "Look at the tiles with a ⚡. Tap them: was ForestNet sure, or was it a coin flip?",
+  "match": 1.0,
+  "files": [
+   "games/tile-detective/game.js"
+  ]
+ },
+ "f3401512": {
+  "key": "7dfd7a7933d5cc37",
+  "who": "hoot",
+  "text": "Oh dear, today's picture hides the lost forest! Try the old picture.",
+  "match": 1.0,
+  "files": [
+   "games/tile-detective/game.js"
+  ]
+ },
+ "6993ddd5": {
+  "key": "2ab68f00721744af",
+  "who": "hoot",
+  "text": "See? The new picture could make ReSeed say STOP, so it judges the old one.",
+  "match": 1.0,
+  "files": [
+   "games/tile-detective/game.js"
+  ]
+ },
+ "54e0ca5c": {
+  "key": "944221de064a13c0",
+  "who": "hoot",
+  "text": "Yes! The old picture still shows the forest, so ReSeed can plan to plant it back.",
+  "match": 1.0,
+  "files": [
+   "games/tile-detective/game.js"
+  ]
+ },
+ "060a6195": {
+  "key": "e913441aba640315",
+  "who": "koa",
+  "text": "G'day! Every drone in my fleet has a name and a battery, so let's make a class: a blueprint for drones.",
+  "match": 1.0,
+  "files": [
+   "games/spell-academy/game.js"
+  ]
+ },
+ "2dee213c": {
+  "key": "d05efc563acc72c1",
+  "who": "hoot",
+  "text": "Brilliant! The old picture shows forest land, so the rescue goes on, but peek at the new one.",
+  "match": 1.0,
+  "files": [
+   "games/tile-detective/game.js"
+  ]
+ },
+ "865f4be6": {
+  "key": "a79e4b98b5990bed",
+  "who": "hoot",
+  "text": "Exactly! Burned forest still counts as forest land, so ReSeed can plan to replant it.",
+  "match": 1.0,
+  "files": [
+   "games/tile-detective/game.js"
+  ]
+ },
+ "702eee90": {
+  "key": "41615d6a44da9400",
+  "who": "hoot",
+  "text": "Careful! After the fire ForestNet might say not forest, so ReSeed judges the picture from before the fire.",
+  "match": 1.0,
+  "files": [
+   "games/tile-detective/game.js"
+  ]
+ },
+ "1da5366b": {
+  "key": "072d442f60bc2263",
+  "who": "sprout",
+  "text": "💡 Think: what did this place look like before it was cut down?",
+  "match": 1.0,
+  "files": [
+   "games/tile-detective/game.js"
+  ]
+ },
+ "06e02e66": {
+  "key": "88ade8c13d609f13",
+  "who": "hoot",
+  "text": "The Dixie Fire burned in 2021. Which picture should ReSeed's forest check use?",
+  "match": 1.0,
+  "files": [
+   "games/tile-detective/game.js"
+  ]
+ },
+ "2744d4e4": {
+  "key": "3ccadf3aba4d9906",
+  "who": "pix",
+  "text": "These code screens, called terminals, show Python-style code. Change it, and the room changes!",
+  "match": 1.0,
+  "files": [
+   "games/lab-escape/game.js"
+  ]
+ },
+ "b8cffab6": {
+  "key": "00ef287264113a45",
+  "who": "hoot",
+  "text": "Whoo-hoo! Thank you, Sprout. A GPU can make training much faster!",
+  "match": 1.0,
+  "files": [
+   "games/lab-escape/game.js"
+  ]
+ },
+ "ab05cd67": {
+  "key": "7b2f04fe0c39ade3",
+  "who": "hoot",
+  "text": "Whoo! I'm stuck on a high ledge. That door opens when NDVI, our plant-green score, is 0.6 or more.",
+  "match": 0.889,
+  "files": [
+   "games/lab-escape/game.js"
+  ]
+ },
+ "8d764ddd": {
+  "key": "8187e848947827ae",
+  "who": "tuki",
+  "text": "Squawk! Koa is locked in the database room. Find Koa's forest type, called a biome, to open the cage!",
+  "match": 1.0,
+  "files": [
+   "games/lab-escape/game.js"
+  ]
+ },
+ "4c428c89": {
+  "key": "d98c984e30cb4938",
+  "who": "koa",
+  "text": "Be careful what you bring to land burned by fire!",
+  "match": 1.0,
+  "files": [
+   "games/regrow-rescue/game.js"
+  ]
+ },
+ "cabcbc79": {
+  "key": "85ed9e7806faa927",
+  "who": "koa",
+  "text": "In our game, the seeds are planted in Rondônia. Now the animals need help to come home!",
+  "match": 1.0,
+  "files": [
+   "games/regrow-rescue/game.js"
+  ]
+ },
+ "80ae42b8": {
+  "key": "a2c50b949465eba0",
+  "who": "tuki",
+  "text": "ReSeed keeps checking the NDVI from space every year. Greener leaves are a good clue, but not proof the forest is back!",
+  "match": 1.0,
+  "files": [
+   "games/regrow-rescue/game.js"
+  ]
+ },
+ "7b0868e2": {
+  "key": "4b32016602c6382d",
+  "who": "tuki",
+  "text": "A satellite checks the NDVI again every year. In our game version, look how it climbed!",
+  "match": 0.857,
+  "files": [
+   "games/regrow-rescue/game.js"
+  ]
+ },
+ "adb226f2": {
+  "key": "1e9b855f32e57b33",
+  "who": "koa",
+  "text": "G'day! This is my home, Kangaroo Island. Most trees grew back after the fire, and in our game we help one small patch that didn't.",
+  "match": 1.0,
+  "files": [
+   "games/regrow-rescue/game.js"
+  ]
+ },
+ "a8d034f6": {
+  "key": "32421ee43cc3f5ab",
+  "who": "sprout",
+  "text": "Next stop: Cloud Sweeper. Let's clean up those cloudy pictures!",
+  "match": 1.0,
+  "files": [
+   "games/satellite-snap/game.js"
+  ]
+ },
+ "1775c8e1": {
+  "key": "a3f2ea87691412cd",
+  "who": "tuki",
+  "text": "Hi, I'm Tuki! I carry messages between the forest and the satellites.",
+  "match": 1.0,
+  "files": [
+   "games/satellite-snap/game.js"
+  ]
+ },
+ "c49a45af": {
+  "key": "1d27acc4a050f7d1",
+  "who": "tuki",
+  "text": "Use the arrow keys, the buttons, or drag the globe. Fly the crosshair to each target!",
+  "match": 1.0,
+  "files": [
+   "games/satellite-snap/game.js"
+  ]
+ },
+ "035723f5": {
+  "key": "fec6bbc1c1121c0a",
+  "who": "tuki",
+  "text": "ReSeed needs fresh pictures from space. Let's learn to aim, time and snap!",
+  "match": 1.0,
+  "files": [
+   "games/satellite-snap/game.js"
+  ]
+ },
+ "23936791": {
+  "key": "a7bd7e53817a1230",
+  "who": "tuki",
+  "text": "Every place on Earth has two numbers. Latitude goes north and south, longitude goes east and west.",
+  "match": 1.0,
+  "files": [
+   "games/satellite-snap/game.js"
+  ]
+ },
+ "e1391207": {
+  "key": "ed1ff4766b5e2901",
+  "who": "tuki",
+  "text": "Wow! You can find any spot, time a pass, dodge clouds and read pixels.",
+  "match": 1.0,
+  "files": [
+   "games/satellite-snap/game.js"
+  ]
+ },
+ "f5fe320e": {
+  "key": "09484afa064f4ede",
+  "who": "tuki",
+  "text": "Meet Sentinel-2: twin satellites with cameras that see 10 m pixels.",
+  "match": 1.0,
+  "files": [
+   "games/satellite-snap/game.js"
+  ]
+ },
+ "4f1ca251": {
+  "key": "ca1897dd9f3600d5",
+  "who": "tuki",
+  "text": "When the camera frame turns green over the target, press SPACE or tap SNAP!",
+  "match": 1.0,
+  "files": [
+   "games/satellite-snap/game.js"
+  ]
+ },
+ "35e41680": {
+  "key": "d429c0fbef409505",
+  "who": "tuki",
+  "text": "Snap only the clear passes. If it's too cloudy, wait 5 days for the next pass!",
+  "match": 1.0,
+  "files": [
+   "games/satellite-snap/game.js"
+  ]
+ },
+ "9b559d69": {
+  "key": "524644b46e3e79da",
+  "who": "tuki",
+  "text": "Ketapang in Borneo is very cloudy. ReSeed uses a 30% cloud limit for this site.",
+  "match": 1.0,
+  "files": [
+   "games/satellite-snap/game.js"
+  ]
+ },
+ "8d33be00": {
+  "key": "ee39164d365e2703",
+  "who": "tuki",
+  "text": "My favourite tree is in this forest! Let's see what a drone and two satellites can see.",
+  "match": 1.0,
+  "files": [
+   "games/satellite-snap/game.js"
+  ]
+ },
+ "f40a8e28": {
+  "key": "5884750e0d41d73a",
+  "who": "hoot",
+  "text": "Each pixel is one colour for one square of ground. Bigger squares show fewer details.",
+  "match": 1.0,
+  "files": [
+   "games/satellite-snap/game.js"
+  ]
+ },
+ "c5687d7a": {
+  "key": "5aa3dcda04872936",
+  "who": "koa",
+  "text": "G'day! Not every satellite takes pictures: GPS satellites help my drone know where it is.",
+  "match": 1.0,
+  "files": [
+   "games/satellite-snap/game.js"
+  ]
+ },
+ "092c3023": {
+  "key": "13cc602fd01ed94a",
+  "who": "koa",
+  "text": "First, sort the satellites. Then use three GPS distances to find my lost drone!",
+  "match": 1.0,
+  "files": [
+   "games/satellite-snap/game.js"
+  ]
+ },
+ "5300c3e8": {
+  "key": "f0fcf9160e102193",
+  "who": "tuki",
+  "text": "Minus means south for latitude and west for longitude. Now find My Site!",
+  "match": 1.0,
+  "files": [
+   "games/satellite-snap/game.js"
+  ]
+ },
+ "d82d7c1b": {
+  "key": "c28d76d7940d3f3b",
+  "who": "tuki",
+  "text": "Not quite! Minus means west for longitude and south for latitude.",
+  "match": 1.0,
+  "files": [
+   "games/satellite-snap/game.js"
+  ]
+ },
+ "3eec5917": {
+  "key": "c9a7574d7310ade0",
+  "who": "tuki",
+  "text": "Yes! A minus longitude means west, and a minus latitude means south.",
+  "match": 1.0,
+  "files": [
+   "games/satellite-snap/game.js"
+  ]
+ },
+ "80abbf81": {
+  "key": "981e6807619a34ca",
+  "who": "tuki",
+  "text": "ReSeed's Rondônia site is at -9.35, -64.35. What does the minus in -64.35 mean?",
+  "match": 1.0,
+  "files": [
+   "games/satellite-snap/game.js"
+  ]
+ },
+ "7ff6be63": {
+  "key": "d04e5345e1e61908",
+  "who": "tuki",
+  "text": "Now look through Sentinel-2. Can you still see my tree?",
+  "match": 1.0,
+  "files": [
+   "games/satellite-snap/game.js"
+  ]
+ },
+ "5a389135": {
+  "key": "d1638664a46fc973",
+  "who": "tuki",
+  "text": "Same spot, two dates! The old Landsat photo shows the forest before it was lost.",
+  "match": 1.0,
+  "files": [
+   "games/satellite-snap/game.js"
+  ]
+ },
+ "4473631b": {
+  "key": "d4db64a110bf1ddd",
+  "who": "tuki",
+  "text": "Now fly Landsat! Its pixels are 30 m, but its photo album goes back to 1984.",
+  "match": 1.0,
+  "files": [
+   "games/satellite-snap/game.js"
+  ]
+ },
+ "8bd3cfcf": {
+  "key": "8405eb48e958f439",
+  "who": "tuki",
+  "text": "Real Ketapang is just as cloudy! Here is the log of pictures ReSeed really kept.",
+  "match": 1.0,
+  "files": [
+   "games/satellite-snap/game.js"
+  ]
+ },
+ "8a3f3827": {
+  "key": "a0bde72c108a23fb",
+  "who": "hoot",
+  "text": "Right! One pixel is 10 m wide, about one tree crown, so Sentinel-2 sees forest patches, not single trees.",
+  "match": 1.0,
+  "files": [
+   "games/satellite-snap/game.js"
+  ]
+ },
+ "14e10363": {
+  "key": "6856f4df7c8d3d22",
+  "who": "hoot",
+  "text": "Look again: it melted into the green. One pixel is as wide as a whole tree crown!",
+  "match": 1.0,
+  "files": [
+   "games/satellite-snap/game.js"
+  ]
+ },
+ "e7cd013c": {
+  "key": "b77efa6b71cd1936",
+  "who": "tuki",
+  "text": "Here is Landsat at 30 m. Which pictures still show the small clearing by the river?",
+  "match": 1.0,
+  "files": [
+   "games/satellite-snap/game.js"
+  ]
+ },
+ "6ae66eb7": {
+  "key": "8d2d4ed5009ff347",
+  "who": "hoot",
+  "text": "Yes! Landsat's big 30 m pixels blur small things away, but big patches still show up.",
+  "match": 1.0,
+  "files": [
+   "games/satellite-snap/game.js"
+  ]
+ },
+ "e2934b77": {
+  "key": "5448d8a29faa4009",
+  "who": "tuki",
+  "text": "So why does ReSeed still use blurry Landsat?",
+  "match": 1.0,
+  "files": [
+   "games/satellite-snap/game.js"
+  ]
+ },
+ "3f8cd7ad": {
+  "key": "95f2a1308f9b16de",
+  "who": "hoot",
+  "text": "Look at the circles: in Landsat the small clearing blurs away. Its 30 m pixels are too big.",
+  "match": 1.0,
+  "files": [
+   "games/satellite-snap/game.js"
+  ]
+ },
+ "34295b0d": {
+  "key": "ac84bbc073664bf5",
+  "who": "tuki",
+  "text": "Yes! Old Landsat pictures show what a forest looked like long ago.",
+  "match": 1.0,
+  "files": [
+   "games/satellite-snap/game.js"
+  ]
+ },
+ "8600dd5c": {
+  "key": "2e417a001b70b32e",
+  "who": "hoot",
+  "text": "Each 10 m pixel is a small square of land, and 100 of them make one hectare. ReSeed skips patches smaller than 50 pixels (0.5 ha).",
+  "match": 1.0,
+  "files": [
+   "games/satellite-snap/game.js"
+  ]
+ },
+ "d1847901": {
+  "key": "7af6e1520a1ff430",
+  "who": "koa",
+  "text": "Two circles cross at two spots. Which one is it?",
+  "match": 1.0,
+  "files": [
+   "games/satellite-snap/game.js"
+  ]
+ },
+ "45aa79c7": {
+  "key": "1de55d9d12351b5b",
+  "who": "koa",
+  "text": "The drone is somewhere on this circle. One distance is not enough!",
+  "match": 1.0,
+  "files": [
+   "games/satellite-snap/game.js"
+  ]
+ },
+ "b31793f0": {
+  "key": "074967a44069ac03",
+  "who": "tuki",
+  "text": "Not quite. Landsat's album goes back to 1984, so we can see the old forest.",
+  "match": 1.0,
+  "files": [
+   "games/satellite-snap/game.js"
+  ]
+ },
+ "4afc9938": {
+  "key": "831723775ee38448",
+  "who": "koa",
+  "text": "Only one spot sits on all three circles. Tap it!",
+  "match": 1.0,
+  "files": [
+   "games/satellite-snap/game.js"
+  ]
+ },
+ "a3c608a9": {
+  "key": "65c31e246ac39a97",
+  "who": "koa",
+  "text": "Great sorting! Now my drone is lost over the forest, so let's listen to the GPS satellites.",
+  "match": 1.0,
+  "files": [
+   "games/satellite-snap/game.js"
+  ]
+ },
+ "b19aa721": {
+  "key": "9a313f1baae2219f",
+  "who": "koa",
+  "text": "Under thick trees, GPS has a harder time. The bigger circle shows all the places the drone might be.",
+  "match": 1.0,
+  "files": [
+   "games/satellite-snap/game.js"
+  ]
+ },
+ "02183a07": {
+  "key": "deedaa25a2192727",
+  "who": "tuki",
+  "text": "💡 Watch the gold frame. Press when it turns green and says NOW!",
+  "match": 1.0,
+  "files": [
+   "games/satellite-snap/game.js"
+  ]
+ },
+ "6353f8e6": {
+  "key": "b55ae54abbb9a58c",
+  "who": "koa",
+  "text": "Real receivers use 4 or more satellites. A phone is good to about 5 m under open sky!",
+  "match": 1.0,
+  "files": [
+   "games/satellite-snap/game.js"
+  ]
+ },
+ "b9ebdaf1": {
+  "key": "f517660ccda62771",
+  "who": "tuki",
+  "text": "💡 Read the cloud number first: over 30% means let that pass go by!",
+  "match": 1.0,
+  "files": [
+   "games/satellite-snap/game.js"
+  ]
+ }
+}

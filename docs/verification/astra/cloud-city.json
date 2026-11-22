@@ -1,0 +1,76 @@
+{
+ "factual_issues": [
+  {
+   "where": "cloud-region reseed; repeated West Europe hints in C and D",
+   "claim": "The Planetary Computer keeps its pictures in Azure's West Europe region; `reseed/acquire.py` streams them from there.",
+   "problem": "E establishes the Planetary Computer service, but does not identify the pictures' storage region. West Europe should be presented as the game's setup, not a verified ReSeed fact.",
+   "evidence": "E sets `PC_STAC_URL = \"https://planetarycomputer.microsoft.com/api/stac/v1\"`; no Azure storage region is specified.",
+   "fix": "ReSeed gets pictures from Microsoft Planetary Computer using `reseed/acquire.py`. In this game, we put the picture store in West Europe."
+  },
+  {
+   "where": "cloud-vm reseed",
+   "claim": "Training ForestNet (`reseed/classify/train.py`) is GPU work: about 12 minutes on one GPU (README).",
+   "problem": "The supplied E contains neither the training code nor the cited README timing. The specific benchmark is unsupported by the review evidence.",
+   "evidence": "E identifies the saved model with `MODEL_PATH = REPO_ROOT / \"models\" / \"forestnet.pt\"`, but supplies no training benchmark or GPU specification.",
+   "fix": "Making a greenness map uses maths on picture pixels. In our game version, a GPU trains ForestNet faster; real training times depend on the computer and training pictures."
+  },
+  {
+   "where": "cloud-stac reseed",
+   "claim": "`search()` in `reseed/acquire.py` asks the Planetary Computer STAC API for `sentinel-2-l2a` scenes, clearest first.",
+   "problem": "E supports using Planetary Computer and Sentinel-2 L2A, but does not show `search()` or establish its sorting order.",
+   "evidence": "E describes \"Real Sentinel-2 L2A ... from the Microsoft Planetary Computer STAC API\" and says \"filter a collection by place and date window, mask clouds per pixel, take the median.\"",
+   "fix": "`reseed/acquire.py` gets Sentinel-2 L2A pictures through the Planetary Computer STAC API (`PC_STAC_URL` in `reseed/config.py`), then masks cloudy pixels to help make a combined picture."
+  },
+  {
+   "where": "D: kept (ReSeed keeps up to 8)",
+   "claim": "ReSeed keeps up to 8.",
+   "problem": "E does not establish an eight-picture limit. Label this as a game rule unless more source evidence is supplied.",
+   "evidence": "E says \"filter a collection by place and date window, mask clouds per pixel, take the median\"; it gives no maximum picture count.",
+   "fix": "kept (this game keeps up to 8)"
+  }
+ ],
+ "general_cs_errors": [
+  {
+   "where": "C and D: Too strict, only a few pictures got through!",
+   "claim": "A median needs at least 3.",
+   "problem": "A median is defined for one or two values too. Three pictures can be a game requirement, but are not a mathematical minimum.",
+   "fix": "Too strict, only a few pictures got through! This game needs at least 3 pictures, so raise the cloud limit."
+  },
+  {
+   "where": "C and D: Train on the GPU, then press Stop; D: Stopped! No more compute bill.",
+   "claim": "Stopping a VM necessarily ends its compute bill.",
+   "problem": "A stopped but still allocated Azure VM can still incur compute charges. The card correctly names deallocation, but the repeated instructions and status message lose that distinction.",
+   "fix": "Train on the GPU, then press Stop (deallocate) on every VM when its job is done. That ends its compute bill."
+  },
+  {
+   "where": "C and D: Run the search on a VM in West Europe, right next to the data.",
+   "claim": "Running the STAC search on a VM beside the picture storage makes the search fast and cheap.",
+   "problem": "The STAC service executes the catalogue search remotely. Locating a VM near the image storage mainly helps subsequent image transfers and processing; it does not move the catalogue search onto that VM or guarantee lower total cost.",
+   "fix": "Ask the catalogue from any computer. For big picture downloads, a VM near the data can save time!"
+  }
+ ],
+ "hard_for_8yo": [
+  {
+   "where": "cloud-blob name",
+   "text": "Account → container → blob",
+   "simpler": "Storage account → box → file"
+  },
+  {
+   "where": "cloud-stac text",
+   "text": "**STAC** (SpatioTemporal Asset Catalog) is a card index for space pictures. You ask: **where?** (a box on the map), **when?** (dates) and **how cloudy?** (`eo:cloud_cover`).",
+   "simpler": "**STAC** is a searchable list of satellite pictures. You ask: **where?** (a box on the map), **when?** (dates) and **how cloudy?** The code calls cloudiness `eo:cloud_cover`."
+  },
+  {
+   "where": "D: cloud cover limit in percent",
+   "text": "cloud cover limit in percent",
+   "simpler": "most cloud cover allowed (%)"
+  },
+  {
+   "where": "D: 16 CPU cores · lots of maths at once",
+   "text": "16 CPU cores · lots of maths at once",
+   "simpler": "16 CPU cores · 16 workers sharing the maths"
+  }
+ ],
+ "safety_or_tone": [],
+ "verdict": "The game has a strong kid-friendly setup and good secret-key guidance, but needs clearer game-only labels for unsupported ReSeed details and corrections to the median, VM billing, and catalogue-search lessons."
+}

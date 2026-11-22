@@ -1,0 +1,100 @@
+{
+ "factual_issues": [
+  {
+   "where": "catalogue.reseed; bootable-usb.reseed; operating-system.reseed; speech and strings mentioning the project computer's Ubuntu version",
+   "claim": "ReSeed's project computer or VM runs Ubuntu 24.04 LTS.",
+   "problem": "The excerpts establish Ubuntu for GitHub Actions, but do not establish the project computer's operating system or version.",
+   "evidence": "tests.yml says \"runs-on: ubuntu-latest\"; it contains no project-computer or VM configuration.",
+   "fix": "ReSeed's automatic tests run on Ubuntu in GitHub Actions (`ubuntu-latest`)."
+  },
+  {
+   "where": "strong-password.reseed",
+   "claim": "ReSeed's secret Azure key lives only in a private .env file on the laptop, and the public website never sees it.",
+   "problem": "No supplied excerpt establishes an Azure key, its storage location, or whether the website receives it. The cited README is not included in E.",
+   "evidence": "E supplies tests.yml, including \"- run: python -m pytest -q\", but no README or secret-handling code.",
+   "fix": "Secret keys need protection, just like passwords. Never post them in public code or share them in a game."
+  },
+  {
+   "where": "disk-partition.reseed",
+   "claim": "python -m reseed run rondonia writes results into data_cache/rondonia/.",
+   "problem": "Neither this command nor its output folder is established by the supplied excerpts. The cited pipeline.py is not included.",
+   "evidence": "The Python command shown in E is \"python -m pytest -q\"; no pipeline command or output path appears.",
+   "fix": "ReSeed's test robot installs Python tools such as `numpy` and `rasterio` (`tests.yml`). Leave room for programs and data!"
+  },
+  {
+   "where": "Train ForestNet on the project's big GPU computer",
+   "claim": "The project has a big GPU computer used to train ForestNet.",
+   "problem": "The supplied code establishes a ForestNet JavaScript test, not model training or a project GPU computer.",
+   "evidence": "tests.yml runs \"node tests/js/forestnet.test.mjs\"; no training command or GPU configuration is shown.",
+   "fix": "Run ReSeed's automatic tests on an Ubuntu computer"
+  }
+ ],
+ "general_cs_errors": [
+  {
+   "where": "operating-system.text",
+   "claim": "The operating system starts first.",
+   "problem": "Firmware and usually a bootloader run before the operating system.",
+   "fix": "The **operating system** (OS) is the boss program. After the computer's startup tools load it, it shares the CPU, memory and disks with apps. Ubuntu, Windows and RHEL are operating systems."
+  },
+  {
+   "where": "[pix] Every computer needs an operating system; matching visible string",
+   "claim": "Every computer needs an operating system.",
+   "problem": "Computers can run programs directly without an OS, as many small embedded computers do.",
+   "fix": "Our mission computer needs an operating system: the boss program that helps run our apps. Let's install one!"
+  },
+  {
+   "where": "[pix] Each operating system has a package manager; matching visible string",
+   "claim": "Each operating system has a package manager that users control by typing.",
+   "problem": "Not all operating systems have package managers, and package managers can also have graphical controls.",
+   "fix": "These three operating systems have package managers: tools that fetch programs. We'll use them by typing."
+  },
+  {
+   "where": "Read the mission again: it only works on one of them.",
+   "claim": "Each matching mission works on only one of Ubuntu, Windows or RHEL.",
+   "problem": "Several missions, including science work and servers with paid support, can run on multiple listed systems. This contradicts the game's own acknowledgement that jobs overlap.",
+   "fix": "Read the mission again: which system best fits our game's clues?"
+  },
+  {
+   "where": "That's a cat video, not an operating system! Installer images end in",
+   "claim": "Installer images always end in .iso.",
+   "problem": "Installer images also use other formats, such as .img. The extension identifies this game's choice, not every OS installer.",
+   "fix": "That's a cat video, not an operating system! Our installer image ends in **.iso**."
+  },
+  {
+   "where": "[y]Almost! Use capital letters: Git.Git[/y]",
+   "claim": "winget install requires the capitalization Git.Git.",
+   "problem": "The displayed command does not use --exact, and normal winget matching is case-insensitive. Lowercase git.git is not a capitalization error.",
+   "fix": "[y]For this game's recipe, copy this spelling: Git.Git[/y]"
+  }
+ ],
+ "hard_for_8yo": [
+  {
+   "where": "bootable-usb.text",
+   "text": "Flashing erases the whole stick! Then open the UEFI setup and put USB first in the boot order.",
+   "simpler": "Writing the installer, called **flashing**, erases the stick! Open **UEFI**, the startup settings, and choose USB as the first place to start."
+  },
+  {
+   "where": "disk-partition.text",
+   "text": "A disk can be split into partitions, like rooms in a house: a small EFI boot room, / for the system and /home for your files.",
+   "simpler": "A disk can have **partitions**, like rooms in a house: **EFI** holds startup files, **/** holds the system, and **/home** holds your files."
+  },
+  {
+   "where": "[pix] First boot! Log in, open the Terminal, and let's update the computer.",
+   "text": "First boot! Log in, open the Terminal, and let's update the computer.",
+   "simpler": "First start! Log in and open the Terminal, where we type commands. Let's get updates!"
+  },
+  {
+   "where": "sudo-apt.text",
+   "text": "sudo apt update checks for new versions, and sudo apt upgrade installs them.",
+   "simpler": "`sudo apt update` gets a fresh list of available software, and `sudo apt upgrade` installs newer versions."
+  }
+ ],
+ "safety_or_tone": [
+  {
+   "where": "[pix] Put sudo in front. It means super user do: do this as the boss.; matching visible string",
+   "problem": "The unconditional advice can teach children to bypass permission errors without checking what a command does.",
+   "fix": "For this update, put sudo in front to use boss powers. Only use it with commands you trust!"
+  }
+ ],
+ "verdict": "The game has helpful backup and pretend-password safeguards, but should remove unsupported ReSeed details and correct a few overly absolute computer claims."
+}

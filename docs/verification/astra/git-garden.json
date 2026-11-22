@@ -1,0 +1,78 @@
+{
+ "factual_issues": [
+  {
+   "where": "git-commit / reseed; speech starting “See? The older lines”; D historical commit messages",
+   "claim": "c04a049 is ReSeed's first commit, and the displayed older commits are real ReSeed history.",
+   "problem": "E supplies no Git history confirming commit IDs, their order, or their messages. These details should not be presented as verified ReSeed history.",
+   "evidence": "E contains excerpts headed “.github/workflows/tests.yml”, “.github/workflows/pages.yml”, and “README.md (The website)”, but no commit log.",
+   "fix": "This garden shows example commits: a first version, new ideas, and bug fixes. To explore ReSeed's actual saved history, use `git log --oneline`."
+  },
+  {
+   "where": "ci-tests / reseed",
+   "claim": "node tests/js/forestnet.test.mjs checks that JavaScript ForestNet gives the same answers as PyTorch.",
+   "problem": "The workflow confirms that this test file runs, but E does not show what it checks. Its filename alone does not establish a comparison with PyTorch.",
+   "evidence": "tests.yml: “- run: node tests/js/forestnet.test.mjs”. README: “the real network in plain JavaScript”. Neither excerpt describes the test assertions.",
+   "fix": "`.github/workflows/tests.yml` sets up Python 3.12 and Node 22, runs `python -m pytest -q`, then runs `node tests/js/forestnet.test.mjs` to test the JavaScript ForestNet code."
+  },
+  {
+   "where": "speech and D starting “Red ✗ on pytest!”",
+   "claim": "Pages publishes site/ on every push.",
+   "problem": "ReSeed's Pages workflow runs on pushes to main, not every branch. Its independence from the tests workflow is correctly represented.",
+   "evidence": "pages.yml: “push:” followed by “branches: [main]”. Tests and deployment are defined in separate workflows.",
+   "fix": "Red ✗ on pytest! The website still updated: Pages publishes site/ on pushes to main, and the bug hides in the Python code."
+  },
+  {
+   "where": "github-pages / reseed; speech starting “That frame is an iframe”",
+   "claim": "airesearchcenter.com/reseed already shows ReSeed in an iframe.",
+   "problem": "The README gives instructions for making this embed, not confirmation that it is already live.",
+   "evidence": "README: “Add a page named `reseed`, then *Insert → Embed → Embed code* and paste”.",
+   "fix": "`pages.yml` publishes `site/` to khamydoan.github.io/reseed on pushes to main, with no build step. The README shows how to embed it on airesearchcenter.com/reseed."
+  },
+  {
+   "where": "speech starting “And these games will live”; D starting “These games, one day”",
+   "claim": "The games will be published at khamydoan.github.io/reseedgames or khamydoan.github.io/reseed_games.",
+   "problem": "E does not establish a hosting destination for the games, and the two supplied versions disagree on the address.",
+   "evidence": "The README's iframe uses “https://khamydoan.github.io/reseed/”; E supplies no games URL.",
+   "fix": "These games could have their own website too. Let's get them ready to share!"
+  }
+ ],
+ "general_cs_errors": [
+  {
+   "where": "speech and D starting “Every save plants a tree”",
+   "claim": "Every save creates a commit, runs tests, and publishes the website.",
+   "problem": "Saving a file is not committing it. Local commits also do not automatically trigger these GitHub workflows; pushing is a separate step.",
+   "fix": "Every commit plants a tree. Push to main, and robots test the code and publish the website!"
+  },
+  {
+   "where": "ci-tests / text; speech starting “Send it with git push”",
+   "claim": "GitHub Actions runs tests on every push, and red means something broke.",
+   "problem": "Actions only runs tests when a workflow is configured to do so. A failed run can also result from setup or service problems, rather than broken application code.",
+   "fix": "**GitHub Actions** can run tests when you push. ReSeed sets this up! Green ✓ means the checks passed; red ✗ means a check failed. (Game version: the NDVI bug here is pretend.)"
+  },
+  {
+   "where": "D starting “Save the fix: `-am`”",
+   "claim": "-am puts changed files in the basket and commits.",
+   "problem": "git commit -am stages changes only to already tracked files. It does not include new, untracked files.",
+   "fix": "Save the fix: `-am` adds changes to files Git already tracks, then commits."
+  }
+ ],
+ "hard_for_8yo": [
+  {
+   "where": "git-push / reseed",
+   "text": "ReSeed's code lives at github.com/khamydoan/reseed (the `origin` remote).",
+   "simpler": "ReSeed's code lives at github.com/khamydoan/reseed. Git calls that online copy `origin`."
+  },
+  {
+   "where": "speech starting “[tuki] Websites are written in HTML”",
+   "text": "Websites are written in HTML. Tags like and tell the browser what each part is.",
+   "simpler": "Websites use HTML. Tags like h1 for headings and p for paragraphs tell the browser what each part is."
+  },
+  {
+   "where": "D starting “Untracked files:”",
+   "text": "Untracked files:",
+   "simpler": "Untracked files (new files Git isn't saving yet):"
+  }
+ ],
+ "safety_or_tone": [],
+ "verdict": "The garden metaphor works well, but distinguish saving from committing and pushing, qualify unsupported ReSeed history and hosting claims, and clarify when tests and publishing run."
+}

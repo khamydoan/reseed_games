@@ -1,0 +1,93 @@
+/* ReSeed Quest hub: world map of eight islands. */
+body.hub { overflow: hidden; background: #7fd0f0; }
+.hub-top {
+  position: fixed; inset: 0 0 auto 0; height: 68px; z-index: 40; display: flex; align-items: center; gap: 12px; padding: 8px 14px;
+  background: var(--paper); border-bottom: 3px solid var(--ink);
+}
+.hub-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
+.hub-logo .mark { width: 50px; height: 50px; }
+.hub-logo b { font-size: 1.6rem; letter-spacing: .01em; line-height: 1; }
+.hub-logo b span { color: #2f9e4f; }
+.hub-logo small { display: block; font-size: .78rem; color: var(--ink-2); font-weight: 500; }
+.hub-top .sp { flex: 1; }
+.hub-top .chip { font-size: 1rem; min-height: 38px; }
+.hub-top .nick { cursor: pointer; }
+.hub-map { position: fixed; inset: 68px 0 0 0; overflow: hidden; }
+.hub-map svg { width: 100%; height: 100%; display: block; }
+.isl { cursor: pointer; transition: transform .18s cubic-bezier(.2, 1.6, .4, 1); transform-box: fill-box; transform-origin: center bottom; }
+.isl:hover, .isl:focus-visible { transform: translateY(-8px) scale(1.04); outline: none; }
+.isl:focus-visible .top { stroke: #ffd84d; stroke-width: 7; }
+.isl.next .ring { animation: hub-ring 1.6s ease-out infinite; transform-box: fill-box; transform-origin: center; }
+@keyframes hub-ring { from { opacity: .9; transform: scale(.9); } to { opacity: 0; transform: scale(1.35); } }
+.wave { animation: hub-wave 6s ease-in-out infinite; }
+@keyframes hub-wave { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(-30px); } }
+.cloud { animation: hub-cloud linear infinite; }
+@keyframes hub-cloud { from { transform: translateX(-300px); } to { transform: translateX(1900px); } }
+.hub-drone { transition: transform 1.4s cubic-bezier(.45, 0, .2, 1); }
+
+/* Island drawer */
+.drawer {
+  position: fixed; top: 80px; right: 12px; bottom: 12px; width: min(560px, 94vw); z-index: 60; overflow: auto;
+  background: var(--paper); border: 4px solid var(--ink); border-radius: 24px; box-shadow: var(--shadow-lg); padding: 0 0 16px;
+  transform: translateX(110%); transition: transform .32s cubic-bezier(.2, 1.2, .4, 1);
+}
+.drawer.open { transform: translateX(0); }
+.drawer .head { position: sticky; top: 0; z-index: 2; display: flex; gap: 12px; align-items: center; padding: 14px 16px; background: var(--ic); color: #fff; border-bottom: 3px solid var(--ink); }
+.drawer .head .who { width: 84px; height: 84px; flex: none; background: rgba(255, 255, 255, .25); border-radius: 18px; }
+.drawer .head h2 { margin: 0; font-size: 1.6rem; line-height: 1.05; }
+.drawer .head small { opacity: .95; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; font-size: .78rem; }
+.drawer .head .x { margin-left: auto; align-self: flex-start; background: #fff; }
+.drawer .story { padding: 12px 18px 4px; font-size: 1.05rem; }
+.gcards { display: flex; flex-direction: column; gap: 12px; padding: 8px 16px; }
+.gcard { display: flex; gap: 12px; align-items: center; border: 3px solid var(--ink); border-radius: 18px; background: #fff; padding: 10px; box-shadow: 0 4px 0 var(--ink); }
+.gcard.next { outline: 4px solid #ffd84d; }
+.gcard .cover { width: 86px; height: 86px; border-radius: 16px; border: 3px solid var(--ink); display: grid; place-items: center; font-size: 44px; flex: none; position: relative; overflow: hidden; }
+.gcard .cover::after { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 30% 25%, rgba(255, 255, 255, .55), transparent 55%); }
+.gcard .info { flex: 1; min-width: 0; }
+.gcard .info b { font-size: 1.15rem; display: block; }
+.gcard .info p { margin: 2px 0 4px; font-size: .95rem; color: var(--ink-2); }
+.gcard .stars { font-size: .95rem; letter-spacing: 1px; }
+.gcard .skills { display: none; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
+.gcard .skills span { font-size: .75rem; padding: 1px 7px; border-radius: 999px; background: var(--paper-2); border: 1.5px solid #c9c2b0; }
+body.grownup .gcard .skills { display: flex; }
+.gcard .play { flex: none; }
+.drawer .foot { padding: 6px 18px; font-size: .9rem; color: var(--ink-2); }
+
+/* Next-adventure banner */
+.hub-next {
+  position: fixed; left: 14px; bottom: 14px; z-index: 30; display: flex; gap: 10px; align-items: center; max-width: min(520px, 92vw);
+  background: var(--paper); border: 4px solid var(--ink); border-radius: 22px; box-shadow: var(--shadow-lg); padding: 10px 14px 10px 10px;
+}
+.hub-next .who { width: 78px; height: 78px; flex: none; }
+.hub-next p { margin: 0 0 6px; font-size: 1rem; }
+
+/* Field guide */
+.guide-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; text-align: left; margin-top: 10px; }
+.gslot { border: 3px solid var(--ink); border-radius: 14px; padding: 8px; background: #fff; cursor: pointer; min-height: 92px; display: flex; flex-direction: column; gap: 4px; }
+.gslot .i { font-size: 28px; }
+.gslot b { font-size: .95rem; line-height: 1.1; }
+.gslot small { font-size: .72rem; color: var(--ink-2); text-transform: uppercase; letter-spacing: .05em; }
+.gslot.locked { background: repeating-linear-gradient(45deg, #f0ede4, #f0ede4 8px, #e7e2d6 8px, #e7e2d6 16px); color: #9a9486; cursor: default; }
+.gslot.locked .i { filter: grayscale(1) opacity(.4); }
+.guide-filters { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
+.guide-filters .btn { min-height: 34px; }
+.guide-filters .btn.on { background: var(--ink); color: #fff; }
+.site-pick { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 10px; }
+.site-pick button { border: 3px solid var(--ink); border-radius: 16px; background: #fff; padding: 6px; cursor: pointer; text-align: center; font: inherit; box-shadow: 0 4px 0 var(--ink); }
+.site-pick button.on { outline: 4px solid #ffd84d; background: #fffbe6; }
+.site-pick img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 10px; border: 2px solid var(--ink); display: block; }
+.site-pick b { display: block; font-size: .95rem; margin-top: 4px; }
+.site-pick small { color: var(--ink-2); font-size: .78rem; }
+
+/* Short screens (laptops): a slim one-row banner so it never covers the island labels (ISSUE-002) */
+@media (max-height: 900px) {
+  .hub-next { padding: 5px 10px 5px 6px; bottom: 10px; gap: 8px; border-width: 3px; border-radius: 16px; }
+  .hub-next .who { width: 40px; height: 40px; }
+  .hub-next > div { display: flex; align-items: center; gap: 10px; }
+  .hub-next p { margin: 0; font-size: .92rem; max-width: 270px; line-height: 1.2; }
+  .hub-next .btn { min-height: 38px; padding: .2em .8em; font-size: .95rem; }
+}
+@media (max-width: 760px) {
+  .hub-logo small, .hub-top .hide-sm { display: none; }
+  .hub-next { right: 14px; }
+}
